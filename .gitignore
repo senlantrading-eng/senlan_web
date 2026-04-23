@@ -1,0 +1,7 @@
+
+# macOS
+.DS_Store
+
+# Natural Earth raw packages (do not commit)
+img/maps/ne/packages/
+*.tif

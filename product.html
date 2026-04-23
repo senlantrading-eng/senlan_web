@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product — SENLAN TRADING</title>
+  <meta name="description" content="Product details — SENLAN TRADING" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="product.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="topbar__logo" href="index.html">SENLAN TRADING</a>
+      <nav class="topbar__nav" aria-label="Primary">
+        <a class="topbar__link" href="#" data-i18n="nav.products" data-products-trigger>Products</a>
+        <a class="topbar__link" href="about.html" data-i18n="nav.about">About</a>
+        <a class="topbar__link" href=gallery.html" data-i18n="nav.gallery">Gallery</a>
+        <a class="topbar__link" href=contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="topbar__right">
+        <div class="lang" aria-label="Language">
+          <button class="lang__btn is-active" data-lang="en" type="button">EN</button>
+          <button class="lang__btn" data-lang="zh" type="button">中文</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Products mega menu (Tesla-like hover preview) -->
+  <div class="pMega" data-products-mega aria-hidden="true">
+    <div class="pMega__backdrop" data-products-close></div>
+    <div class="pMega__panel" role="dialog" aria-label="Products">
+      <div class="pMega__grid">
+        <div class="pMega__list" role="list">
+          <a class="pMega__item is-active" href="product.html?p=ggbfs" role="listitem" data-pm-item data-key="ggbfs">
+            <div class="pMega__name">GGBFS Powder</div>
+            <div class="pMega__meta">Cement replacement · Durability · Low heat</div>
+          </a>
+          <a class="pMega__item" href="product.html?p=gbfs" role="listitem" data-pm-item data-key="gbfs">
+            <div class="pMega__name">GBFS Granules</div>
+            <div class="pMega__meta">Bulk supply · Further processing</div>
+          </a>
+          <a class="pMega__item" href="product.html?p=highcalcium" role="listitem" data-pm-item data-key="highcalcium">
+            <div class="pMega__name">High-Calcium Stone</div>
+            <div class="pMega__meta">Stable CaO · Industrial-grade</div>
+          </a>
+          <a class="pMega__item" href="product.html?p=clinker" role="listitem" data-pm-item data-key="clinker">
+            <div class="pMega__name">Clinker</div>
+            <div class="pMega__meta">Cement raw material · Consistent supply</div>
+          </a>
+        </div>
+
+        <div class="pMega__preview" aria-hidden="true">
+          <div class="pMega__stage" data-pm-stage>
+            <div class="pMega__img is-active" data-pm-img="ggbfs" style="background-image:url('img/ggbfs-hero-nanobanana-2k.png')"></div>
+            <div class="pMega__img" data-pm-img="gbfs" style="background-image:url('img/gbfs-hero-nanobanana-1k-v2.png')"></div>
+            <div class="pMega__img" data-pm-img="highcalcium" style="background-image:url('img/highcalcium-product-nanobanana-2k.png')"></div>
+            <div class="pMega__img" data-pm-img="clinker" style="background-image:url('img/clinker-product-nanobanana-2k.png')"></div>
+            <div class="pMega__glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="product-hero">
+      <div class="product-hero__grid">
+        <div class="product-hero__media" aria-hidden="true">
+          <div class="product-hero__bg" id="p-bg"></div>
+          <div class="product-hero__overlay"></div>
+        </div>
+        <div class="container product-hero__content">
+          <!-- No product name / CTA. Only intro copy. -->
+          <h1 class="product-hero__title" id="p-headline">Built for durability and long-term performance.</h1>
+          <p class="product-hero__lead" id="p-lead">Product introduction.</p>
+
+          <div class="product-meta" id="p-meta" aria-label="Key highlights"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="benefits">
+      <div class="container">
+        <div class="benefits">
+          <div class="benefits__text">
+            <h2 class="h2" data-i18n="p.benefitsTitle">Key Performance Benefits</h2>
+            <p class="p" data-i18n="p.benefitsLead">
+              When used as a cement replacement or concrete admixture, GGBFS provides:
+            </p>
+            <ul class="bullets" id="p-benefits"></ul>
+          </div>
+          <div class="benefits__media" aria-hidden="true">
+            <div class="benefits__canvas" id="molecule3d"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tds">
+      <div class="container">
+        <h2 class="h2" data-i18n="p.tds">Technical Datasheet</h2>
+        <div class="pdf-pages" id="p-pdf" aria-label="TDS pages"></div>
+        <p class="p footnote" data-i18n="p.disclaimer">
+          Datasheet values are for reference and may vary by batch and shipment conditions. Final acceptance is subject to contract.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">© <span id="year"></span> SENLAN TRADING</div>
+      <div class="footer__right">
+        <a class="link" href=index.html" data-i18n="footer.home">Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav-mega.js"></script>
+  <script src="product-page.js" type="module"></script>
+</body>
+</html>

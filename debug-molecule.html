@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D Debug</title>
+  <style>
+    body{margin:0;font-family:Inter,system-ui}
+    #box{width:100vw;height:100vh;background:#fff;position:relative}
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+  <script type="module">
+    import { initMolecule3D } from './img/molecule-3d.js';
+    const box = document.getElementById('box');
+    try {
+      initMolecule3D(box);
+      console.log('3d init ok');
+      document.title = '3D Debug: OK';
+    } catch (e) {
+      console.error('3d init failed', e);
+      document.title = '3D Debug: FAIL';
+    }
+  </script>
+</body>
+</html>

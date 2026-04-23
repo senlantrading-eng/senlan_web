@@ -1,0 +1,70 @@
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar__inner{display:flex;align-items:center;justify-content:space-between;gap:18px;height:64px}
+.topbar__logo{text-decoration:none;font-weight:600;letter-spacing:.4px;font-size:14px}
+.topbar__nav{display:flex;gap:16px;align-items:center}
+.topbar__link{text-decoration:none;color:var(--muted);font-size:14px}
+.topbar__link.is-active{color:var(--text)}
+.topbar__right{display:flex;gap:12px;align-items:center}
+
+.contact-hero{padding:60px 0}
+.contact-title{margin:0;font-size:56px;letter-spacing:-.03em}
+.contact-lead{margin:14px 0 0;color:var(--muted);max-width:860px;line-height:1.65}
+
+.contact-grid{margin-top:28px;display:grid;grid-template-columns: 1.1fr .9fr;gap:22px;align-items:start}
+
+.contact-form{
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+.field{display:flex;flex-direction:column;gap:8px}
+.field span{font-size:13px;color:var(--muted)}
+.field input,.field select,.field textarea{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:12px 12px;
+  font:inherit;
+  outline:none;
+  background:#fff;
+}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:rgba(31,95,255,.6); box-shadow:0 0 0 4px rgba(31,95,255,.12)}
+
+.field.checkbox{flex-direction:row;align-items:center;gap:10px}
+.field.checkbox input{width:16px;height:16px}
+.field.checkbox span{font-size:13px;color:var(--text)}
+
+.contact-aside{
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+  padding:18px;
+}
+.aside-block{padding:14px 0;border-top:1px solid var(--line)}
+.aside-block:first-child{border-top:none;padding-top:0}
+.aside-title{font-weight:600;letter-spacing:.2px}
+.aside-sub{margin-top:8px;color:var(--muted);line-height:1.6}
+.aside-k{font-size:12px;color:var(--muted)}
+.aside-v{margin-top:8px;line-height:1.6;color:var(--text)}
+
+@media (max-width: 980px){
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width: 640px){
+  .contact-title{font-size:42px}
+  .row2{grid-template-columns:1fr}
+}

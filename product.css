@@ -1,0 +1,227 @@
+/* Reuse gallery topbar styles */
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(255,255,255,.86);
+  backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.topbar__inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+.topbar__logo{text-decoration:none;display:flex;align-items:center}
+.topbar__nav{display:flex;gap:16px;align-items:center}
+.topbar__link{text-decoration:none;color:var(--muted);font-size:14px}
+.topbar__right{display:flex;gap:12px;align-items:center}
+.topbar__cta{height:38px;min-width:132px}
+
+/* logo size */
+.logo__img{width:140px;height:91px;object-fit:contain;display:block}
+
+.topbar__inner{padding:18px 0}
+
+.product-hero{
+  position:relative;
+  min-height: 78vh;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+  color:var(--text);
+  background:#fff;
+}
+
+/* Tesla-like product hero: image left, text right */
+.product-hero__grid{
+  display:grid;
+  grid-template-columns: 1.15fr .85fr;
+  min-height: 78vh;
+}
+
+.product-hero__media{
+  position:relative;
+  background:#0b1220;
+  border-right:1px solid var(--line);
+}
+
+.product-hero__bg{position:absolute; inset:0; background-size:cover; background-position:center 58%}
+.product-hero__overlay{position:absolute; inset:0; background: linear-gradient(to bottom, rgba(0,0,0,.10), rgba(0,0,0,.03) 46%, rgba(0,0,0,.14));}
+
+.product-hero__content{
+  padding: 10vh 28px 10vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.product-hero__title{margin:0; font-size: clamp(34px, 3.6vw, 54px); font-weight:600; letter-spacing:-.02em; line-height:1.08}
+.product-hero__lead{margin:14px 0 0; max-width:520px; color:var(--muted); font-size:15px; line-height:1.6}
+.product-hero__actions{margin-top:18px; display:flex; gap:12px; justify-content:flex-start; align-items:center}
+
+/* Minimal product key meta */
+.product-meta{
+  margin-top: 18px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.meta-item{border:1px solid var(--line); border-radius:14px; padding:12px 12px; background:#fff}
+.meta-k{font-size:12px; color:var(--muted)}
+.meta-v{margin-top:6px; font-size:14px; font-weight:600; color:var(--text)}
+
+.product-links{margin-top:14px}
+.footnote{font-size:12px}
+
+/* TDS section background (avoid editor-like look) */
+#tds{
+  background: #f6f8fb;
+}
+
+/* Benefits section */
+#benefits{
+  background:#ffffff;
+}
+
+.benefits{
+  display:grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 24px;
+  align-items:start;
+}
+
+.bullets{
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+}
+
+.bullets li{
+  position:relative;
+  padding-left: 18px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.bullets li::before{
+  content: "";
+  position:absolute;
+  left:0;
+  top: .62em;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--blue);
+}
+
+.benefits__media{
+  position:relative;
+  border:1px solid var(--line);
+  border-radius: 18px;
+  overflow:hidden;
+  background:#fff;
+  min-height: 420px;
+}
+
+/* 3D canvas container */
+.benefits__canvas{
+  position:absolute;
+  inset:0;
+}
+
+/* debug badge */
+.benefits__canvas::before{
+  content: attr(data-3d);
+  position:absolute;
+  top:12px;
+  right:12px;
+  z-index:5;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.3px;
+  padding:6px 10px;
+  border-radius:999px;
+  background: rgba(255,255,255,.85);
+  border: 1px solid rgba(0,0,0,.08);
+  color: #111827;
+}
+
+.benefits__media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to bottom, rgba(255,255,255,.00), rgba(255,255,255,.25));
+  pointer-events:none;
+}
+
+/* Ensure section titles never look like they have a border */
+#tds .h2{
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+  background:transparent !important;
+}
+
+/* PDF rendered as images (no toolbar, no viewer UI) */
+.pdf-pages{
+  margin-top: 18px;
+  display:flex;
+  flex-direction:column;
+  gap: 0;
+}
+
+.pdf-page{
+  border-radius: 0;
+  overflow:hidden;
+  background: transparent;
+  box-shadow: none;
+}
+
+.pdf-page img{
+  width:100%;
+  height:auto;
+  display:block;
+  border: 0;
+  outline: 0;
+}
+
+/* Remove the visible black edge coming from PDF page image pixels */
+.pdf-page{
+  background:#f6f8fb;
+}
+.pdf-page img{
+  /* clip around to hide PDF page border lines (PDF-to-image often has a 1–10px frame) */
+  clip-path: inset(16px 16px 16px 16px);
+}
+
+@media (max-width: 820px){
+  .pdf-pages{gap: 12px}
+}
+
+/* On light background, match homepage CTA style */
+.product-hero .btn--ghost{
+  border-color: var(--line);
+  background: transparent;
+  color: var(--text);
+}
+.product-hero .btn--ghost:hover{background:#f4f6fb}
+
+.table{margin-top:18px; border:1px solid var(--line); border-radius:16px; overflow:hidden; background:#fff}
+.row{display:grid; grid-template-columns: .6fr 1.4fr; border-top:1px solid var(--line)}
+.row:first-child{border-top:none}
+.k{padding:14px 16px; color:var(--muted); font-size:13px; background:#fbfcfe}
+.v{padding:14px 16px; color:var(--text); font-size:14px}
+
+.chips{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
+.chip{border:1px solid var(--line); border-radius:999px; padding:10px 14px; background:#fff}
+
+@media (max-width: 820px){
+  .product-hero__grid{grid-template-columns:1fr; min-height: auto}
+  .product-hero__media{min-height: 44vh; border-right:none; border-bottom:1px solid var(--line)}
+  .product-hero__actions{flex-direction:column; align-items:flex-start}
+  .btn{width:min(420px, 92vw)}
+  .product-meta{grid-template-columns: 1fr}
+  .row{grid-template-columns:1fr}
+  .k{background:#fff}
+
+  .benefits{grid-template-columns:1fr}
+  .benefits__media{min-height: 320px}
+}

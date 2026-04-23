@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SENLAN TRADING — GGBFS & GBFS</title>
+  <meta name="description" content="Tesla-style minimal bilingual homepage demo for SENLAN TRADING." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <section class="hero" id="top" aria-label="Hero slider">
+    <div class="hero__slider" aria-hidden="true">
+      <div class="hero__slide is-active" data-slide="1"></div>
+      <div class="hero__slide" data-slide="2"></div>
+      <div class="hero__slide" data-slide="3"></div>
+      <div class="hero__slide" data-slide="4"></div>
+    </div>
+
+    <header class="hero__header" aria-label="Header">
+      <div class="logo" aria-label="SENLAN TRADING logo">SENLAN TRADING</div>
+      <nav class="hero__nav" aria-label="Primary">
+      <a class="hero__navlink" href="#products" data-i18n="nav.products" data-products-trigger>Products</a>
+      <a class="hero__navlink" href="about.html" data-i18n="nav.about">About</a>
+      <a class="hero__navlink" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+      <a class="hero__navlink" href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <nav class="lang" aria-label="Language">
+        <button class="lang__btn is-active" data-lang="en" type="button">EN</button>
+        <button class="lang__btn" data-lang="zh" type="button">中文</button>
+      </nav>
+    </header>
+
+    <!-- Products mega menu (Tesla-like hover preview) -->
+    <div class="pMega" data-products-mega aria-hidden="true">
+      <div class="pMega__backdrop" data-products-close></div>
+      <div class="pMega__panel" role="dialog" aria-label="Products">
+        <div class="pMega__grid">
+          <div class="pMega__list" role="list">
+            <a class="pMega__item is-active" href="product.html?p=ggbfs" role="listitem" data-pm-item data-key="ggbfs">
+              <div class="pMega__name">GGBFS Powder</div>
+              <div class="pMega__meta">Cement replacement · Durability · Low heat</div>
+            </a>
+            <a class="pMega__item" href="product.html?p=gbfs" role="listitem" data-pm-item data-key="gbfs">
+              <div class="pMega__name">GBFS Granules</div>
+              <div class="pMega__meta">Bulk supply · Further processing</div>
+            </a>
+            <a class="pMega__item" href="product.html?p=highcalcium" role="listitem" data-pm-item data-key="highcalcium">
+              <div class="pMega__name">High-Calcium Stone</div>
+              <div class="pMega__meta">Stable CaO · Industrial-grade</div>
+            </a>
+            <a class="pMega__item" href="product.html?p=clinker" role="listitem" data-pm-item data-key="clinker">
+              <div class="pMega__name">Clinker</div>
+              <div class="pMega__meta">Cement raw material · Consistent supply</div>
+            </a>
+          </div>
+
+          <div class="pMega__preview" aria-hidden="true">
+            <div class="pMega__stage" data-pm-stage>
+              <div class="pMega__img is-active" data-pm-img="ggbfs" style="background-image:url('img/ggbfs-hero-nanobanana-2k.png')"></div>
+              <div class="pMega__img" data-pm-img="gbfs" style="background-image:url('img/gbfs-hero-nanobanana-1k-v2.png')"></div>
+              <div class="pMega__img" data-pm-img="highcalcium" style="background-image:url('img/highcalcium-product-nanobanana-2k.png')"></div>
+              <div class="pMega__img" data-pm-img="clinker" style="background-image:url('img/clinker-product-nanobanana-2k.png')"></div>
+              <div class="pMega__glow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__dots" aria-label="Slider dots">
+      <button class="dot is-active" data-to="1" type="button" aria-label="Slide 1"></button>
+      <button class="dot" data-to="2" type="button" aria-label="Slide 2"></button>
+      <button class="dot" data-to="3" type="button" aria-label="Slide 3"></button>
+      <button class="dot" data-to="4" type="button" aria-label="Slide 4"></button>
+    </div>
+
+    <div class="hero__content">
+      <h1 class="hero__title" data-i18n="hero.slide1.title">GGBFS &amp; GBFS</h1>
+
+      <div class="hero__cta" aria-label="Primary actions">
+        <a class="btn btn--primary" href="contact.html" data-i18n="cta.getQuote">Get Quote</a>
+        <a class="btn btn--ghost" href="product.html?p=ggbfs" data-i18n="cta.learnMore" data-learnmore>Learn More</a>
+      </div>
+
+      <button class="hero__arrow hero__arrow--left" type="button" aria-label="Previous slide" data-dir="-1">‹</button>
+      <button class="hero__arrow hero__arrow--right" type="button" aria-label="Next slide" data-dir="1">›</button>
+    </div>
+  </section>
+
+  <main>
+    <section class="section" id="capacity">
+      <div class="container">
+        <h2 class="h2 reveal-mask" data-reveal>OUR CAPACITY AND LOADING SCENE</h2>
+        <p class="p">Port, loading, packing, and production scenes.</p>
+
+        <div class="carousel carousel--bleed" aria-label="Capacity and loading carousel">
+          <button class="carousel__arrow carousel__arrow--left" type="button" aria-label="Previous" data-carousel-prev>‹</button>
+          <div class="carousel__track" data-carousel-track>
+
+            <article class="carousel__slide">
+              <div class="carousel__media" style="background-image:url('img/port-loading-2k.png')"></div>
+              <div class="carousel__content">
+                <h3 class="carousel__title">Port loading scene</h3>
+              </div>
+            </article>
+
+            <article class="carousel__slide">
+              <div class="carousel__media" style="background-image:url('img/gbfs-in-use-2k.png')"></div>
+              <div class="carousel__content">
+                <h3 class="carousel__title">GBFS bulk loading into trucks</h3>
+              </div>
+            </article>
+
+            <article class="carousel__slide">
+              <div class="carousel__media" style="background-image:url('img/gbfs-granules-2k.png')"></div>
+              <div class="carousel__content">
+                <h3 class="carousel__title">GBFS in Jumbo Bags</h3>
+              </div>
+            </article>
+
+            <article class="carousel__slide">
+              <div class="carousel__media" style="background-image:url('img/ggbfs-hero-nanobanana-2k.png')"></div>
+              <div class="carousel__content">
+                <h3 class="carousel__title">GGBFS Grinding System</h3>
+              </div>
+            </article>
+
+            <article class="carousel__slide">
+              <div class="carousel__media" style="background-image:url('img/gbfs-application-2k.png')"></div>
+              <div class="carousel__content">
+                <h3 class="carousel__title">Port capacity</h3>
+              </div>
+            </article>
+
+          </div>
+          <button class="carousel__arrow carousel__arrow--right" type="button" aria-label="Next" data-carousel-next>›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="products" aria-label="Products">
+      <div class="container">
+        <h2 class="h2">Products</h2>
+        <p class="p">Hover a product to preview.</p>
+
+        <div class="pHover" data-productshover>
+          <div class="pHover__left" role="list">
+            <button class="pHover__item is-active" type="button" role="listitem" data-ph-item data-key="ggbfs">
+              <div class="pHover__name">GGBFS Powder</div>
+              <div class="pHover__meta">Cement replacement · Durability · Low heat</div>
+            </button>
+            <button class="pHover__item" type="button" role="listitem" data-ph-item data-key="gbfs">
+              <div class="pHover__name">GBFS Granules</div>
+              <div class="pHover__meta">Bulk supply · Further processing</div>
+            </button>
+            <button class="pHover__item" type="button" role="listitem" data-ph-item data-key="highcalcium">
+              <div class="pHover__name">High-Calcium Stone</div>
+              <div class="pHover__meta">Stable CaO · Industrial-grade</div>
+            </button>
+            <button class="pHover__item" type="button" role="listitem" data-ph-item data-key="clinker">
+              <div class="pHover__name">Clinker</div>
+              <div class="pHover__meta">Cement raw material · Consistent supply</div>
+            </button>
+          </div>
+
+          <div class="pHover__right" aria-hidden="true">
+            <div class="pHover__stage" data-ph-stage>
+              <div class="pHover__img is-active" data-ph-img="ggbfs" style="background-image:url('img/ggbfs-hero-nanobanana-2k.png')"></div>
+              <div class="pHover__img" data-ph-img="gbfs" style="background-image:url('img/gbfs-hero-nanobanana-1k-v2.png')"></div>
+              <div class="pHover__img" data-ph-img="highcalcium" style="background-image:url('img/highcalcium-product-nanobanana-2k.png')"></div>
+              <div class="pHover__img" data-ph-img="clinker" style="background-image:url('img/clinker-product-nanobanana-2k.png')"></div>
+              <div class="pHover__glow" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--bleed" id="footprint">
+      <div class="container container--bleed">
+        <div class="footprint-section-title" data-titlefx>
+          <h2 class="footprint-section-title__h">4,000,000 MT GBFS and 900,000 MT GGBFS shipped this year.</h2>
+          <p class="footprint-section-title__p">Executed with scale, discipline, and control.</p>
+        </div>
+
+        <div class="footprint-split">
+          <div class="footprint-split__text">
+            <div class="footprint-hero-modern">
+              <div class="footprint-hero-modern__decor" aria-hidden="true">
+                <span class="d d--y-dot"></span>
+                <span class="d d--p-diamond"></span>
+                <span class="d d--p-bar"></span>
+                <span class="d d--y-bar"></span>
+              </div>
+
+              <!-- Replaced by sl-hero-modern block below -->
+
+              <!-- React-style card block (static HTML) -->
+              <div class="sl-hero-modern" aria-label="Execution snapshot">
+                <div class="sl-hero-modern__decor" aria-hidden="true">
+                  <span class="sl-decor sl-decor--y-dot"></span>
+                  <span class="sl-decor sl-decor--p-diamond"></span>
+                  <span class="sl-decor sl-decor--p-bar"></span>
+                  <span class="sl-decor sl-decor--y-bar"></span>
+                </div>
+
+                <div class="sl-hero-modern__container">
+                  <div class="sl-hero-modern__grid">
+                    <div class="sl-hero-modern__text">
+                      <p class="sl-hero-modern__lead">
+                        4,000,000 MT of GBFS. 900,000 MT of GGBFS. Here’s How We Delivered.
+                      </p>
+                      <div class="sl-hero-modern__body">
+                        <p>
+                          Over the past year, Senlan Trading has supplied 4,000,000 MT of GBFS and 900,000 MT of GGBFS to both domestic and global markets. This performance is supported by our integrated delivery chain — from long-term partner factories to port handling and shipment — ensuring stable capacity, consistent quality, and reliable execution.
+                        </p>
+                        <p>
+                          Our scale is built on proven capability, disciplined logistics, and trust earned through repeat delivery.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="sl-hero-modern__cardcol">
+                      <div class="sl-hero-modern__card">
+                        <div class="sl-hero-modern__cardimg" style="background-image:url('img/footprint-banner-2k.png')"></div>
+
+                        <span class="sl-float sl-float--tl"></span>
+                        <span class="sl-float sl-float--br"></span>
+                        <span class="sl-float sl-float--rbar"></span>
+                        <span class="sl-dot sl-dot--tr"></span>
+                        <span class="sl-dot sl-dot--bl"></span>
+                        <span class="sl-bar sl-bar--l"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- trust row removed -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- footprint right media column removed -->
+        </div>
+
+        <h2 class="h2 reveal-mask" data-reveal>Our Global Footprint Across China and International Markets</h2>
+
+        <div class="map2d" id="map2d" aria-label="2D world map"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">© <span id="year"></span> SENLAN TRADING</div>
+      <div class="footer__right">
+        <a class="link" href="#top" data-i18n="footer.backTop">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav-mega.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

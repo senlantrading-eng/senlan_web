@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — SENLAN TRADING</title>
+  <meta name="description" content="About SENLAN TRADING" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="topbar" data-topbar data-scrollhide>
+    <div class="container topbar__inner">
+      <a class="topbar__logo" href="index.html">SENLAN TRADING</a>
+      <nav class="topbar__nav" aria-label="Primary">
+        <a class="topbar__link" href="#" data-i18n="nav.products" data-products-trigger>Products</a>
+        <a class="topbar__link is-active" href="about.html" data-i18n="nav.about">About</a>
+        <a class="topbar__link" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+        <a class="topbar__link" href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="topbar__right">
+        <div class="lang" aria-label="Language">
+          <button class="lang__btn is-active" data-lang="en" type="button">EN</button>
+          <button class="lang__btn" data-lang="zh" type="button">中文</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Products mega menu (Tesla-like hover preview) -->
+  <div class="pMega" data-products-mega aria-hidden="true">
+    <div class="pMega__backdrop" data-products-close></div>
+    <div class="pMega__panel" role="dialog" aria-label="Products">
+      <div class="pMega__grid">
+        <div class="pMega__list" role="list">
+          <a class="pMega__item is-active" href="product.html?p=ggbfs" role="listitem" data-pm-item data-key="ggbfs">
+            <div class="pMega__name">GGBFS Powder</div>
+            <div class="pMega__meta">Cement replacement · Durability · Low heat</div>
+          </a>
+          <a class="pMega__item" href="product.html?p=gbfs" role="listitem" data-pm-item data-key="gbfs">
+            <div class="pMega__name">GBFS Granules</div>
+            <div class="pMega__meta">Bulk supply · Further processing</div>
+          </a>
+          <a class="pMega__item" href="product.html?p=highcalcium" role="listitem" data-pm-item data-key="highcalcium">
+            <div class="pMega__name">High-Calcium Stone</div>
+            <div class="pMega__meta">Stable CaO · Industrial-grade</div>
+          </a>
+          <a class="pMega__item" href="product.html?p=clinker" role="listitem" data-pm-item data-key="clinker">
+            <div class="pMega__name">Clinker</div>
+            <div class="pMega__meta">Cement raw material · Consistent supply</div>
+          </a>
+        </div>
+
+        <div class="pMega__stage" aria-hidden="true">
+          <div class="pMega__img is-active" data-pm-img="ggbfs" style="background-image:url('img/ggbfs-hero-nanobanana-2k.png')"></div>
+          <div class="pMega__img" data-pm-img="gbfs" style="background-image:url('img/gbfs-hero-nanobanana-1k-v2.png')"></div>
+          <div class="pMega__img" data-pm-img="highcalcium" style="background-image:url('img/highcalcium-product-nanobanana-2k.png')"></div>
+          <div class="pMega__img" data-pm-img="clinker" style="background-image:url('img/clinker-product-nanobanana-2k.png')"></div>
+          <div class="pMega__glow"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Tesla-like fullscreen hero (image slideshow, video-style) -->
+    <section class="aboutHero" aria-label="About hero">
+      <div class="aboutHero__bg" aria-hidden="true">
+        <div class="aboutHero__frame is-active" data-about-frame style="background-image:url('img/about/about-hero-1.webp')"></div>
+        <div class="aboutHero__frame" data-about-frame style="background-image:url('img/about/about-hero-2.png')"></div>
+        <div class="aboutHero__frame" data-about-frame style="background-image:url('img/about/about-hero-3.png')"></div>
+      </div>
+      <div class="aboutHero__veil" aria-hidden="true"></div>
+      <div class="container aboutHero__content">
+        <a class="aboutHero__scroll" href="#about" aria-label="Scroll down">↓</a>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container" style="max-width:1100px">
+        <div style="display:grid;grid-template-columns: 1fr 1fr;gap:22px;align-items:center">
+          <div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff;min-height:420px">
+            <div style="position:absolute;inset:0;background-image:url('img/about-split.webp');background-size:cover;background-position:center"></div>
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.06) 0%, rgba(0,0,0,.18) 100%)"></div>
+          </div>
+
+          <div>
+            <h1 class="h2" style="margin:0 0 10px">Leading GBFS &amp; GGBFS Manufacturer and Export Partner in Northern China</h1>
+            <p class="p" style="color:var(--muted);margin:0 0 10px;max-width:70ch;line-height:1.75">
+              Senlan specializes in the manufacturing and export of GBFS and GGBFS for the cement and concrete industry. Since 2015, we have supported customers across the United States, Europe, and Australia with reliable, consistent supply for large-volume projects.
+            </p>
+            <p class="p" style="color:var(--muted);margin:0;max-width:70ch;line-height:1.75">
+              Backed by large raw-material reserves, port-based stockyards, and integrated logistics and quality control, we deliver stable quality and efficient international shipments worldwide.
+            </p>
+
+            <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px">
+              <div style="border:1px solid var(--line);border-radius:16px;padding:14px;background:#fff">
+                <div style="font-weight:800;letter-spacing:-.02em">Built for consistency.</div>
+                <div style="margin-top:6px;color:var(--muted);line-height:1.6">Stable specs. Clear documentation. Reliable timelines.</div>
+              </div>
+              <div style="border:1px solid var(--line);border-radius:16px;padding:14px;background:#fff">
+                <div style="font-weight:800;letter-spacing:-.02em">Logistics</div>
+                <div style="margin-top:6px;color:var(--muted);line-height:1.6">Port-based stockyards and efficient international shipment planning.</div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:14px">
+              <div style="padding:10px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:800">Since 2015</div>
+              <div style="padding:10px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:800">GBFS · GGBFS</div>
+              <div style="padding:10px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:800">US · Europe · Australia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">© <span id="year"></span> SENLAN TRADING</div>
+      <div class="footer__right"><a href="index.html" data-i18n="footer.home">Home</a></div>
+    </div>
+  </footer>
+
+  <script src="app.js" type="module"></script>
+  <script src="js/nav-mega.js" defer></script>
+  <script>
+    // About fullscreen hero slideshow (video-style)
+    (function(){
+      var frames = Array.prototype.slice.call(document.querySelectorAll('[data-about-frame]'));
+      if (!frames.length) return;
+      var i = 0;
+      setInterval(function(){
+        frames[i].classList.remove('is-active');
+        i = (i + 1) % frames.length;
+        frames[i].classList.add('is-active');
+      }, 9000);
+    })();
+
+    // About topbar: hide on scroll down, show on scroll up
+    (function(){
+      var bar = document.querySelector('[data-scrollhide]');
+      if (!bar) return;
+      var lastY = window.scrollY || 0;
+      var ticking = false;
+      function update(){
+        ticking = false;
+        var y = window.scrollY || 0;
+        var dy = y - lastY;
+        // Always show at the very top
+        if (y < 12) {
+          bar.classList.remove('is-hidden');
+          lastY = y;
+          return;
+        }
+        if (dy > 8) bar.classList.add('is-hidden');
+        else if (dy < -8) bar.classList.remove('is-hidden');
+        lastY = y;
+      }
+      window.addEventListener('scroll', function(){
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(update);
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
