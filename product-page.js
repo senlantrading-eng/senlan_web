@@ -189,7 +189,7 @@ const DATA = {
     ],
     highlights: [],
     benefits: { en: [], zh: [] },
-    benefitImage: 'img/highcalcium-grades-hero-nanobanana-2k-v2.png'
+    benefitImage: 'img/highcalcium-detail-singlegrade-nanobanana-2k.png'
   },
 
   clinker: {
