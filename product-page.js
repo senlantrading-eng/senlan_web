@@ -236,6 +236,51 @@ function applyI18n() {
 
 function render() {
   const p = DATA[state.product];
+  const seo = {
+    ggbfs: {
+      title: 'GGBFS Supplier from China | SENLAN TRADING',
+      desc: 'Ground Granulated Blast Furnace Slag (GGBFS) supply from China for cement and concrete applications, with technical datasheets and export support.'
+    },
+    gbfs: {
+      title: 'GBFS Granules Supplier from China | SENLAN TRADING',
+      desc: 'Granulated Blast Furnace Slag (GBFS) supply from China for further processing and industrial applications, with export logistics support.'
+    },
+    highcalcium: {
+      title: 'High-Calcium Limestone Supplier | SENLAN TRADING',
+      desc: 'High-calcium limestone supply for cement and industrial applications, supported by technical datasheets and export logistics from China.'
+    },
+    clinker: {
+      title: 'Cement Clinker Supplier from China | SENLAN TRADING',
+      desc: 'Cement clinker supply from China for global trading and cement production, with technical datasheets and shipment support.'
+    }
+  };
+  const s = seo[state.product];
+  if (s) {
+    document.title = s.title;
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute('name', 'description');
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', s.desc);
+
+    let ogt = document.querySelector('meta[property="og:title"]');
+    if (!ogt) {
+      ogt = document.createElement('meta');
+      ogt.setAttribute('property', 'og:title');
+      document.head.appendChild(ogt);
+    }
+    ogt.setAttribute('content', s.title);
+
+    let ogd = document.querySelector('meta[property="og:description"]');
+    if (!ogd) {
+      ogd = document.createElement('meta');
+      ogd.setAttribute('property', 'og:description');
+      document.head.appendChild(ogd);
+    }
+    ogd.setAttribute('content', s.desc);
+  }
   // background
   document.getElementById('p-bg').style.backgroundImage = `url('${p.bg}')`;
 
