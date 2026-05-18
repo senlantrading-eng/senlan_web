@@ -38,57 +38,43 @@ const NEWS = [
     date: '2026-05-18',
     tag: { en: 'Shipping', zh: '海运' },
     title: {
-      en: 'Bulk freight sentiment remains sensitive to port congestion and vessel rotation.',
-      zh: '港口拥堵与船期轮换，仍在持续影响散货运价情绪。'
+      en: 'Supply constraints and longer-haul demand are supporting dry bulk sentiment.',
+      zh: '运力约束与长航程需求，正在支撑干散货市场情绪。'
     },
     desc: {
-      en: 'Freight discussions in the bulk market continue to focus on berth efficiency, vessel availability and loading-window certainty across major export routes.',
-      zh: '当前散货市场讨论仍集中在泊位效率、可用船舶以及主要出口航线上的装港窗口确定性。'
+      en: 'According to Seatrade Maritime coverage, tighter vessel supply and longer-haul trade patterns are helping lift dry bulk market sentiment. For bulk building-material exporters, freight timing and vessel planning remain key decision factors.',
+      zh: '根据 Seatrade Maritime 的报道，更紧张的船舶供给与更长的运输航程，正在推动干散货市场情绪走强。对于大宗建材出口商来说，运价窗口与船期安排仍然是关键决策因素。'
     },
-    source: 'Daily Market Note',
-    url: '#'
+    source: 'Seatrade Maritime',
+    url: 'https://www.seatrade-maritime.com/dry-bulk/supply-constraints-and-longer-hauls-boost-dry-bulk-market'
+  },
+  {
+    date: '2026-05-18',
+    tag: { en: 'Shipping', zh: '海运' },
+    title: {
+      en: 'Dry bulk shipping performance is becoming more selective across listed owners.',
+      zh: '上市干散货船东的市场表现分化正在加大。'
+    },
+    desc: {
+      en: 'MarineLink reports that fewer listed dry bulk owners outperformed the market in 2025, highlighting a more selective operating environment. For cargo buyers, this reinforces the value of stable logistics coordination and reliable loading execution.',
+      zh: 'MarineLink 报道称，2025 年跑赢市场的上市干散货船东数量减少，说明航运经营环境正变得更加分化。对于货主与买家来说，这进一步凸显了稳定物流协调与可靠装港执行的重要性。'
+    },
+    source: 'MarineLink / Vesselindex',
+    url: 'https://www.marinelink.com/news/vesselindex-report-shows-fewer-listed-dry-539022'
   },
   {
     date: '2026-05-18',
     tag: { en: 'Cement', zh: '水泥' },
     title: {
-      en: 'Supplementary cementitious materials remain in focus for long-term durability strategies.',
-      zh: '为提升长期耐久性，补充胶凝材料仍是市场关注重点。'
+      en: 'Low-carbon cement materials remain a central theme in industry discussions.',
+      zh: '低碳水泥材料仍是当前行业讨论的核心主题。'
     },
     desc: {
-      en: 'Project owners and concrete producers continue to evaluate SCM usage for performance consistency, lower heat of hydration and lifecycle efficiency.',
-      zh: '项目业主与混凝土生产商持续关注 SCM 在性能稳定性、降低水化热及全生命周期效率方面的价值。'
+      en: 'Recent green cement coverage continues to emphasize clinker-efficient and supplementary cementitious material solutions. This supports longer-term interest in materials that improve cement performance while aligning with lower-carbon construction goals.',
+      zh: '近期绿色水泥相关内容持续强调熟料替代效率与补充胶凝材料方案的重要性。这说明，既能改善水泥性能又契合低碳建造目标的材料，仍将在中长期保持市场关注。'
     },
-    source: 'Industry Watch',
-    url: '#'
-  },
-  {
-    date: '2026-05-18',
-    tag: { en: 'Steel', zh: '钢铁' },
-    title: {
-      en: 'Steel-sector operating trends continue to influence slag availability expectations.',
-      zh: '钢铁板块开工走势，持续影响矿渣供应预期。'
-    },
-    desc: {
-      en: 'Market participants are watching blast furnace operating conditions closely, as upstream production patterns shape medium-term slag supply visibility.',
-      zh: '市场正在密切关注高炉运行情况，因为上游生产节奏会直接影响中期矿渣供应的可见度。'
-    },
-    source: 'Supply Chain Brief',
-    url: '#'
-  },
-  {
-    date: '2026-05-18',
-    tag: { en: 'Export', zh: '出口' },
-    title: {
-      en: 'Buyers continue asking for clearer delivery windows and origin coordination.',
-      zh: '买家对交付窗口与装港协调提出了更清晰要求。'
-    },
-    desc: {
-      en: 'Inquiries remain active, but procurement decisions increasingly depend on documentation clarity, shipment timing and destination-port coordination.',
-      zh: '询盘依旧活跃，但采购决策越来越依赖单证清晰度、装运节奏以及目的港协调能力。'
-    },
-    source: 'Trade Update',
-    url: '#'
+    source: 'openPR / Green Cement coverage',
+    url: 'https://www.openpr.com/news/4513191/green-cement-manufacturing-plant-dpr-unit-setup-2026-demand'
   }
 ];
 
