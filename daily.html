@@ -14,26 +14,23 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <a class="topbar__logo" href="index.html">SENLAN TRADING</a>
-      <nav class="topbar__nav" aria-label="Primary">
-        <a class="topbar__link" href="#" data-i18n="nav.products" data-products-trigger>Products</a>
-        <a class="topbar__link" href="about.html" data-i18n="nav.about">About</a>
-        <a class="topbar__link is-active" href="daily.html" data-i18n="nav.daily">News</a>
-        <a class="topbar__link" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
-        <a class="topbar__link" href="contact.html" data-i18n="nav.contact">Contact</a>
+  <section class="hero" style="min-height:52vh;padding-bottom:48px" aria-label="News hero">
+    <header class="hero__header" aria-label="Header">
+      <div class="logo" aria-label="SENLAN TRADING logo">SENLAN TRADING</div>
+      <nav class="hero__nav" aria-label="Primary">
+        <a class="hero__navlink" href="#" data-i18n="nav.products" data-products-trigger>Products</a>
+        <a class="hero__navlink" href="about.html" data-i18n="nav.about">About</a>
+        <a class="hero__navlink is-active" href="daily.html" data-i18n="nav.daily">News</a>
+        <a class="hero__navlink" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+        <a class="hero__navlink" href="contact.html" data-i18n="nav.contact">Contact</a>
       </nav>
-      <div class="topbar__right">
-        <div class="lang" aria-label="Language">
-          <button class="lang__btn is-active" data-lang="en" type="button">EN</button>
-          <button class="lang__btn" data-lang="zh" type="button">中文</button>
-        </div>
-      </div>
-    </div>
-  </header>
+      <nav class="lang" aria-label="Language">
+        <button class="lang__btn is-active" data-lang="en" type="button">EN</button>
+        <button class="lang__btn" data-lang="zh" type="button">中文</button>
+      </nav>
+    </header>
 
-  <div class="pMega" data-products-mega aria-hidden="true">
+    <div class="pMega" data-products-mega aria-hidden="true">
     <div class="pMega__backdrop" data-products-close></div>
     <div class="pMega__panel" role="dialog" aria-label="Products">
       <div class="pMega__grid">
@@ -67,10 +64,9 @@
         </div>
       </div>
     </div>
-  </div>
+    </div>
 
-  <main>
-    <section class="section" style="padding-top:34px">
+    <div class="hero__content" style="padding-top:20vh;align-items:flex-start;text-align:left">
       <div class="container" style="max-width:1180px">
         <div style="display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:end">
           <div>
@@ -90,7 +86,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <main>
 
     <section class="section" style="padding-top:10px">
       <div class="container" style="max-width:1180px">
