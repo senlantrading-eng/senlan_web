@@ -3,16 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Products | SENLAN TRADING Material Supply from China</title>
-  <meta name="description" content="Explore SENLAN TRADING product details for GGBFS, GBFS, high-calcium limestone and clinker, including application value and technical datasheets." />
-  <meta property="og:title" content="Products | SENLAN TRADING Material Supply from China" />
-  <meta property="og:description" content="Product details and technical datasheets for GGBFS, GBFS, high-calcium limestone and clinker." />
+  <title>News Insights | SENLAN TRADING Industry News</title>
+  <meta name="description" content="Daily industry news and market updates curated for SENLAN TRADING, including cement, steel, shipping, export, and raw-material signals." />
+  <meta property="og:title" content="News Insights | SENLAN TRADING Industry News" />
+  <meta property="og:description" content="Latest industry news, shipping updates and market signals relevant to GGBFS, GBFS, clinker and bulk materials trade." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="product.css" />
 </head>
 <body>
   <header class="topbar">
@@ -21,7 +20,7 @@
       <nav class="topbar__nav" aria-label="Primary">
         <a class="topbar__link" href="#" data-i18n="nav.products" data-products-trigger>Products</a>
         <a class="topbar__link" href="about.html" data-i18n="nav.about">About</a>
-        <a class="topbar__link" href="daily.html" data-i18n="nav.daily">News</a>
+        <a class="topbar__link is-active" href="daily.html" data-i18n="nav.daily">News</a>
         <a class="topbar__link" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
         <a class="topbar__link" href="contact.html" data-i18n="nav.contact">Contact</a>
       </nav>
@@ -34,7 +33,6 @@
     </div>
   </header>
 
-  <!-- Products mega menu (Tesla-like hover preview) -->
   <div class="pMega" data-products-mega aria-hidden="true">
     <div class="pMega__backdrop" data-products-close></div>
     <div class="pMega__panel" role="dialog" aria-label="Products">
@@ -72,46 +70,31 @@
   </div>
 
   <main>
-    <section class="product-hero">
-      <div class="product-hero__grid">
-        <div class="product-hero__media" aria-hidden="true">
-          <div class="product-hero__bg" id="p-bg"></div>
-          <div class="product-hero__overlay"></div>
-        </div>
-        <div class="container product-hero__content">
-          <!-- No product name / CTA. Only intro copy. -->
-          <h1 class="product-hero__title" id="p-headline">Built for durability and long-term performance.</h1>
-          <p class="product-hero__lead" id="p-lead">Product introduction.</p>
-
-          <div class="product-meta" id="p-meta" aria-label="Key highlights"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="benefits">
-      <div class="container">
-        <div class="benefits">
-          <div class="benefits__text">
-            <h2 class="h2" data-i18n="p.benefitsTitle">Key Performance Benefits</h2>
-            <p class="p" data-i18n="p.benefitsLead">
-              When used as a cement replacement or concrete admixture, GGBFS provides:
-            </p>
-            <ul class="bullets" id="p-benefits"></ul>
+    <section class="section" style="padding-top:34px">
+      <div class="container" style="max-width:1180px">
+        <div style="display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:end">
+          <div>
+            <div style="display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);font-size:12px;letter-spacing:.14em;text-transform:uppercase" data-i18n="daily.eyebrow">News Insights</div>
+            <h1 class="h2" style="font-size:clamp(34px,5vw,68px);line-height:.98;margin:16px 0 10px;max-width:10ch" data-i18n="daily.title">Latest market signals. Curated daily.</h1>
+            <p class="p" style="max-width:72ch;font-size:17px" data-i18n="daily.lead">A focused stream of shipping, cement, steel, export and raw-material news that matters to international bulk materials trade.</p>
           </div>
-          <div class="benefits__media" aria-hidden="true">
-            <div class="benefits__canvas" id="molecule3d"></div>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+            <div style="padding:16px;border:1px solid var(--line);border-radius:18px;background:#fff">
+              <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)" data-i18n="daily.stat1k">Focus</div>
+              <div style="margin-top:8px;font-size:18px;font-weight:800" data-i18n="daily.stat1v">Bulk materials</div>
+            </div>
+            <div style="padding:16px;border:1px solid var(--line);border-radius:18px;background:#fff">
+              <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)" data-i18n="daily.stat2k">Update mode</div>
+              <div style="margin-top:8px;font-size:18px;font-weight:800" data-i18n="daily.stat2v">Manual daily curation</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="tds">
-      <div class="container">
-        <h2 class="h2" data-i18n="p.tds">Technical Datasheet</h2>
-        <div class="pdf-pages" id="p-pdf" aria-label="TDS pages"></div>
-        <p class="p footnote" data-i18n="p.disclaimer">
-          Datasheet values are for reference and may vary by batch and shipment conditions. Final acceptance is subject to contract.
-        </p>
+    <section class="section" style="padding-top:10px">
+      <div class="container" style="max-width:1180px">
+        <div id="daily-list" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px"></div>
       </div>
     </section>
   </main>
@@ -119,13 +102,11 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__left">© <span id="year"></span> SENLAN TRADING</div>
-      <div class="footer__right">
-        <a class="link" href="index.html" data-i18n="footer.home">Home</a>
-      </div>
+      <div class="footer__right"><a class="link" href="index.html" data-i18n="footer.home">Home</a></div>
     </div>
   </footer>
 
   <script src="js/nav-mega.js"></script>
-  <script src="product-page.js" type="module"></script>
+  <script src="daily.js"></script>
 </body>
 </html>

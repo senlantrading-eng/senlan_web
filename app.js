@@ -8,6 +8,7 @@ const I18N = {
       changeImages: "Change Images"
     },
     cta: { getQuote: "Get Quote", learnMore: "Learn More" },
+    nav: { daily: "News" },
     brand: {
       title: "Built for consistency.",
       keywords: "Quality · Delivery · Partnership",
@@ -51,6 +52,7 @@ const I18N = {
       changeImages: "更换图片"
     },
     cta: { getQuote: "获取报价", learnMore: "了解更多" },
+    nav: { daily: "每日热点" },
     brand: {
       title: "稳定，才是长期合作的基础。",
       keywords: "品质 · 交付 · 合作",

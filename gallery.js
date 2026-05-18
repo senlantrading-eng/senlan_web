@@ -1,6 +1,6 @@
 const I18N = {
   en: {
-    nav: { products: 'Products', gallery: 'Gallery', contact: 'Contact' },
+    nav: { products: 'Products', daily: 'News', gallery: 'Gallery', contact: 'Contact' },
     cta: { getQuote: 'Get Quote' },
     gallery: { title: 'Gallery', sub: 'A minimal visual overview of products and shipments.' },
     footer: { home: 'Home' },
@@ -11,7 +11,7 @@ const I18N = {
     }
   },
   zh: {
-    nav: { products: '产品', gallery: '画廊', contact: '联系' },
+    nav: { products: '产品', daily: '每日热点', gallery: '画廊', contact: '联系' },
     cta: { getQuote: '获取报价' },
     gallery: { title: '画廊', sub: '以极简方式展示产品与发运场景。' },
     footer: { home: '首页' },

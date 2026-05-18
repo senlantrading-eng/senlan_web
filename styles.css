@@ -514,18 +514,19 @@ a{color:inherit}
 .topbar__nav{
   display:flex;
   align-items:center;
-  gap: 18px;
+  gap: 12px;
 }
 .topbar__link{
   position: relative;
   display:inline-flex;
   align-items:center;
-  height: 40px;
-  padding: 0 10px;
+  height: 36px;
+  padding: 0 8px;
   border-radius: 999px;
   color: rgba(17,24,39,.82);
   text-decoration:none;
-  font-weight: 650;
+  font-weight: 600;
+  font-size: 13px;
   letter-spacing: .01em;
   transition: background .18s ease, color .18s ease;
 }
