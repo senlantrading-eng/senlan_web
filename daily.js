@@ -12,7 +12,7 @@ const I18N = {
       stat2v: 'Manual daily curation',
       source: 'Source',
       tag: 'Category',
-      read: 'Read more'
+      why: 'Why it matters'
     }
   },
   zh: {
@@ -28,7 +28,7 @@ const I18N = {
       stat2v: '手动每日整理',
       source: '来源',
       tag: '分类',
-      read: '查看原文'
+      why: '这意味着什么'
     }
   }
 };
@@ -37,44 +37,56 @@ const NEWS = [
   {
     date: '2026-05-18',
     tag: { en: 'Shipping', zh: '海运' },
+    image: 'img/port-loading-2k.png',
     title: {
-      en: 'Supply constraints and longer-haul demand are supporting dry bulk sentiment.',
-      zh: '运力约束与长航程需求，正在支撑干散货市场情绪。'
+      en: 'Dry bulk sentiment is strengthening as vessel supply stays tight.',
+      zh: '在船舶供给偏紧的背景下，干散货市场情绪正在转强。'
     },
     desc: {
-      en: 'According to Seatrade Maritime coverage, tighter vessel supply and longer-haul trade patterns are helping lift dry bulk market sentiment. For bulk building-material exporters, freight timing and vessel planning remain key decision factors.',
-      zh: '根据 Seatrade Maritime 的报道，更紧张的船舶供给与更长的运输航程，正在推动干散货市场情绪走强。对于大宗建材出口商来说，运价窗口与船期安排仍然是关键决策因素。'
+      en: 'Recent market coverage suggests that tighter vessel supply and longer-haul demand are helping support freight sentiment across dry bulk lanes.',
+      zh: '近期市场信息显示，船舶供给偏紧与更长航程需求，正在为干散货航线的运价情绪提供支撑。'
     },
-    source: 'Seatrade Maritime',
-    url: 'https://www.seatrade-maritime.com/dry-bulk/supply-constraints-and-longer-hauls-boost-dry-bulk-market'
+    why: {
+      en: 'For bulk building-material exporters, freight timing, loading windows and vessel planning remain critical to quote accuracy and shipment reliability.',
+      zh: '对于大宗建材出口商来说，运价窗口、装港时间以及船期安排，仍然直接影响报价准确性与发运可靠性。'
+    },
+    source: 'Seatrade Maritime'
   },
   {
     date: '2026-05-18',
     tag: { en: 'Shipping', zh: '海运' },
+    image: 'img/gbfs-in-use-2k.png',
     title: {
-      en: 'Dry bulk shipping performance is becoming more selective across listed owners.',
-      zh: '上市干散货船东的市场表现分化正在加大。'
+      en: 'Dry bulk performance is becoming more selective across shipping operators.',
+      zh: '干散货市场表现正在出现更明显的航运主体分化。'
     },
     desc: {
-      en: 'MarineLink reports that fewer listed dry bulk owners outperformed the market in 2025, highlighting a more selective operating environment. For cargo buyers, this reinforces the value of stable logistics coordination and reliable loading execution.',
-      zh: 'MarineLink 报道称，2025 年跑赢市场的上市干散货船东数量减少，说明航运经营环境正变得更加分化。对于货主与买家来说，这进一步凸显了稳定物流协调与可靠装港执行的重要性。'
+      en: 'Recent reporting indicates that fewer listed dry bulk owners are outperforming the broader market, pointing to a more selective operating environment.',
+      zh: '最新报道显示，跑赢整体市场的上市干散货船东数量正在减少，这意味着当前航运营商所处的经营环境更具分化特征。'
     },
-    source: 'MarineLink / Vesselindex',
-    url: 'https://www.marinelink.com/news/vesselindex-report-shows-fewer-listed-dry-539022'
+    why: {
+      en: 'For cargo buyers, this means logistics reliability matters more than ever. Stable coordination, documentation and loading execution can be a competitive advantage.',
+      zh: '对于货主和买家而言，这意味着物流稳定性变得更重要。稳定的协调、单证衔接与装港执行，本身就是竞争力。'
+    },
+    source: 'MarineLink / Vesselindex'
   },
   {
     date: '2026-05-18',
     tag: { en: 'Cement', zh: '水泥' },
+    image: 'img/ggbfs-hero-nanobanana-2k.png',
     title: {
-      en: 'Low-carbon cement materials remain a central theme in industry discussions.',
-      zh: '低碳水泥材料仍是当前行业讨论的核心主题。'
+      en: 'Low-carbon cement materials remain central to industry attention.',
+      zh: '低碳水泥材料仍然处于行业关注的核心位置。'
     },
     desc: {
-      en: 'Recent green cement coverage continues to emphasize clinker-efficient and supplementary cementitious material solutions. This supports longer-term interest in materials that improve cement performance while aligning with lower-carbon construction goals.',
-      zh: '近期绿色水泥相关内容持续强调熟料替代效率与补充胶凝材料方案的重要性。这说明，既能改善水泥性能又契合低碳建造目标的材料，仍将在中长期保持市场关注。'
+      en: 'Ongoing green cement discussions continue to highlight clinker-efficient systems and supplementary cementitious materials as long-term industry priorities.',
+      zh: '持续进行的绿色水泥行业讨论，仍在强调高熟料替代效率体系与补充胶凝材料在中长期内的重要性。'
     },
-    source: 'openPR / Green Cement coverage',
-    url: 'https://www.openpr.com/news/4513191/green-cement-manufacturing-plant-dpr-unit-setup-2026-demand'
+    why: {
+      en: 'For producers and traders, materials that improve cement performance while aligning with lower-carbon goals are likely to keep attracting market interest.',
+      zh: '对生产商和贸易商来说，那些既能改善水泥性能、又契合低碳目标的材料，预计仍将持续吸引市场关注。'
+    },
+    source: 'Green cement market coverage'
   }
 ];
 
@@ -98,24 +110,29 @@ function renderNews() {
 
   NEWS.forEach((item, index) => {
     const article = document.createElement('article');
-    article.style.cssText = 'padding:22px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 10px 30px rgba(15,23,42,.05)';
+    article.style.cssText = 'padding:0;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 10px 30px rgba(15,23,42,.05);overflow:hidden';
 
     article.innerHTML = `
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px">
-        <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">${item.date}</div>
-        <div style="padding:7px 10px;border-radius:999px;background:#f3f5f8;border:1px solid var(--line);font-size:12px;color:#111827">${item.tag[state.lang]}</div>
-      </div>
-      <h2 style="margin:0 0 10px;font-size:clamp(22px,3vw,30px);line-height:1.12;letter-spacing:-.03em">${item.title[state.lang]}</h2>
-      <p style="margin:0 0 18px;color:var(--muted);line-height:1.75">${item.desc[state.lang]}</p>
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-        <div style="font-size:13px;color:var(--muted)">${I18N[state.lang].daily.source}: ${item.source}</div>
-        <a href="${item.url}" style="font-size:13px;font-weight:700;color:#0f172a;text-decoration:none">${I18N[state.lang].daily.read} →</a>
+      <div style="display:grid;grid-template-columns:${index === 0 ? '1.05fr .95fr' : '1fr'};gap:0;align-items:stretch">
+        <div style="min-height:${index === 0 ? '360px' : '250px'};background-image:url('${item.image}');background-size:cover;background-position:center"></div>
+        <div style="padding:${index === 0 ? '30px' : '22px'}">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px">
+            <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">${item.date}</div>
+            <div style="padding:7px 10px;border-radius:999px;background:#f3f5f8;border:1px solid var(--line);font-size:12px;color:#111827">${item.tag[state.lang]}</div>
+          </div>
+          <h2 style="margin:0 0 10px;font-size:clamp(22px,3vw,30px);line-height:1.12;letter-spacing:-.03em">${item.title[state.lang]}</h2>
+          <p style="margin:0 0 16px;color:var(--muted);line-height:1.75">${item.desc[state.lang]}</p>
+          <div style="margin:0 0 18px;padding:14px 16px;border-radius:16px;background:#f8fafc;border:1px solid var(--line)">
+            <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">${I18N[state.lang].daily.why}</div>
+            <div style="line-height:1.75;color:#111827">${item.why[state.lang]}</div>
+          </div>
+          <div style="font-size:13px;color:var(--muted)">${I18N[state.lang].daily.source}: ${item.source}</div>
+        </div>
       </div>
     `;
 
     if (index === 0) {
       article.style.gridColumn = '1 / -1';
-      article.style.padding = '28px';
     }
 
     wrap.appendChild(article);
