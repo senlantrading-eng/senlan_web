@@ -1,0 +1,192 @@
+window.DAILY_POSTS = [
+  {
+    id: '2026-05-19-low-carbon-cement-momentum',
+    date: '2026-05-19',
+    cover: 'img/news-lowcarbon-lead-2026-05-19.png',
+    coverAlt: {
+      en: 'Low-carbon cement materials editorial visual',
+      zh: '低碳水泥材料主题视觉图'
+    },
+    title: {
+      en: 'Why Low-Carbon Cement Materials Are Staying at the Center of Industry Attention',
+      zh: '低碳水泥材料为什么还在持续成为行业焦点'
+    },
+    excerpt: {
+      en: 'From industry conferences to technical discussion, the message remains consistent: clinker reduction and supplementary cementitious materials are staying central to the cement sector’s next phase.',
+      zh: '从行业会议到技术讨论，一个信号正在持续被重复：熟料减量与补充胶凝材料，仍然处于水泥行业下一阶段转型的中心位置。'
+    },
+    blocks: [
+      {
+        type: 'paragraph',
+        en: 'Low-carbon cement is no longer a side conversation. Across conferences, market commentary and technical reporting, the direction is becoming more visible: the industry continues to look for practical ways to lower clinker intensity while maintaining performance, scalability and commercial viability. That is exactly why supplementary cementitious materials remain highly relevant.',
+        zh: '低碳水泥已经不再是边缘话题。无论是在行业会议、市场讨论还是技术报道中，一个方向都变得越来越清晰：行业仍在持续寻找降低熟料强度、同时保持性能、规模化能力与商业可行性的现实路径。这正是补充胶凝材料持续保持高相关性的原因。'
+      },
+      {
+        type: 'image',
+        src: 'img/news-lowcarbon-lead-2026-05-19.png',
+        alt: {
+          en: 'Low-carbon cement materials lead image',
+          zh: '低碳水泥材料封面图'
+        },
+        caption: {
+          en: 'Low-carbon cement themes continue to move from concept to execution.',
+          zh: '低碳水泥议题正持续从概念讨论走向实际落地。'
+        }
+      },
+      {
+        type: 'heading',
+        en: '1. Industry attention is still intensifying, not fading',
+        zh: '1. 行业关注并没有降温，反而仍在加深'
+      },
+      {
+        type: 'paragraph',
+        en: 'Recent event coverage around green cement and decarbonisation shows that producers, technology providers and market participants are still investing attention in this area. That matters because sustained attention usually indicates more than passing rhetoric. It suggests that lower-carbon cement systems are continuing to influence procurement priorities, technical evaluation and product positioning across the industry.',
+        zh: '近期围绕绿色水泥与脱碳主题的活动和报道表明，生产商、技术提供方以及市场参与者仍在持续投入关注。这一点很重要，因为持续性的关注通常并不只是短期口号，而意味着更低碳的水泥体系正在继续影响行业中的采购优先级、技术评估标准以及产品定位方式。'
+      },
+      {
+        type: 'image',
+        src: 'img/news-green-cement-conference-2026-05-19.png',
+        alt: {
+          en: 'Green cement industry momentum image',
+          zh: '绿色水泥行业动向配图'
+        },
+        caption: {
+          en: 'Conferences and industry discussion continue to reinforce the low-carbon cement agenda.',
+          zh: '行业会议与讨论仍在不断强化低碳水泥议题。'
+        }
+      },
+      {
+        type: 'heading',
+        en: '2. Clinker reduction remains one of the most practical levers',
+        zh: '2. 熟料减量仍然是最现实的关键抓手之一'
+      },
+      {
+        type: 'paragraph',
+        en: 'Many low-carbon pathways are being discussed, but clinker reduction remains one of the clearest and most commercially understandable. The reason is simple: it links directly to emissions intensity, production design and material formulation. That keeps materials such as slag-based supplementary cementitious materials in the center of long-term technical and market conversations.',
+        zh: '低碳路径有很多，但熟料减量仍然是其中最清晰、也最具商业可理解性的方向之一。原因很简单：它直接连接了排放强度、生产体系以及材料配方设计。这也使得矿渣类补充胶凝材料持续处于长期技术和市场讨论的核心位置。'
+      },
+      {
+        type: 'heading',
+        en: '3. For suppliers, the story is now about relevance and readiness',
+        zh: '3. 对供应商来说，关键已经变成相关性与准备度'
+      },
+      {
+        type: 'paragraph',
+        en: 'For producers, traders and exporters, the takeaway is not only that low-carbon cement matters, but that buyers increasingly expect materials to fit into a broader performance-and-carbon narrative. That means product consistency, application clarity and technical positioning all become more important. It is no longer enough to offer material alone; the market increasingly values how that material supports a lower-carbon cement system.',
+        zh: '对于生产商、贸易商和出口商来说，真正的结论不只是低碳水泥很重要，而是买家越来越希望材料能够嵌入一个更完整的“性能 + 碳减排”叙事之中。这意味着产品稳定性、应用场景清晰度以及技术定位都会变得更重要。市场正在越来越重视的，不只是你提供什么材料，而是这种材料如何支撑一个更低碳的水泥体系。'
+      },
+      {
+        type: 'image',
+        src: 'img/news-scm-materials-2026-05-19.png',
+        alt: {
+          en: 'Supplementary cementitious materials visual',
+          zh: '补充胶凝材料视觉图'
+        },
+        caption: {
+          en: 'Material relevance increasingly depends on both technical value and carbon positioning.',
+          zh: '材料的市场相关性，正越来越取决于技术价值与低碳定位的结合。'
+        }
+      },
+      {
+        type: 'paragraph',
+        en: 'In short, low-carbon cement materials are staying central because they address a practical industry need rather than a symbolic one. As long as cement producers continue to balance cost, performance and emissions, supplementary cementitious materials are likely to remain part of the core conversation.',
+        zh: '简而言之，低碳水泥材料之所以持续处于中心位置，是因为它们回应的是行业的现实需求，而不是象征性议题。只要水泥生产商仍需要在成本、性能与排放之间持续平衡，补充胶凝材料就很可能继续留在核心讨论之中。'
+      }
+    ]
+  },
+  {
+    id: '2026-05-18-market-brief',
+    date: '2026-05-18',
+    cover: 'img/news-drybulk-port-2026-05-19.png',
+    coverAlt: {
+      en: 'Bulk vessel and port loading scene',
+      zh: '散货船与港口装载场景'
+    },
+    title: {
+      en: 'Dry Bulk Tightens, Low-Carbon Materials Rise: What Matters This Week',
+      zh: '运价收紧、低碳材料升温：本周建材出口最值得关注的信号'
+    },
+    excerpt: {
+      en: 'Freight discipline, operator selectivity and low-carbon cement material demand are shaping this week’s most relevant signals for bulk building-material exporters.',
+      zh: '本周对大宗建材出口最重要的三个信号，来自运价纪律、航运主体分化，以及低碳水泥材料需求的持续升温。'
+    },
+    blocks: [
+      {
+        type: 'paragraph',
+        en: 'This week’s market tone is being shaped by two clear forces: freight conditions remain sensitive across dry bulk lanes, while low-carbon cement materials continue to gain attention in industry discussions. For exporters of GGBFS, GBFS, clinker and related materials, these signals are practical rather than abstract — they affect quoting rhythm, shipment planning and customer conversation directly.',
+        zh: '本周的市场氛围主要由两个清晰力量驱动：一方面，干散货航线的运价条件依旧敏感；另一方面，低碳水泥材料在行业讨论中的关注度持续提升。对于 GGBFS、GBFS、熟料及相关材料的出口商来说，这些信号并不抽象，而是会直接影响报价节奏、发运安排与客户沟通。'
+      },
+      {
+        type: 'image',
+        src: 'img/news-drybulk-port-2026-05-19.png',
+        alt: {
+          en: 'Port loading scene for bulk materials',
+          zh: '大宗物料港口装载场景'
+        },
+        caption: {
+          en: 'Freight timing and vessel planning remain central to shipment execution.',
+          zh: '运价窗口与船期安排，仍然是发运执行的核心。'
+        }
+      },
+      {
+        type: 'heading',
+        en: '1. Freight discipline is back at the center of execution',
+        zh: '1. 运价纪律重新回到执行层面的中心位置'
+      },
+      {
+        type: 'paragraph',
+        en: 'Recent market coverage suggests that tighter vessel supply and longer-haul demand are supporting dry bulk sentiment. Even when buyers remain price-sensitive, logistics discipline can reshape the final commercial outcome. For suppliers, that means freight timing, berth coordination and loading-window control remain as important as the product quote itself.',
+        zh: '近期市场信息显示，船舶供给偏紧以及更长航程需求，正在支撑干散货市场情绪。即使买家仍然对价格敏感，物流纪律本身也会重新塑造最终的成交结果。对供应商来说，这意味着运价窗口、泊位协调与装港时间控制的重要性，并不亚于产品报价本身。'
+      },
+      {
+        type: 'heading',
+        en: '2. Market performance is becoming more selective',
+        zh: '2. 市场表现正在出现更明显的分化'
+      },
+      {
+        type: 'paragraph',
+        en: 'Shipping performance is no longer moving in one direction for all operators. Some players continue to perform steadily, while others struggle in a more selective environment. For cargo buyers and exporters, this reinforces a simple point: stable documentation, predictable loading execution and communication clarity can become real competitive advantages when the market is less forgiving.',
+        zh: '当前航运市场的表现，已经不再是所有参与者同向波动。一部分主体仍然维持稳定表现，另一部分则在更具选择性的环境中承压。对于货主和出口商来说，这再次说明一个简单但重要的事实：当市场容错率下降时，稳定的单证衔接、可预测的装港执行与清晰的沟通能力，本身就会成为真正的竞争优势。'
+      },
+      {
+        type: 'image',
+        src: 'img/news-logistics-execution-2026-05-19.png',
+        alt: {
+          en: 'Bulk material loading and movement scene',
+          zh: '散装物料装运与转运场景'
+        },
+        caption: {
+          en: 'Reliable loading execution matters more in a selective market.',
+          zh: '在更分化的市场里，稳定执行比以往更重要。'
+        }
+      },
+      {
+        type: 'heading',
+        en: '3. Low-carbon cement materials remain a long-term theme',
+        zh: '3. 低碳水泥材料仍然是中长期主线'
+      },
+      {
+        type: 'paragraph',
+        en: 'Green cement discussions continue to highlight clinker-efficient systems and supplementary cementitious materials. That does not mean every buyer will move at the same speed, but it does suggest that the broader direction remains intact. Materials that improve cement performance while aligning with lower-carbon targets are likely to stay relevant in both technical and commercial conversations.',
+        zh: '绿色水泥相关讨论仍在持续强调高熟料替代效率体系与补充胶凝材料的重要性。这并不意味着所有买家都会以同样速度推进，但它确实说明，大方向并没有改变。那些既能改善水泥性能、又能契合更低碳目标的材料，仍然会在技术与商务层面保持相关性。'
+      },
+      {
+        type: 'image',
+        src: 'img/news-lowcarbon-materials-2026-05-19.png',
+        alt: {
+          en: 'GGBFS material visual',
+          zh: 'GGBFS 材料视觉图'
+        },
+        caption: {
+          en: 'Performance and lower-carbon positioning continue to support market interest.',
+          zh: '性能价值与低碳定位，仍在持续支撑市场关注。'
+        }
+      },
+      {
+        type: 'paragraph',
+        en: 'For this week, the takeaway is simple: freight execution, logistics stability and material positioning are increasingly connected. The companies that present these together — not as separate issues, but as one integrated supply story — are more likely to stand out.',
+        zh: '对本周而言，结论很简单：运价执行、物流稳定性与材料定位正在变得越来越紧密相关。那些能够把这三者作为一个完整供应故事来呈现，而不是分散问题分别处理的公司，更有可能脱颖而出。'
+      }
+    ]
+  }
+];
