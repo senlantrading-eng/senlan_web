@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://senlantrading-eng.github.io/senlan_web/sitemap.xml
+Sitemap: https://senlantrading.org/sitemap.xml

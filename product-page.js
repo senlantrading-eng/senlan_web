@@ -83,7 +83,7 @@ const I18N = {
   }
 };
 
-const SITE_URL = 'https://senlantrading-eng.github.io/senlan_web/';
+const SITE_URL = 'https://senlantrading.org/';
 
 const DATA = {
   ggbfs: {
