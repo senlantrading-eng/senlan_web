@@ -85,7 +85,7 @@ const I18N = {
 
 const DATA = {
   ggbfs: {
-    bg: 'img/ggbfs-hero-nanobanana-2k.png',
+    bg: 'img/ggbfs-hero-nanobanana-2k_compressed.png',
     headline: {
       en: 'Built for durability and long-term performance.',
       zh: '专为耐用性和长期性能而设计'
@@ -100,8 +100,8 @@ const DATA = {
     },
     // pages generated from the latest PDF ("(1)" version)
     tdsPages: [
-      'img/tds/ggbfs-tds-1.png',
-      'img/tds/ggbfs-tds-2.png'
+      'img/tds/ggbfs-tds-1_compressed.png',
+      'img/tds/ggbfs-tds-2_compressed.png'
     ],
     highlights: [
       { k: 'grade', v: 'S95' },
@@ -131,11 +131,11 @@ const DATA = {
         '混凝土颜色更浅，表观质量更佳'
       ]
     },
-    benefitImage: 'img/ggbfs-hero-nanobanana-2k.png'
+    benefitImage: 'img/ggbfs-hero-nanobanana-2k_compressed.png'
   },
 
   gbfs: {
-    bg: 'img/gbfs-hero-nanobanana-1k-v2.png',
+    bg: 'img/gbfs-hero-nanobanana-1k-v2_compressed.png',
     headline: {
       en: 'More Than Just Slag — A Reliable Material for Modern Construction',
       zh: '不止是矿渣——面向现代建设的可靠材料'
@@ -150,8 +150,8 @@ const DATA = {
     },
     // pages generated from the latest PDF ("(1)" version)
     tdsPages: [
-      'img/tds/gbfs-tds-1.png',
-      'img/tds/gbfs-tds-2.png'
+      'img/tds/gbfs-tds-1_compressed.png',
+      'img/tds/gbfs-tds-2_compressed.png'
     ],
     highlights: [
       { k: 'glass', v: '98.1 %' },
@@ -169,11 +169,11 @@ const DATA = {
         '多元工业应用：GBFS 可进一步加工为矿渣粉（高性能建筑外加材料）或用于生产矿棉保温材料；同时适用于道路基层填筑、制砖，以及作为玻璃陶瓷生产的补充原料等。'
       ]
     },
-    benefitImage: 'img/gbfs-in-use-2k.png'
+    benefitImage: 'img/gbfs-in-use-2k_compressed.png'
   },
 
   highcalcium: {
-    bg: 'img/highcalcium-grades-hero-nanobanana-2k-v2.png',
+    bg: 'img/highcalcium-grades-hero-nanobanana-2k-v2_compressed.png',
     headline: {
       en: 'High-calcium limestone for industrial applications.',
       zh: '高钙石/高钙石灰石，用于工业应用'
@@ -184,16 +184,16 @@ const DATA = {
     },
     lead2: { en: '', zh: '' },
     tdsPages: [
-      'img/tds/highcalcium-tds-1.png',
-      'img/tds/highcalcium-tds-2.png'
+      'img/tds/highcalcium-tds-1_compressed.png',
+      'img/tds/highcalcium-tds-2_compressed.png'
     ],
     highlights: [],
     benefits: { en: [], zh: [] },
-    benefitImage: 'img/highcalcium-detail-singlegrade-nanobanana-2k.png'
+    benefitImage: 'img/highcalcium-detail-singlegrade-nanobanana-2k_compressed.png'
   },
 
   clinker: {
-    bg: 'img/clinker-hero-nanobanana-2k.png',
+    bg: 'img/clinker-hero-nanobanana-2k_compressed.png',
     headline: {
       en: 'Cement clinker for global supply.',
       zh: '水泥熟料 · 面向全球供应'
@@ -204,12 +204,12 @@ const DATA = {
     },
     lead2: { en: '', zh: '' },
     tdsPages: [
-      'img/tds/clinker-tds-1.png',
-      'img/tds/clinker-tds-2.png'
+      'img/tds/clinker-tds-1_compressed.png',
+      'img/tds/clinker-tds-2_compressed.png'
     ],
     highlights: [],
     benefits: { en: [], zh: [] },
-    benefitImage: 'img/clinker-product-nanobanana-2k.png'
+    benefitImage: 'img/clinker-product-nanobanana-2k_compressed.png'
   }
 };
 

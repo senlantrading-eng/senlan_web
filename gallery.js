@@ -27,8 +27,8 @@ let state = { lang: 'en' };
 
 const items = [
   { key: 'port', src: null },
-  { key: 'ggbfs', src: 'img/ggbfs-hero-nanobanana-2k.png' },
-  { key: 'gbfs', src: 'img/gbfs-hero-nanobanana-1k-v2.png' },
+  { key: 'ggbfs', src: 'img/ggbfs-hero-nanobanana-2k_compressed.png' },
+  { key: 'gbfs', src: 'img/gbfs-hero-nanobanana-1k-v2_compressed.png' },
   { key: 'port', src: null },
   { key: 'port', src: null }
 ];
