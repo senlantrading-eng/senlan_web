@@ -2,7 +2,7 @@ window.DAILY_POSTS = [
   {
     id: '2026-05-20-cement-clinker-scm-price-signals',
     date: '2026-05-20',
-    cover: 'img/news-price-coverage-lead-2026-05-20_compressed.jpg',
+    cover: 'img/news-price-coverage-lead-2026-05-20_compressed.webp',
     coverAlt: {
       en: 'Editorial visual of bulk materials trade and pricing transparency',
       zh: '大宗建材贸易与价格透明度主题视觉图'
@@ -23,7 +23,7 @@ window.DAILY_POSTS = [
       },
       {
         type: 'image',
-        src: 'img/news-price-coverage-lead-2026-05-20_compressed.jpg',
+        src: 'img/news-price-coverage-lead-2026-05-20_compressed.webp',
         alt: {
           en: 'Bulk materials trade and price transparency lead image',
           zh: '大宗建材贸易与价格透明度封面图'
@@ -45,7 +45,7 @@ window.DAILY_POSTS = [
       },
       {
         type: 'image',
-        src: 'img/news-price-coverage-port-2026-05-20_compressed.jpg',
+        src: 'img/news-price-coverage-port-2026-05-20_compressed.webp',
         alt: {
           en: 'Bulk port execution and freight scene',
           zh: '散货港口执行与海运场景图'
@@ -77,7 +77,7 @@ window.DAILY_POSTS = [
       },
       {
         type: 'image',
-        src: 'img/news-price-coverage-materials-2026-05-20_compressed.jpg',
+        src: 'img/news-price-coverage-materials-2026-05-20_compressed.webp',
         alt: {
           en: 'Industrial materials and SCM detail image',
           zh: '工业材料与 SCM 细节图'
@@ -97,7 +97,7 @@ window.DAILY_POSTS = [
   {
     id: '2026-05-19-low-carbon-cement-momentum',
     date: '2026-05-19',
-    cover: 'img/news-lowcarbon-lead-2026-05-19_compressed.png',
+    cover: 'img/news-lowcarbon-lead-2026-05-19_compressed.webp',
     coverAlt: {
       en: 'Low-carbon cement materials editorial visual',
       zh: '低碳水泥材料主题视觉图'
@@ -118,7 +118,7 @@ window.DAILY_POSTS = [
       },
       {
         type: 'image',
-        src: 'img/news-lowcarbon-lead-2026-05-19_compressed.png',
+        src: 'img/news-lowcarbon-lead-2026-05-19_compressed.webp',
         alt: {
           en: 'Low-carbon cement materials lead image',
           zh: '低碳水泥材料封面图'
@@ -140,7 +140,7 @@ window.DAILY_POSTS = [
       },
       {
         type: 'image',
-        src: 'img/news-green-cement-conference-2026-05-19_compressed.png',
+        src: 'img/news-green-cement-conference-2026-05-19_compressed.webp',
         alt: {
           en: 'Green cement industry momentum image',
           zh: '绿色水泥行业动向配图'
@@ -172,7 +172,7 @@ window.DAILY_POSTS = [
       },
       {
         type: 'image',
-        src: 'img/news-scm-materials-2026-05-19_compressed.png',
+        src: 'img/news-scm-materials-2026-05-19_compressed.webp',
         alt: {
           en: 'Supplementary cementitious materials visual',
           zh: '补充胶凝材料视觉图'
@@ -192,7 +192,7 @@ window.DAILY_POSTS = [
   {
     id: '2026-05-18-market-brief',
     date: '2026-05-18',
-    cover: 'img/news-drybulk-port-2026-05-19_compressed.png',
+    cover: 'img/news-drybulk-port-2026-05-19_compressed.webp',
     coverAlt: {
       en: 'Bulk vessel and port loading scene',
       zh: '散货船与港口装载场景'
@@ -213,7 +213,7 @@ window.DAILY_POSTS = [
       },
       {
         type: 'image',
-        src: 'img/news-drybulk-port-2026-05-19_compressed.png',
+        src: 'img/news-drybulk-port-2026-05-19_compressed.webp',
         alt: {
           en: 'Port loading scene for bulk materials',
           zh: '大宗物料港口装载场景'
@@ -245,7 +245,7 @@ window.DAILY_POSTS = [
       },
       {
         type: 'image',
-        src: 'img/news-logistics-execution-2026-05-19_compressed.png',
+        src: 'img/news-logistics-execution-2026-05-19_compressed.webp',
         alt: {
           en: 'Bulk material loading and movement scene',
           zh: '散装物料装运与转运场景'
@@ -267,7 +267,7 @@ window.DAILY_POSTS = [
       },
       {
         type: 'image',
-        src: 'img/news-lowcarbon-materials-2026-05-19_compressed.png',
+        src: 'img/news-lowcarbon-materials-2026-05-19_compressed.webp',
         alt: {
           en: 'GGBFS material visual',
           zh: 'GGBFS 材料视觉图'

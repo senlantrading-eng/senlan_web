@@ -11,6 +11,8 @@ const I18N = {
   }
 };
 
+const SITE_URL = 'https://senlantrading-eng.github.io/senlan_web/';
+
 let state = { lang: 'en' };
 
 function get(obj, path) {
@@ -36,6 +38,107 @@ function renderPost() {
   if (!post) return;
 
   document.title = `${post.title[state.lang]} | SENLAN TRADING`;
+  const canonicalHref = `${SITE_URL}daily-post.html?id=${encodeURIComponent(post.id)}`;
+
+  let metaDesc = document.querySelector('meta[name="description"]');
+  if (!metaDesc) {
+    metaDesc = document.createElement('meta');
+    metaDesc.setAttribute('name', 'description');
+    document.head.appendChild(metaDesc);
+  }
+  metaDesc.setAttribute('content', post.excerpt[state.lang]);
+
+  let canonical = document.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement('link');
+    canonical.setAttribute('rel', 'canonical');
+    document.head.appendChild(canonical);
+  }
+  canonical.setAttribute('href', canonicalHref);
+
+  let ogt = document.querySelector('meta[property="og:title"]');
+  if (!ogt) {
+    ogt = document.createElement('meta');
+    ogt.setAttribute('property', 'og:title');
+    document.head.appendChild(ogt);
+  }
+  ogt.setAttribute('content', `${post.title[state.lang]} | SENLAN TRADING`);
+
+  let ogd = document.querySelector('meta[property="og:description"]');
+  if (!ogd) {
+    ogd = document.createElement('meta');
+    ogd.setAttribute('property', 'og:description');
+    document.head.appendChild(ogd);
+  }
+  ogd.setAttribute('content', post.excerpt[state.lang]);
+
+  let ogu = document.querySelector('meta[property="og:url"]');
+  if (!ogu) {
+    ogu = document.createElement('meta');
+    ogu.setAttribute('property', 'og:url');
+    document.head.appendChild(ogu);
+  }
+  ogu.setAttribute('content', canonicalHref);
+
+  let ogi = document.querySelector('meta[property="og:image"]');
+  if (!ogi) {
+    ogi = document.createElement('meta');
+    ogi.setAttribute('property', 'og:image');
+    document.head.appendChild(ogi);
+  }
+  ogi.setAttribute('content', new URL(post.cover, SITE_URL).href);
+
+  let twTitle = document.querySelector('meta[name="twitter:title"]');
+  if (!twTitle) {
+    twTitle = document.createElement('meta');
+    twTitle.setAttribute('name', 'twitter:title');
+    document.head.appendChild(twTitle);
+  }
+  twTitle.setAttribute('content', `${post.title[state.lang]} | SENLAN TRADING`);
+
+  let twDesc = document.querySelector('meta[name="twitter:description"]');
+  if (!twDesc) {
+    twDesc = document.createElement('meta');
+    twDesc.setAttribute('name', 'twitter:description');
+    document.head.appendChild(twDesc);
+  }
+  twDesc.setAttribute('content', post.excerpt[state.lang]);
+
+  let twImage = document.querySelector('meta[name="twitter:image"]');
+  if (!twImage) {
+    twImage = document.createElement('meta');
+    twImage.setAttribute('name', 'twitter:image');
+    document.head.appendChild(twImage);
+  }
+  twImage.setAttribute('content', new URL(post.cover, SITE_URL).href);
+
+  let schemaScript = document.getElementById('article-schema');
+  if (!schemaScript) {
+    schemaScript = document.createElement('script');
+    schemaScript.type = 'application/ld+json';
+    schemaScript.id = 'article-schema';
+    document.head.appendChild(schemaScript);
+  }
+  schemaScript.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title.en,
+    alternativeHeadline: post.title.zh,
+    description: post.excerpt.en,
+    inLanguage: ['en', 'zh-CN'],
+    image: [new URL(post.cover, SITE_URL).href],
+    datePublished: post.date,
+    dateModified: post.date,
+    mainEntityOfPage: canonicalHref,
+    author: {
+      '@type': 'Organization',
+      name: 'SENLAN TRADING'
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'SENLAN TRADING'
+    }
+  });
 
   const posts = window.DAILY_POSTS || [];
   const latestPosts = posts

@@ -83,9 +83,11 @@ const I18N = {
   }
 };
 
+const SITE_URL = 'https://senlantrading-eng.github.io/senlan_web/';
+
 const DATA = {
   ggbfs: {
-    bg: 'img/ggbfs-hero-nanobanana-2k_compressed.png',
+    bg: 'img/ggbfs-hero-nanobanana-2k_compressed.webp',
     headline: {
       en: 'Built for durability and long-term performance.',
       zh: '专为耐用性和长期性能而设计'
@@ -100,8 +102,8 @@ const DATA = {
     },
     // pages generated from the latest PDF ("(1)" version)
     tdsPages: [
-      'img/tds/ggbfs-tds-1_compressed.png',
-      'img/tds/ggbfs-tds-2_compressed.png'
+      'img/tds/ggbfs-tds-1_compressed.webp',
+      'img/tds/ggbfs-tds-2_compressed.webp'
     ],
     highlights: [
       { k: 'grade', v: 'S95' },
@@ -131,11 +133,11 @@ const DATA = {
         '混凝土颜色更浅，表观质量更佳'
       ]
     },
-    benefitImage: 'img/ggbfs-hero-nanobanana-2k_compressed.png'
+    benefitImage: 'img/ggbfs-hero-nanobanana-2k_compressed.webp'
   },
 
   gbfs: {
-    bg: 'img/gbfs-hero-nanobanana-1k-v2_compressed.png',
+    bg: 'img/gbfs-hero-nanobanana-1k-v2_compressed.webp',
     headline: {
       en: 'More Than Just Slag — A Reliable Material for Modern Construction',
       zh: '不止是矿渣——面向现代建设的可靠材料'
@@ -150,8 +152,8 @@ const DATA = {
     },
     // pages generated from the latest PDF ("(1)" version)
     tdsPages: [
-      'img/tds/gbfs-tds-1_compressed.png',
-      'img/tds/gbfs-tds-2_compressed.png'
+      'img/tds/gbfs-tds-1_compressed.webp',
+      'img/tds/gbfs-tds-2_compressed.webp'
     ],
     highlights: [
       { k: 'glass', v: '98.1 %' },
@@ -169,11 +171,11 @@ const DATA = {
         '多元工业应用：GBFS 可进一步加工为矿渣粉（高性能建筑外加材料）或用于生产矿棉保温材料；同时适用于道路基层填筑、制砖，以及作为玻璃陶瓷生产的补充原料等。'
       ]
     },
-    benefitImage: 'img/gbfs-in-use-2k_compressed.png'
+    benefitImage: 'img/gbfs-in-use-2k_compressed.webp'
   },
 
   highcalcium: {
-    bg: 'img/highcalcium-grades-hero-nanobanana-2k-v2_compressed.png',
+    bg: 'img/highcalcium-grades-hero-nanobanana-2k-v2_compressed.webp',
     headline: {
       en: 'High-calcium limestone for industrial applications.',
       zh: '高钙石/高钙石灰石，用于工业应用'
@@ -184,16 +186,16 @@ const DATA = {
     },
     lead2: { en: '', zh: '' },
     tdsPages: [
-      'img/tds/highcalcium-tds-1_compressed.png',
-      'img/tds/highcalcium-tds-2_compressed.png'
+      'img/tds/highcalcium-tds-1_compressed.webp',
+      'img/tds/highcalcium-tds-2_compressed.webp'
     ],
     highlights: [],
     benefits: { en: [], zh: [] },
-    benefitImage: 'img/highcalcium-detail-singlegrade-nanobanana-2k_compressed.png'
+    benefitImage: 'img/highcalcium-detail-singlegrade-nanobanana-2k_compressed.webp'
   },
 
   clinker: {
-    bg: 'img/clinker-hero-nanobanana-2k_compressed.png',
+    bg: 'img/clinker-hero-nanobanana-2k_compressed.webp',
     headline: {
       en: 'Cement clinker for global supply.',
       zh: '水泥熟料 · 面向全球供应'
@@ -204,12 +206,12 @@ const DATA = {
     },
     lead2: { en: '', zh: '' },
     tdsPages: [
-      'img/tds/clinker-tds-1_compressed.png',
-      'img/tds/clinker-tds-2_compressed.png'
+      'img/tds/clinker-tds-1_compressed.webp',
+      'img/tds/clinker-tds-2_compressed.webp'
     ],
     highlights: [],
     benefits: { en: [], zh: [] },
-    benefitImage: 'img/clinker-product-nanobanana-2k_compressed.png'
+    benefitImage: 'img/clinker-product-nanobanana-2k_compressed.webp'
   }
 };
 
@@ -280,6 +282,80 @@ function render() {
       document.head.appendChild(ogd);
     }
     ogd.setAttribute('content', s.desc);
+
+    const canonicalHref = `${SITE_URL}product.html?p=${encodeURIComponent(state.product)}`;
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', canonicalHref);
+
+    let ogu = document.querySelector('meta[property="og:url"]');
+    if (!ogu) {
+      ogu = document.createElement('meta');
+      ogu.setAttribute('property', 'og:url');
+      document.head.appendChild(ogu);
+    }
+    ogu.setAttribute('content', canonicalHref);
+
+    let ogi = document.querySelector('meta[property="og:image"]');
+    if (!ogi) {
+      ogi = document.createElement('meta');
+      ogi.setAttribute('property', 'og:image');
+      document.head.appendChild(ogi);
+    }
+    ogi.setAttribute('content', new URL(p.bg, SITE_URL).href);
+
+    let twTitle = document.querySelector('meta[name="twitter:title"]');
+    if (!twTitle) {
+      twTitle = document.createElement('meta');
+      twTitle.setAttribute('name', 'twitter:title');
+      document.head.appendChild(twTitle);
+    }
+    twTitle.setAttribute('content', s.title);
+
+    let twDesc = document.querySelector('meta[name="twitter:description"]');
+    if (!twDesc) {
+      twDesc = document.createElement('meta');
+      twDesc.setAttribute('name', 'twitter:description');
+      document.head.appendChild(twDesc);
+    }
+    twDesc.setAttribute('content', s.desc);
+
+    let twImage = document.querySelector('meta[name="twitter:image"]');
+    if (!twImage) {
+      twImage = document.createElement('meta');
+      twImage.setAttribute('name', 'twitter:image');
+      document.head.appendChild(twImage);
+    }
+    twImage.setAttribute('content', new URL(p.bg, SITE_URL).href);
+
+    let schemaScript = document.getElementById('product-schema');
+    if (!schemaScript) {
+      schemaScript = document.createElement('script');
+      schemaScript.type = 'application/ld+json';
+      schemaScript.id = 'product-schema';
+      document.head.appendChild(schemaScript);
+    }
+    schemaScript.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: s.title.replace(' | SENLAN TRADING', ''),
+      description: s.desc,
+      image: [new URL(p.bg, SITE_URL).href],
+      brand: {
+        '@type': 'Organization',
+        name: 'SENLAN TRADING'
+      },
+      manufacturer: {
+        '@type': 'Organization',
+        name: 'SENLAN TRADING'
+      },
+      url: canonicalHref,
+      category: 'Construction Materials'
+    });
   }
   // background
   document.getElementById('p-bg').style.backgroundImage = `url('${p.bg}')`;

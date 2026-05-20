@@ -27,8 +27,8 @@ let state = { lang: 'en' };
 
 const items = [
   { key: 'port', src: null },
-  { key: 'ggbfs', src: 'img/ggbfs-hero-nanobanana-2k_compressed.png' },
-  { key: 'gbfs', src: 'img/gbfs-hero-nanobanana-1k-v2_compressed.png' },
+  { key: 'ggbfs', src: 'img/ggbfs-hero-nanobanana-2k_compressed.webp' },
+  { key: 'gbfs', src: 'img/gbfs-hero-nanobanana-1k-v2_compressed.webp' },
   { key: 'port', src: null },
   { key: 'port', src: null }
 ];
@@ -59,6 +59,7 @@ function buildGallery(){
     const img = document.createElement('img');
     img.className = 'tile__img';
     img.loading = 'lazy';
+    img.alt = `${meta.title} - ${meta.desc}`;
 
     if (it.src) {
       img.src = it.src;

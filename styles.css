@@ -97,20 +97,20 @@ a{color:inherit}
 /* Hero images (2K)
    Note: If slide 1 still appears dark on some screens, it's usually due to overlay.
 */
-.hero__slide[data-slide="1"]{background-image:url("img/highcalcium-grades-hero-nanobanana-2k-v2_compressed.png")}
+.hero__slide[data-slide="1"]{background-image:url("img/highcalcium-grades-hero-nanobanana-2k-v2_compressed.webp")}
 .hero__slide[data-slide="1"]{background-position:center 56%}
 
-.hero__slide[data-slide="2"]{background-image:url("img/ggbfs-hero-nanobanana-2k_compressed.png")}
+.hero__slide[data-slide="2"]{background-image:url("img/ggbfs-hero-nanobanana-2k_compressed.webp")}
 .hero__slide[data-slide="2"]{background-position:center 56%}
 
-.hero__slide[data-slide="3"]{background-image:url("img/gbfs-hero-nanobanana-1k-v2_compressed.png")}
-.hero__slide[data-slide="4"]{background-image:url("img/clinker-hero-nanobanana-2k_compressed.png")}
+.hero__slide[data-slide="3"]{background-image:url("img/gbfs-hero-nanobanana-1k-v2_compressed.webp")}
+.hero__slide[data-slide="4"]{background-image:url("img/clinker-hero-nanobanana-2k_compressed.webp")}
 .hero__slide[data-slide="3"]{background-position:center 58%}
 
 .hero__slide[data-slide="4"]{background-position:center 58%}
 
 /* If you want Slide 1 to be the same as Gallery (product visual), swap like below:
-   /* .hero__slide[data-slide="1"]{background-image:url("img/gbfs-granules-2k_compressed.png")} */
+   /* .hero__slide[data-slide="1"]{background-image:url("img/gbfs-granules-2k_compressed.webp")} */
 */
 
 .hero__header{
@@ -912,7 +912,7 @@ a{color:inherit}
   overflow:hidden;
   background-image:
     linear-gradient(135deg, rgba(11,16,32,.35), rgba(11,16,32,.12) 45%, rgba(11,16,32,.40)),
-    url('img/footprint-banner-2k_compressed.png');
+    url('img/footprint-banner-2k_compressed.webp');
   background-size: cover;
   background-position: center;
 }
