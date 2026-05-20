@@ -37,7 +37,7 @@ const NEWS = [
   {
     date: '2026-05-18',
     tag: { en: 'Shipping', zh: '海运' },
-    image: 'img/port-loading-2k_compressed.png',
+    image: 'img/port-loading-2k_compressed.webp',
     title: {
       en: 'Dry bulk sentiment is strengthening as vessel supply stays tight.',
       zh: '在船舶供给偏紧的背景下，干散货市场情绪正在转强。'
@@ -55,7 +55,7 @@ const NEWS = [
   {
     date: '2026-05-18',
     tag: { en: 'Shipping', zh: '海运' },
-    image: 'img/gbfs-in-use-2k_compressed.png',
+    image: 'img/gbfs-in-use-2k_compressed.webp',
     title: {
       en: 'Dry bulk performance is becoming more selective across shipping operators.',
       zh: '干散货市场表现正在出现更明显的航运主体分化。'
@@ -73,7 +73,7 @@ const NEWS = [
   {
     date: '2026-05-18',
     tag: { en: 'Cement', zh: '水泥' },
-    image: 'img/ggbfs-hero-nanobanana-2k_compressed.png',
+    image: 'img/ggbfs-hero-nanobanana-2k_compressed.webp',
     title: {
       en: 'Low-carbon cement materials remain central to industry attention.',
       zh: '低碳水泥材料仍然处于行业关注的核心位置。'
