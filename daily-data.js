@@ -1,5 +1,261 @@
 window.DAILY_POSTS = [
   {
+    "id": "2026-05-26-strait-hormuz-cement-trade-energy-impact",
+    "date": "2026-05-26",
+    "category": {
+      "en": "Logistics & Freight",
+      "zh": "物流运费"
+    },
+    "cover": "img/news-hormuz-lead-2026-05-26_compressed.webp",
+    "coverAlt": {
+      "en": "Strait of Hormuz shipping lane with dry bulk vessels and energy infrastructure",
+      "zh": "霍尔木兹海峡航运通道与散货船及能源基础设施"
+    },
+    "title": {
+      "en": "Strait of Hormuz Crisis Reshapes Cement Economics: Why Energy and Freight Now Drive SCM Strategy",
+      "zh": "霍尔木兹海峡危机重塑水泥经济：能源与运费为何正主导 SCM 战略"
+    },
+    "excerpt": {
+      "en": "The closure of the Strait of Hormuz in March 2026 has pushed Brent crude past $120 per barrel and forced major LNG exporters to declare force majeure. For cement and slag exporters, the impact is immediate: kiln fuel costs are surging, bulk freight routes are being rerouted around the Cape of Good Hope, and the economic case for supplementary cementitious materials is strengthening by the week.",
+      "zh": "2026 年 3 月霍尔木兹海峡的关闭已将布伦特原油推至每桶 120 美元以上，并迫使主要 LNG 出口商宣布不可抗力。对水泥与矿渣出口商而言，影响是即时的：窑炉燃料成本飙升、大宗货运航线被迫绕行好望角、补充胶凝材料的经济论证正以周为单位加强。"
+    },
+    "blocks": [
+      {
+        "type": "paragraph",
+        "en": "On 4 March 2026, the Strait of Hormuz — through which roughly one-fifth of global oil and a significant share of LNG pass — was effectively closed to commercial shipping. The immediate market reaction was severe. Brent crude surged past $120 per barrel, and QatarEnergy was forced to declare force majeure on all LNG exports. By May, the baseline crude price assumption for 2026-27 had been revised upward to $95 per barrel by ICRA, with some scenarios pointing higher. For energy-intensive industries, and cement production sits near the top of that list, the cost shock is not hypothetical. It is already reshaping operating margins, procurement strategy and the relative economics of clinker versus supplementary cementitious materials.",
+        "zh": "2026 年 3 月 4 日，霍尔木兹海峡——全球约五分之一原油及大量 LNG 的必经之路——事实上对商业航运关闭。市场反应剧烈：布伦特原油冲破每桶 120 美元，卡塔尔能源被迫对所有 LNG 出口宣布不可抗力。进入 5 月，ICRA 已将 2026-27 财年的基准原油价格假设上调至每桶 95 美元，部分情景指向更高。对高能耗行业而言，水泥生产几乎位于榜首，成本冲击并非假设，它已经在重塑运营利润率、采购策略，以及熟料与补充胶凝材料之间的相对经济性。"
+      },
+      {
+        "type": "image",
+        "src": "img/news-hormuz-lead-2026-05-26_compressed.webp",
+        "alt": {
+          "en": "Strait of Hormuz shipping lane with dry bulk vessels and energy infrastructure",
+          "zh": "霍尔木兹海峡航运通道与散货船及能源基础设施"
+        },
+        "caption": {
+          "en": "The Hormuz closure has disrupted both energy markets and bulk shipping routes that underpin cement and slag trade.",
+          "zh": "霍尔木兹海峡的关闭同时扰乱了能源市场与支撑水泥和矿渣贸易的大宗航运路线。"
+        }
+      },
+      {
+        "type": "heading",
+        "en": "1. The fuel cost shock hits cement where it hurts",
+        "zh": "1. 燃料成本冲击直击水泥行业的痛点"
+      },
+      {
+        "type": "paragraph",
+        "en": "Power, fuel and selling costs already constitute 50 to 55 per cent of total operating costs for cement companies in India and Asia. Petcoke, thermal coal and coking coal — the backbone fuels of cement kiln operations — have all seen price revisions upward since the Hormuz closure. ICRA now projects that Indian cement producers face a 10 to 12 per cent increase in power and fuel costs in FY27, alongside a 6 to 8 per cent rise in selling expenses driven by higher freight and packaging outlays. When crude is averaging $95 per barrel and bunker fuel prices track it closely, the energy bill for every tonne of clinker becomes substantially heavier.",
+        "zh": "对印度及亚洲的水泥企业而言，电力、燃料与销售成本本就占总运营成本的 50% 至 55%。石油焦、动力煤和炼焦煤——水泥窑炉运行的骨干燃料——自霍尔木兹关闭以来均经历了价格上调。ICRA 目前预测，印度水泥生产商在 2027 财年将面临电力与燃料成本上涨 10% 至 12%，同时受运费与包装支出走高的推动，销售费用可能再增 6% 至 8%。当原油价格均值达到每桶 95 美元且船用燃油价格紧密跟随时，每吨熟料的能源账单都变得显著更重。"
+      },
+      {
+        "type": "paragraph",
+        "en": "The structural problem is that cement manufacturing is inherently calcination-dependent. Producing one tonne of Portland cement clinker requires heating limestone to roughly 1,450 degrees Celsius. That thermal demand is not negotiable. Unlike steel or aluminum where alternative energy sources and process redesigns are being actively explored, the kiln is the kiln. When fuel prices spike, the clinker cost base spikes with them. And because cement is a bulk commodity with limited pricing power in competitive markets, producers cannot always pass the full increase through to customers. The result is margin compression — real, immediate and sustained.",
+        "zh": "结构性问题在于水泥制造本质上依赖煅烧。生产一吨硅酸盐水泥熟料需要将石灰石加热至约 1450 摄氏度。这种热需求不可协商。与钢铁或铝业不同——后两者正在积极探索替代能源与工艺重新设计——水泥窑就是水泥窑。当燃料价格飙升时，熟料成本基数随之飙升。而由于水泥是一种在竞争市场中定价能力有限的大宗商品，生产商无法总是将全额涨幅转嫁给客户。结果是利润压缩——真实、即时且持续。"
+      },
+      {
+        "type": "image",
+        "src": "img/news-hormuz-freight-2026-05-26_compressed.webp",
+        "alt": {
+          "en": "Dry bulk vessel rerouting around Cape of Good Hope with elevated bunker fuel indicators",
+          "zh": "干散货船绕行好望角，伴随高船用燃油成本指标"
+        },
+        "caption": {
+          "en": "Rerouted shipping lanes extend voyage times and fuel burn, raising delivered costs for bulk cementitious cargoes.",
+          "zh": "改道的航运线路延长了航程与燃油消耗，推高了胶凝材料大宗货物的到岸成本。"
+        }
+      },
+      {
+        "type": "heading",
+        "en": "2. Freight rerouting adds a second layer of cost pressure",
+        "zh": "2. 航线改道叠加了第二层成本压力"
+      },
+      {
+        "type": "paragraph",
+        "en": "The Hormuz closure has forced shipping operators to reroute vessels around the Cape of Good Hope, adding thousands of nautical miles to voyages between the Gulf and Asian or European destinations. For dry bulk carriers moving clinker, GBFS and cement, the implications are direct: longer voyage times mean higher bunker consumption, increased charter rates, and tighter vessel availability. The Baltic Dry Index had already firmed to its highest level since December 2023 before the crisis intensified, and the additional route disruption is keeping sentiment elevated across vessel segments.",
+        "zh": "霍尔木兹海峡的关闭迫使航运运营商将船舶绕行好望角，使海湾地区与亚洲或欧洲目的港之间的航程增加了数千海里。对运输熟料、GBFS 及水泥的干散货船而言，影响是直接且即时的：更长航程意味着更高的燃油消耗、上涨的租船费率和更紧的可用运力。波罗的海干散货指数在危机升级前就已走强至 2023 年 12 月以来最高位，而额外的航线扰动正在各船型板块维持市场情绪于高位。"
+      },
+      {
+        "type": "paragraph",
+        "en": "For cementitious material exporters, the combined effect of higher bunker costs and longer transit times is pushing delivered costs upward even before product value is considered. In a market where buyers are already price-sensitive, this means that landed quotations need careful recalibration. More importantly, it means that suppliers who can offer reliable loading schedules, consistent laycan performance and efficient port execution are becoming more valuable — because in a tight freight market, a delayed shipment does not just cost money. It costs the charterer additional demurrage, disrupts the buyer's production schedule, and damages the commercial relationship.",
+        "zh": "对胶凝材料出口商而言，更高燃油成本与更长 transit time 的叠加效应，在产品本身价值之外已推高了到岸成本。在买家本就对价格敏感的市场中，这意味着到岸报价需要谨慎重新校准。更重要的是，这意味着能够提供可靠装船计划、稳定装期表现与高效港口执行的供应商正变得更有价值——因为在紧张的运价市场中，延误的装运不只是损失金钱，还会让租船人承担额外滞期费、扰乱买家的生产排程，并损害商业关系。"
+      },
+      {
+        "type": "heading",
+        "en": "3. Why slag and SCM gain relative advantage in a high-energy world",
+        "zh": "3. 为什么在高能源成本世界中矿渣与 SCM 获得相对优势"
+      },
+      {
+        "type": "paragraph",
+        "en": "Every percentage point of clinker replaced by ground granulated blast furnace slag removes a corresponding share of kiln fuel demand from the cost base. This is not new information, but in a $95 crude environment the arithmetic becomes far more compelling. GGBFS and GBFS are by-products of steelmaking. Their production does not involve limestone calcination. When blended into cement, they reduce both the thermal energy requirement and the CO2 intensity of the final product. The result is a lower per-tonne production cost for blended cement compared to pure Portland cement in a high-fuel-price environment.",
+        "zh": "每一百分点被磨细粒化高炉矿渣替代的熟料，都会从成本基数中移除相应比例的窑炉燃料需求。这不是新信息，但在每桶 95 美元的原油环境中，算术变得远为引人注目。GGBFS 与 GBFS 是钢铁生产的副产品，其生产过程不涉及石灰石煅烧。当掺入水泥中时，它们同时降低了成品的热能耗需求与 CO2 强度。结果是，在高燃料价格环境下，掺配水泥的单位生产成本低于纯硅酸盐水泥。"
+      },
+      {
+        "type": "paragraph",
+        "en": "The competitive shift is already visible in procurement behaviour. Indian cement producers, facing the dual pressure of rising fuel costs and stricter blended cement standards, are actively expanding their Portland Slag Cement and Portland Pozzolana Cement lines. European green cement players, already operating under CBAM carbon border costs, are locking in slag supply chains with greater urgency. In both cases, the driver is not only sustainability policy. It is direct cost arithmetic. When clinker becomes more expensive to produce, materials that replace it become more valuable.",
+        "zh": "这种竞争转变已在采购行为中可见。印度水泥生产商面临燃料成本上涨与更严格掺配水泥标准的双重压力，正积极扩展其硅酸盐矿渣水泥和硅酸盐火山灰水泥生产线。欧洲绿色水泥参与者——已在 CBAM 碳边境成本下运营——正以更紧迫的姿态锁定矿渣供应链。在这两种情形下，驱动力不仅是可持续性政策，更是直接的成本算术。当熟料生产成本上升时，能够替代它的材料就变得更有价值。"
+      },
+      {
+        "type": "image",
+        "src": "img/news-hormuz-scm-2026-05-26_compressed.webp",
+        "alt": {
+          "en": "GGBFS and GBFS materials as low-energy cement alternatives in industrial storage",
+          "zh": "GGBFS 与 GBFS 材料作为工业仓储中的低能耗水泥替代品"
+        },
+        "caption": {
+          "en": "In a high-fuel environment, slag-based materials offer a direct cost advantage through reduced kiln dependence.",
+          "zh": "在高燃料成本环境中，矿渣基材料通过降低对窑炉的依赖提供了直接的成本优势。"
+        }
+      },
+      {
+        "type": "heading",
+        "en": "4. What exporters should monitor now",
+        "zh": "4. 出口商现在应该关注什么"
+      },
+      {
+        "type": "paragraph",
+        "en": "The Hormuz situation is fluid, but even a partial or intermittent reopening will not immediately reverse the cost shifts that have already been baked into 2026-27 contracts and procurement budgets. Exporters of clinker, GBFS and GGBFS should focus on four operational priorities:",
+        "zh": "霍尔木兹局势仍在演变，但即使部分或间歇性重新开放，也不会立即逆转已嵌入 2026-27 合同与采购预算的成本转变。熟料、GBFS 与 GGBFS 出口商应聚焦四项运营优先事项："
+      },
+      {
+        "type": "paragraph",
+        "en": "First, track bunker fuel and BDI trends as closely as product pricing. Freight is no longer a secondary line item; it is becoming a primary cost driver. Second, reassess quotation validity periods. In a volatile freight and fuel environment, long-dated quotes carry significant risk. Third, review alternative routing options and port pairs. Some Asian and African destinations may become more attractive if European routing costs rise disproportionately. Fourth, communicate the cost-and-carbon advantage of slag-based products clearly. Buyers who are rethinking their raw material mix need suppliers who can explain not just what they sell, but why it makes economic sense in the current environment.",
+        "zh": "第一，像追踪产品价格一样密切跟踪船用燃油与 BDI 趋势。运费不再是次要明细，而是正在成为主要成本驱动因素。第二，重新评估报价有效期。在动荡的运费与燃料环境中，远期报价承载着显著风险。第三，审视替代航线与港对组合。如果欧洲方向航线成本不成比例地上升，某些亚洲与非洲目的地可能变得更有吸引力。第四，清晰传达矿渣基产品的成本与碳优势。正在重新思考原材料组合的买家，需要的不仅是供应商卖什么，更是需要供应商解释在当前环境下为什么这在经济上有意义。"
+      },
+      {
+        "type": "paragraph",
+        "en": "The Strait of Hormuz crisis is, above all, a reminder that cement trade does not happen in isolation from geopolitics and energy markets. For suppliers with reliable GBFS and GGBFS output, direct port access, and the operational discipline to execute consistently through disruption, the current environment creates a clear competitive opening. The question is not whether demand for supplementary cementitious materials will grow. It is whether your supply chain can deliver the reliability that buyers now need, in a market where both energy and freight are working against the conventional clinker model.",
+        "zh": "霍尔木兹海峡危机首先提醒我们：水泥贸易并非发生在地缘政治与能源市场的真空之中。对拥有可靠 GBFS 与 GGBFS 产出、直通港口优势，以及具备在扰动中持续稳定执行纪律的供应商而言，当前环境创造了一个清晰的竞争窗口。问题不在于补充胶凝材料的需求是否会增长，而在于你的供应链能否在能源与运费双双对常规熟料模式不利的当前市场中，交付买家如今所需要的可靠性。"
+      }
+    ]
+  },
+  {
+    "id": "2026-05-25-ggbfs-market-india-southeast-asia-demand",
+    "date": "2026-05-25",
+    "category": {
+      "en": "Market & Trends",
+      "zh": "市场趋势"
+    },
+    "cover": "img/news-ggbfs-market-weekly-2026-05-25_compressed.jpg",
+    "coverAlt": {
+      "en": "GGBFS powder production facility with industrial grinding equipment and bulk storage",
+      "zh": "GGBFS 粉末生产设施，配有工业研磨设备与散装仓储"
+    },
+    "title": {
+      "en": "GGBFS Market on Track for $36 Billion by 2034: What the India and Southeast Asia Demand Wave Means for Suppliers",
+      "zh": "GGBFS 市场迈向 2034 年 360 亿美元：印度与东南亚需求浪潮对供应商意味着什么"
+    },
+    "excerpt": {
+      "en": "The global ground granulated blast furnace slag market is projected to grow from USD 20.7 billion in 2024 to USD 36.0 billion by 2034 at a 5.7 per cent CAGR. Behind this expansion lies a structural shift in cement consumption: India is targeting 7 to 8 per cent growth in FY27 driven by infrastructure and housing, while Southeast Asia construction is surging toward USD 8.6 trillion by 2030. For suppliers of GBFS, GGBFS, and blended cement materials, the opportunity is not just volume. It is about aligning specifications, consistency, and logistics with markets that are rapidly scaling their use of supplementary cementitious materials.",
+      "zh": "全球磨细粒化高炉矿渣市场预计从 2024 年的 207 亿美元增长至 2034 年的 360 亿美元，复合年增长率 5.7%。这一扩张背后隐藏着水泥消费的结构转变：印度凭借基础设施与住房驱动，定下了 2027 财年 7% 至 8% 的增长目标；而东南亚建筑业正向着 2030 年的 8.6 万亿美元猛冲。对 GBFS、GGBFS 及掺配水泥材料供应商而言，机遇不仅是体量，更在于让规格、一致性与物流与那些正快速扩大补充胶凝材料使用的市场对齐。"
+    },
+    "blocks": [
+      {
+        "type": "paragraph",
+        "en": "The ground granulated blast furnace slag market is no longer a niche segment of the cement industry. Recent projections place the sector at USD 36.0 billion by 2034, up from USD 20.7 billion in 2024, representing a compound annual growth rate of 5.7 per cent. This is not speculative growth. It is being driven by real regulatory, infrastructure, and sustainability pressures that are forcing cement producers across Asia to rethink their raw material mix.",
+        "zh": "磨细粒化高炉矿渣市场已不再是水泥行业的小众板块。最新预测将该领域定位为 2034 年达到 360 亿美元，较 2024 年的 207 亿美元大幅增长，复合年增长率为 5.7%。这不是投机性增长，而是由真实的监管、基础设施与可持续性压力所驱动，这些压力正迫使全亚洲的水泥生产商重新思考其原材料组合。"
+      },
+      {
+        "type": "heading",
+        "en": "1. The $36 billion trajectory: why GGBFS is becoming a primary material",
+        "zh": "1. 360 亿美元轨迹：GGBFS 为何正成为主流材料"
+      },
+      {
+        "type": "paragraph",
+        "en": "For decades, GGBFS was viewed as a supplementary option: a by-product of steelmaking that could replace some clinker in blended cement. That perception is shifting. As carbon pricing mechanisms expand and construction codes in major markets tighten their environmental requirements, the economic case for slag-based cement is strengthening. GGBFS reduces the carbon intensity of finished cement by replacing clinker that would otherwise be produced through calcination. It also improves long-term durability and sulfate resistance, properties that matter deeply in coastal and tropical construction environments across Southeast Asia and the Indian subcontinent.",
+        "zh": "几十年来，GGBFS 一直被视为补充性选择：一种可替代掺配水泥中部分熟料的钢铁生产副产品。这种认知正在改变。随着碳定价机制扩展、主要市场的建筑规范收紧环保要求，矿渣基水泥的经济论证正在加强。GGBFS 通过替代原本需经煅烧生产的熟料，降低了成品水泥的碳强度。它还能提升长期耐久性和抗硫酸盐侵蚀能力，这些特性对东南亚及印度次大陆沿海与热带建筑环境至关重要。"
+      },
+      {
+        "type": "image",
+        "src": "img/news-ggbfs-market-lead-2026-05-24_compressed.webp",
+        "alt": {
+          "en": "GGBFS powder production and bulk storage facility",
+          "zh": "GGBFS 粉末生产与散装仓储设施"
+        },
+        "caption": {
+          "en": "The GGBFS market is projected to nearly double by 2034, driven by Asia-Pacific infrastructure and sustainability mandates.",
+          "zh": "受亚太基础设施与可持续性指令驱动，GGBFS 市场预计到 2034 年接近翻倍。"
+        }
+      },
+      {
+        "type": "heading",
+        "en": "2. India's blended cement boom and what it means for slag demand",
+        "zh": "2. 印度掺配水泥热潮及其对矿渣需求的影响"
+      },
+      {
+        "type": "paragraph",
+        "en": "India is now the most important demand story for cementitious materials. In the first eleven months of FY26, the market recorded a 9.2 per cent year-on-year volume increase. For FY27, leading cement makers are targeting 7 to 8 per cent growth, supported by sustained government infrastructure spending, housing demand, and urbanization momentum. The key detail for suppliers is not just the volume. It is the product mix.",
+        "zh": "印度现已成为胶凝材料领域最重要的需求故事。在 2026 财年的前 11 个月，市场录得了 9.2% 的同比增长。进入 2027 财年，主要水泥制造商定下了 7% 至 8% 的增长目标，支撑来自持续的政府基础设施支出、住房需求与城市化势头。对供应商而言，关键细节不仅是体量，更是产品组合。"
+      },
+      {
+        "type": "paragraph",
+        "en": "India's Bureau of Indian Standards has been tightening compliance requirements for blended cements, including Portland Pozzolana Cement and Portland Slag Cement. These standards directly influence procurement decisions at the plant level. As more Indian producers expand their PSC and PPC lines to meet both regulatory requirements and cost pressures, the demand for consistent, high-quality slag feedstock is increasing. For importers, this means specifications matter more than ever. Variability in slag quality, particle size distribution, or glass content can disrupt grinding operations and affect final cement performance. Procurement teams at major Indian cement groups are now screening suppliers on chemical consistency, logistics reliability, and documentation discipline before committing to long-term supply agreements.",
+        "zh": "印度标准局一直在收紧掺配水泥的合规要求，包括硅酸盐火山灰水泥和硅酸盐矿渣水泥。这些标准直接影响工厂层面的采购决策。随着更多印度生产商扩展其 PSC 和 PPC 生产线以满足监管要求与成本压力，对稳定、高品质矿渣原料的需求正在增加。对进口商而言，这意味着规格比以往任何时候都更重要。矿渣质量、粒度分布或玻璃体含量的波动可能扰乱研磨作业并影响最终水泥性能。主要印度水泥集团的采购团队现在正基于化学一致性、物流可靠性与文件规范性筛选供应商，然后才会承诺长期供应协议。"
+      },
+      {
+        "type": "heading",
+        "en": "3. Southeast Asia: the construction wave driving SCM adoption",
+        "zh": "3. 东南亚：推动 SCM 采用的建筑浪潮"
+      },
+      {
+        "type": "paragraph",
+        "en": "The Asia-Pacific construction market reached USD 5.69 trillion in 2024 and is projected to surge to USD 8.64 trillion by 2030. Within this region, Indonesia and Vietnam are exhibiting the highest construction Gross Value Added shares, supported by rapid urbanization, infrastructure expansion, and industrial development. What makes this relevant for slag suppliers is the nature of the projects. Massive infrastructure corridors, industrial zones, and port expansions are being built with durability requirements that favor blended cement systems.",
+        "zh": "亚太建筑市场于 2024 年达到 5.69 万亿美元，预计将在 2030 年猛增至 8.64 万亿美元。在这一区域内，印度尼西亚和越南正展现出最高的建筑业增加值份额，支撑来自快速城市化、基础设施扩张与工业发展。对矿渣供应商而言，关键在于项目的性质。大规模基础设施走廊、工业园区与港口扩建正在以耐久性要求建造，这些要求偏爱掺配水泥体系。"
+      },
+      {
+        "type": "paragraph",
+        "en": "In Indonesia, the government is pushing ahead with new capital relocation projects, toll road networks, and smelter-industrial complexes that require large volumes of durable concrete. In Vietnam, the manufacturing shift from China continues to drive industrial park construction, while major cities expand their metro and highway systems. Both markets are importing significant volumes of cement and clinker, and both are beginning to specify blended cement products for public works to reduce costs and improve sustainability metrics. For suppliers in China with reliable GBFS and GGBFS output, this represents a direct commercial pipeline that did not exist at this scale five years ago.",
+        "zh": "在印度尼西亚，政府正推进新首都迁移项目、收费公路网络以及需要大量耐久混凝土的冶炼工业综合体。在越南，从中国转移而来的制造业继续推动工业园区建设，同时主要城市扩展其地铁与高速公路系统。两个市场都在进口大量水泥与熟料，并且都开始为公共工程指定掺配水泥产品以降低成本并改善可持续性指标。对拥有可靠 GBFS 与 GGBFS 产出的中国供应商而言，这代表了一条在五年前还不存在如此规模的直接商业管道。"
+      },
+      {
+        "type": "image",
+        "src": "img/news-sea-construction-2026-05-25_compressed.webp",
+        "alt": {
+          "en": "Southeast Asia infrastructure construction site with cement and concrete materials",
+          "zh": "东南亚基础设施建筑工地，配有水泥与混凝土材料"
+        },
+        "caption": {
+          "en": "Indonesia and Vietnam are leading the Southeast Asia construction surge, creating sustained demand for blended cement materials.",
+          "zh": "印度尼西亚和越南正引领东南亚建筑热潮，为掺配水泥材料创造持续需求。"
+        }
+      },
+      {
+        "type": "heading",
+        "en": "4. What suppliers need to align on now",
+        "zh": "4. 供应商现在需要对齐什么"
+      },
+      {
+        "type": "paragraph",
+        "en": "The demand wave is real, but accessing it requires more than having material available. Buyers in India and Southeast Asia are increasingly systematic in their supplier evaluation. The priorities that come up consistently in procurement conversations include:",
+        "zh": "需求浪潮是真实的，但要接入它需要的不只是有材料可供。印度和东南亚的买家在供应商评估上正变得越来越系统化。采购对话中持续出现的优先事项包括："
+      },
+      {
+        "type": "paragraph",
+        "en": "- Chemical consistency across batches, especially CaO, SiO2, Al2O3, and MgO ratios\n- Predictable particle size distribution that matches the buyer's grinding circuit\n- Reliable moisture control for bulk shipments in tropical climates\n- Clear laycan schedules and port execution discipline\n- Documentation readiness, including test certificates and chain-of-custody records\n- Container, jumbo bag, and bulk vessel loading flexibility",
+        "zh": "- 批次间化学一致性，特别是 CaO、SiO2、Al2O3 和 MgO 比例\n- 与买方研磨系统匹配的 predictable 粒度分布\n- 热带气候下散货装运的可靠水分控制\n- 清晰的 laycan 时间表与港口执行纪律\n- 文件完备性，包括检验证书与 custody 记录\n- 集装箱、大袋与散货船装载的灵活性"
+      },
+      {
+        "type": "paragraph",
+        "en": "These are not soft preferences. They are operational requirements that determine whether a supplier gets a trial shipment or a long-term contract. The suppliers who treat every detail with the same rigor as product specification are the ones capturing volume in this expansion phase.",
+        "zh": "这些不是软性偏好，而是决定供应商获得试运还是长期合同的操作要求。以与产品规格同等严谨态度对待每个细节的供应商，才是那些在此扩张阶段 capture 体量的人。"
+      },
+      {
+        "type": "heading",
+        "en": "5. The China supply position and Caofeidian port advantage",
+        "zh": "5. 中国供应地位与曹妃甸港口优势"
+      },
+      {
+        "type": "paragraph",
+        "en": "China remains the largest producer of blast furnace slag globally, with integrated steel complexes generating consistent volumes of high-quality granulated slag. The Caofeidian port zone in northern China offers a strategic export position: direct access to steel plant output, deep-water berths capable of handling bulk vessels, and established logistics infrastructure for both domestic distribution and international shipment. For buyers in India, Bangladesh, Southeast Asia, and the Middle East, sourcing from this region provides a combination of volume reliability, quality consistency, and competitive freight economics that is difficult to replicate from smaller or less integrated origins.",
+        "zh": "中国仍是全球最大的高炉矿渣生产国，综合钢铁联合体持续产出高品质粒化矿渣。中国北方的曹妃甸港区提供了战略性出口位置：直接接入钢铁厂产出、可处理散货船的深水泊位，以及面向国内分销与国际货运的成熟物流基础设施。对印度、孟加拉国、东南亚和中东的买家而言，从这一区域采购提供了体量可靠性、质量一致性与有竞争力运费经济的组合，这是较小或整合度较低的产地难以复制的。"
+      },
+      {
+        "type": "paragraph",
+        "en": "The GGBFS market is entering a phase where demand growth is structural rather than cyclical. India's blended cement expansion, Southeast Asia's infrastructure construction wave, and the global shift toward lower-carbon building materials are all converging on a single requirement: reliable, specification-consistent slag supply at scale. For suppliers with the right product, the right port, and the right operational discipline, the next decade offers a clear commercial opening.",
+        "zh": "GGBFS 市场正进入一个需求增长为结构性而非周期性的阶段。印度的掺配水泥扩张、东南亚的基础设施建筑浪潮，以及全球向低碳建筑材料的转变，都汇聚于单一需求：规模化、规格稳定的可靠矿渣供应。对拥有合适产品、合适港口与合适操作纪律的供应商而言，未来十年提供了明确的商业窗口。"
+      }
+    ]
+  },
+  {
     "id": "2026-05-25-eu-cbam-definitive-phase-impact",
     "date": "2026-05-25",
     "cover": "img/news-cbam-lead-2026-05-25_compressed.webp",
