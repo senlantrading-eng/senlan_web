@@ -92,7 +92,11 @@ window.DAILY_POSTS = [
         "en": "CBAM is not a distant policy discussion. It is now a line item on import cost sheets. For exporters of traditional cement and clinker, the margin compression is real and immediate. For suppliers of GGBFS, GBFS, and blended low-carbon materials, the new regime offers a tangible commercial opening. The key is to treat carbon data with the same discipline as chemical specification and loading execution: measure it, verify it, and make it part of the value proposition you bring to market.",
         "zh": "CBAM 不是遥远的政策讨论，而是现已出现在进口成本表上的一项明细。对传统水泥与熟料出口商而言，利润压缩真实且即时。对 GGBFS、GBFS 及掺配低碳材料的供应商而言，新机制提供了切实的商业窗口。关键在于以与化学规格和装运执行同等的严谨态度对待碳数据：测量它、核实它，并让它成为你对市场价值主张的一部分。"
       }
-    ]
+    ],
+    "category": {
+      "en": "Policy & Carbon",
+      "zh": "碳政策"
+    }
   },
   {
     "id": "2026-05-24-ggbfs-market-acceleration",
@@ -192,7 +196,11 @@ window.DAILY_POSTS = [
         "en": "The near-term outlook is clear. The USD 36 billion forecast, the 4 million metric ton US record and the European supply chain momentum are not separate stories. They share a common thread: cement producers around the world are scaling capacity while simultaneously reducing clinker dependence. That structural shift requires more supplementary cementitious materials, more reliable supply chains and more disciplined execution from raw material suppliers. For companies positioned at the intersection of quality, volume and port logistics, the current signals point to a sustained demand cycle with meaningful opportunities across North America, Europe and Asia.",
         "zh": "短期前景是清晰的。360 亿美元预测、美国 400 万吨纪录以及欧洲供应链势头，并不是各自独立的故事。它们共享一条主线：全球各地的水泥生产商正在扩大产能，同时降低对熟料的依赖。这种结构性转变需要更多的补充胶凝材料、更可靠的供应链，以及原材料供应商更具纪律的执行。对那些兼具品质、规模与港口物流优势的公司而言，当前信号指向的是一个持续的需求周期，在北美、欧洲和亚洲都蕴含着实质性机遇。"
       }
-    ]
+    ],
+    "category": {
+      "en": "Market & Trends",
+      "zh": "市场趋势"
+    }
   },
   {
     "id": "2026-05-23-global-cement-investment-scm-demand",
@@ -287,7 +295,11 @@ window.DAILY_POSTS = [
         "en": "The near-term capital surge and the regional blending momentum may look like separate stories, but they share a common thread: cement producers are scaling capacity while simultaneously lowering their clinker dependence. That combination requires more supplementary cementitious materials, more reliable supply chains, and more disciplined execution from raw material suppliers. For companies positioned at the intersection of quality, volume and port logistics, the current signals point to a sustained demand cycle rather than a temporary spike.",
         "zh": "短期的资本 surge 与区域掺配 momentum 看似是两件事，但它们有一条共同主线：水泥生产商正在扩大产能，同时降低对熟料的依赖。这种组合需要更多的补充胶凝材料、更可靠的供应链，以及原材料供应商更具纪律的执行。对于那些兼具品质、规模与港口物流优势的公司而言，当前信号指向的是一个持续的需求周期，而非短暂的 spikes。"
       }
-    ]
+    ],
+    "category": {
+      "en": "Market & Trends",
+      "zh": "市场趋势"
+    }
   },
   {
     "id": "2026-05-23-fuel-freight-cost-scm-strategy",
@@ -382,7 +394,11 @@ window.DAILY_POSTS = [
         "en": "The near-term cost shock may fade, but the structural shift it accelerates will not. Cement producers that integrate SCM strategy into their core procurement and product planning will be better positioned regardless of where fuel and freight prices settle. For suppliers, this is a clear signal: reliability, consistency, and bulk availability are the currencies that matter now.",
         "zh": "短期成本冲击可能会消退，但它加速的结构性转变不会。那些将 SCM 战略融入核心采购与产品规划的水泥生产商，无论燃料与运费价格最终企稳于何处，都将处于更有利的位置。对供应商而言，这是一个明确的信号：可靠性、一致性和大宗供应能力，才是当下最重要的硬通货。"
       }
-    ]
+    ],
+    "category": {
+      "en": "Logistics & Freight",
+      "zh": "物流运费"
+    }
   },
   {
     "id": "2026-05-22-europe-slag-grinding-acquisition",
@@ -477,7 +493,11 @@ window.DAILY_POSTS = [
         "en": "The bottom line is that European green cement expansion is creating tangible import demand for GBFS. Suppliers who can combine material quality with predictable execution are likely to find their relevance rising in markets that previously seemed distant. The La Rochelle route may be just one early signal of a broader trend.",
         "zh": "结论是：欧洲绿色水泥产能扩张正在为 GBFS 创造切实的进口需求。能够将材料品质与可预期的执行能力结合起来的供应商，有望在以往看似遥远的市场里获得越来越高的相关性。拉罗谢尔这条路线，或许只是更广泛趋势中的一个早期信号。"
       }
-    ]
+    ],
+    "category": {
+      "en": "Production & Technology",
+      "zh": "生产技术"
+    }
   },
   {
     "id": "2026-05-21-freight-discipline-bulk-exports",
@@ -572,7 +592,11 @@ window.DAILY_POSTS = [
         "en": "The takeaway is simple. When dry bulk freight firms up and planning visibility shrinks, export competitiveness becomes a combination of product, logistics discipline and timing control. For companies active in clinker and slag shipments, the market is sending a clear signal: execution quality is becoming more visible, and more commercial, than before.",
         "zh": "结论很直接：当干散货运价走强、计划可视性缩短时，出口竞争力会变成“产品 + 物流纪律 + 时间控制”的组合。对活跃在熟料与矿渣发运中的公司来说，市场正在发出一个清晰信号：执行质量正在变得比过去更可见，也更具商业价值。"
       }
-    ]
+    ],
+    "category": {
+      "en": "Logistics & Freight",
+      "zh": "物流运费"
+    }
   },
   {
     "id": "2026-05-20-cement-clinker-scm-price-signals",
@@ -667,7 +691,11 @@ window.DAILY_POSTS = [
         "en": "In short, broader cement, clinker and SCM price coverage is not just a media detail. It is a sign that the market is becoming more disciplined, more comparable and more decision-oriented. For companies active in bulk materials trade, that makes positioning, execution quality and pricing logic even more important than before.",
         "zh": "简而言之，更广的水泥 熟料与 SCM 价格覆盖，并不只是一个媒体层面的细节，而是市场正在变得更有纪律 更可比较 也更面向决策的信号。对于活跃在大宗建材贸易中的公司来说，这会让市场定位 执行质量与报价逻辑比过去更重要。"
       }
-    ]
+    ],
+    "category": {
+      "en": "Market & Trends",
+      "zh": "市场趋势"
+    }
   },
   {
     "id": "2026-05-19-low-carbon-cement-momentum",
@@ -762,7 +790,11 @@ window.DAILY_POSTS = [
         "en": "In short, low-carbon cement materials are staying central because they address a practical industry need rather than a symbolic one. As long as cement producers continue to balance cost, performance and emissions, supplementary cementitious materials are likely to remain part of the core conversation.",
         "zh": "简而言之，低碳水泥材料之所以持续处于中心位置，是因为它们回应的是行业的现实需求，而不是象征性议题。只要水泥生产商仍需要在成本、性能与排放之间持续平衡，补充胶凝材料就很可能继续留在核心讨论之中。"
       }
-    ]
+    ],
+    "category": {
+      "en": "Policy & Carbon",
+      "zh": "碳政策"
+    }
   },
   {
     "id": "2026-05-18-market-brief",
@@ -857,6 +889,10 @@ window.DAILY_POSTS = [
         "en": "For this week, the takeaway is simple: freight execution, logistics stability and material positioning are increasingly connected. The companies that present these together — not as separate issues, but as one integrated supply story — are more likely to stand out.",
         "zh": "对本周而言，结论很简单：运价执行、物流稳定性与材料定位正在变得越来越紧密相关。那些能够把这三者作为一个完整供应故事来呈现，而不是分散问题分别处理的公司，更有可能脱颖而出。"
       }
-    ]
+    ],
+    "category": {
+      "en": "Market & Trends",
+      "zh": "市场趋势"
+    }
   }
 ];

@@ -1,6 +1,6 @@
 const I18N = {
   en: {
-    nav: { products: 'Products', about: 'About', daily: 'News', gallery: 'Gallery', contact: 'Contact' },
+    nav: { products: 'Products', about: 'About', daily: 'News', contact: 'Contact' },
     footer: { home: 'Home' },
     p: {
       tds: 'Technical Datasheet',
@@ -41,7 +41,7 @@ const I18N = {
     }
   },
   zh: {
-    nav: { products: '产品', about: '关于我们', daily: '每日热点', gallery: '画廊', contact: '联系' },
+    nav: { products: '产品', about: '关于我们', daily: '每日热点', contact: '联系' },
     footer: { home: '首页' },
     p: {
       tds: '技术数据表',
@@ -175,7 +175,7 @@ const DATA = {
   },
 
   highcalcium: {
-    bg: 'img/highcalcium-grades-hero-nanobanana-2k-v2_compressed.webp',
+    bg: 'img/highcalcium-hero-refresh-20260520.webp',
     headline: {
       en: 'High-calcium limestone for industrial applications.',
       zh: '高钙石/高钙石灰石，用于工业应用'

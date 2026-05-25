@@ -1,6 +1,6 @@
 const I18N = {
   en: {
-    nav: { home: 'Home', gallery: 'Gallery', details: 'Details', contact: 'Contact' },
+    nav: { home: 'Home', details: 'Details', contact: 'Contact' },
     contact: {
       title: 'Get a Quote',
       lead: "Interested in working together? Fill out some info and we will be in touch shortly. We can’t wait to hear from you!"
@@ -28,7 +28,7 @@ const I18N = {
     footer: { home: 'Home' }
   },
   zh: {
-    nav: { home: '首页', gallery: '画廊', details: '详情', contact: '联系' },
+    nav: { home: '首页', details: '详情', contact: '联系' },
     contact: {
       title: '联系我们获取报价',
       lead: '有合作意向？请填写相关信息，我们会尽快与您联系并提供报价。期待您的来信！'

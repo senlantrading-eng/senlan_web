@@ -1,19 +1,19 @@
 const I18N = {
   en: {
-    nav: { products: 'Products', about: 'About', daily: 'News', gallery: 'Gallery', contact: 'Contact' },
+    nav: { products: 'Products', about: 'About', daily: 'News', contact: 'Contact' },
     footer: { home: 'Home' },
-    daily: { back: 'Back to all briefs', insight: 'Key insight', latest: 'Latest posts', category: 'Market Brief' }
+    daily: { back: 'Back to all briefs', insight: 'Key insight', latest: 'Latest posts', categories: 'Categories', category: 'Market Brief' }
   },
   zh: {
-    nav: { products: '产品', about: '关于我们', daily: '每日热点', gallery: '画廊', contact: '联系' },
+    nav: { products: '产品', about: '关于我们', daily: '每日热点', contact: '联系' },
     footer: { home: '首页' },
-    daily: { back: '返回全部文章', insight: '核心观点', latest: '最新文章', category: '市场简报' }
+    daily: { back: '返回全部文章', insight: '核心观点', latest: '最新文章', categories: '分类', category: '市场简报' }
   }
 };
 
 const SITE_URL = 'https://senlantrading.org/';
 
-let state = { lang: 'en' };
+let state = { lang: 'en', activeCategory: null };
 
 function get(obj, path) {
   return path.split('.').reduce((o, k) => (o ? o[k] : undefined), obj);
@@ -31,6 +31,96 @@ function getPost() {
   const url = new URL(window.location.href);
   const id = url.searchParams.get('id');
   return (window.DAILY_POSTS || []).find(p => p.id === id) || (window.DAILY_POSTS || [])[0];
+}
+
+function getRecentPosts(days = 4) {
+  const posts = window.DAILY_POSTS || [];
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - days);
+  const cutoffStr = cutoff.toISOString().split('T')[0];
+  return posts.filter(p => p.date >= cutoffStr);
+}
+
+function getCategories() {
+  const posts = window.DAILY_POSTS || [];
+  const cats = {};
+  posts.forEach(p => {
+    const key = p.category?.en || 'Market & Trends';
+    const zhKey = p.category?.zh || '市场趋势';
+    if (!cats[key]) {
+      cats[key] = { en: key, zh: zhKey, posts: [] };
+    }
+    cats[key].posts.push(p);
+  });
+  return Object.values(cats).sort((a, b) => b.posts.length - a.posts.length);
+}
+
+function renderSidebar(post) {
+  const posts = window.DAILY_POSTS || [];
+  const currentId = post?.id;
+
+  // Latest posts (last 4 days)
+  const recentPosts = getRecentPosts(4)
+    .filter(item => item.id !== currentId)
+    .slice(0, 5);
+
+  const recentHtml = recentPosts.length
+    ? recentPosts.map(item => `
+      <article style="padding:0 0 16px;margin:0 0 16px;border-bottom:1px solid var(--line)">
+        <p style="margin:0 0 8px;font-size:12px;color:var(--muted)">${item.date}</p>
+        <p style="margin:0 0 8px;font-size:16px;line-height:1.55;font-weight:700;letter-spacing:-.02em"><a href="daily-post.html?id=${item.id}" style="color:#111827;text-decoration:none">${item.title[state.lang]}</a></p>
+        <p style="margin:0;font-size:12px;color:var(--muted)">${item.category?.[state.lang] || I18N[state.lang].daily.category}</p>
+      </article>
+    `).join('')
+    : `<p style="margin:0;color:var(--muted);font-size:14px">No posts in last 4 days.</p>`;
+
+  // Categories
+  const categories = getCategories();
+  const activeCat = state.activeCategory;
+
+  let categoryPostsHtml = '';
+  if (activeCat) {
+    const catData = categories.find(c => c.en === activeCat);
+    if (catData) {
+      categoryPostsHtml = `
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--line)">
+          <p style="margin:0 0 12px;font-size:12px;color:var(--muted);cursor:pointer" onclick="clearCategory()">
+            ← ${I18N[state.lang].daily.categories}
+          </p>
+          ${catData.posts.slice(0, 6).map(item => `
+            <article style="padding:0 0 14px;margin:0 0 14px;border-bottom:1px solid var(--line)">
+              <p style="margin:0 0 6px;font-size:11px;color:var(--muted)">${item.date}</p>
+              <p style="margin:0;font-size:15px;line-height:1.5;font-weight:600;letter-spacing:-.02em"><a href="daily-post.html?id=${item.id}" style="color:#111827;text-decoration:none">${item.title[state.lang]}</a></p>
+            </article>
+          `).join('')}
+        </div>
+      `;
+    }
+  }
+
+  const catsHtml = categories.map(c => `
+    <button onclick="setCategory('${c.en}')" style="display:block;width:100%;text-align:left;padding:8px 10px;margin:0 0 6px;border:1px solid ${activeCat === c.en ? '#111827' : 'var(--line)'};border-radius:10px;background:${activeCat === c.en ? '#111827' : '#fff'};color:${activeCat === c.en ? '#fff' : '#374151'};font-size:13px;cursor:pointer;transition:all .15s">
+      <span style="font-weight:600">${c[state.lang]}</span>
+      <span style="float:right;font-size:12px;opacity:.7">${c.posts.length}</span>
+    </button>
+  `).join('');
+
+  const latestRoot = document.getElementById('latest-posts-root');
+  if (latestRoot) {
+    latestRoot.innerHTML = `
+      <aside style="position:absolute;top:8px;left:calc(50% + 470px);width:250px;padding:18px 18px 6px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 12px 36px rgba(15,23,42,.06)">
+        <h3 style="margin:0 0 16px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)">${I18N[state.lang].daily.latest}</h3>
+        ${recentHtml}
+
+        <div style="margin-top:20px;padding-top:18px;border-top:2px solid var(--line)">
+          <h3 style="margin:0 0 14px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)">${I18N[state.lang].daily.categories}</h3>
+          ${catsHtml}
+        </div>
+
+        ${categoryPostsHtml}
+      </aside>
+    `;
+  }
 }
 
 function renderPost() {
@@ -140,18 +230,6 @@ function renderPost() {
     }
   });
 
-  const posts = window.DAILY_POSTS || [];
-  const latestPosts = posts
-    .filter(item => item.id !== post.id)
-    .slice(0, 5)
-    .map(item => `
-      <article style="padding:0 0 16px;margin:0 0 16px;border-bottom:1px solid var(--line)">
-        <p style="margin:0 0 8px;font-size:12px;color:var(--muted)">${item.date}</p>
-        <p style="margin:0 0 8px;font-size:16px;line-height:1.55;font-weight:700;letter-spacing:-.02em"><a href="daily-post.html?id=${item.id}" style="color:#111827;text-decoration:none">${item.title[state.lang]}</a></p>
-        <p style="margin:0;font-size:12px;color:var(--muted)">${I18N[state.lang].daily.category}</p>
-      </article>
-    `).join('');
-
   const root = document.getElementById('post-root');
   root.innerHTML = `
     <article style="max-width:860px;margin:0 auto">
@@ -176,15 +254,7 @@ function renderPost() {
     </article>
   `;
 
-  const latestRoot = document.getElementById('latest-posts-root');
-  if (latestRoot) {
-    latestRoot.innerHTML = `
-      <aside style="position:absolute;top:8px;left:calc(50% + 470px);width:250px;padding:18px 18px 6px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 12px 36px rgba(15,23,42,.06)">
-        <h3 style="margin:0 0 16px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)">${I18N[state.lang].daily.latest}</h3>
-        ${latestPosts || `<p style="margin:0;color:var(--muted);font-size:14px">No more posts yet.</p>`}
-      </aside>
-    `;
-  }
+  renderSidebar(post);
 
   const body = document.getElementById('post-body');
   post.blocks.forEach((block, index) => {
@@ -207,6 +277,16 @@ function renderPost() {
 
     body.appendChild(el);
   });
+}
+
+function setCategory(cat) {
+  state.activeCategory = cat;
+  renderPost();
+}
+
+function clearCategory() {
+  state.activeCategory = null;
+  renderPost();
 }
 
 function setLang(lang) {

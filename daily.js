@@ -1,6 +1,6 @@
 const I18N = {
   en: {
-    nav: { products: 'Products', about: 'About', daily: 'News', gallery: 'Gallery', contact: 'Contact' },
+    nav: { products: 'Products', about: 'About', daily: 'News', contact: 'Contact' },
     footer: { home: 'Home' },
     daily: {
       eyebrow: 'News Insights',
@@ -16,7 +16,7 @@ const I18N = {
     }
   },
   zh: {
-    nav: { products: '产品', about: '关于我们', daily: '每日热点', gallery: '画廊', contact: '联系' },
+    nav: { products: '产品', about: '关于我们', daily: '每日热点', contact: '联系' },
     footer: { home: '首页' },
     daily: {
       eyebrow: '每日热点',
