@@ -455,6 +455,9 @@ startAutoplay();
     });
   }, { passive: true });
 
+  // Also catch the end of smooth-scroll (scrollBy/scrollTo), which may not fire a final scroll event
+  track.addEventListener('scrollend', normalizeAtEdges, { passive: true });
+
   prev?.addEventListener('click', () => {
     track.scrollBy({ left: -scrollByAmount(), behavior: 'smooth' });
   });
