@@ -317,7 +317,7 @@ window.DAILY_POSTS = [
       },
       {
         "type": "image",
-        "src": "img/news-sea-construction-2026-05-25_compressed.webp",
+        "src": "img/news-sea-construction-2026-05-25_compressed.jpg",
         "alt": {
           "en": "Southeast Asia infrastructure construction site with cement and concrete materials",
           "zh": "东南亚基础设施建筑工地，配有水泥与混凝土材料"
