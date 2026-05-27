@@ -10,8 +10,14 @@ const I18N = {
       partnersLead: 'We maintain long-term contractual partnerships with multiple blast furnace slag producers in Tangshan, enabling us to source GBFS directly from the factory. This stable upstream integration ensures consistent product quality, reliable supply volumes, and full traceability from production to delivery. By working closely with our partner factories, we are able to respond efficiently to market demand while maintaining strict quality and logistics control for both domestic and international customers.',
       partner: {
         donghua: 'Tangshan Donghua Iron & Steel Enterprise Group Co., Ltd.',
-        ruifeng: 'Tangshan Ruifeng Iron & Steel (Group) Co., Ltd.'
+        ruifeng: 'Tangshan Ruifeng Iron & Steel (Group) Co., Ltd.',
+        anfeng: 'Hebei Anfeng Iron & Steel Group Co., Ltd.',
+        anfengZh: '河北安丰钢铁集团有限公司',
+        songting: 'Tangshan Songting Iron & Steel Co., Ltd.',
+        songtingZh: '唐山松汀钢铁有限公司'
       },
+      logisticsTitle: 'Optimized Logistics, Lower Delivered Cost',
+      logisticsLead: 'Because our GBFS is sourced directly from partner factories, we are able to eliminate unnecessary intermediaries, resulting in a more cost-effective supply structure for our customers. In addition, our partner plants are strategically located near major ports in the Tangshan region, significantly reducing inland transportation distance and handling costs. This proximity allows for faster turnaround, optimized loading operations, and lower overall logistics expenses, providing customers with competitive pricing and a more efficient end-to-end delivery solution.',
       k: {
         grade: 'Grade',
         sample: 'Sample',
@@ -56,8 +62,14 @@ const I18N = {
       partnersLead: '我们与唐山多家高炉矿渣生产商保持长期合同合作关系，能够直接从工厂采购 GBFS。这种稳定的上游整合确保了产品质量的一致性、供应量的可靠性以及从生产到交付的全程可追溯性。通过与合作伙伴工厂的紧密协作，我们能够高效响应市场需求，同时为国内外客户严格把控质量与物流。',
       partner: {
         donghua: '唐山东华钢铁企业集团有限公司',
-        ruifeng: '唐山瑞丰钢铁（集团）有限公司'
+        ruifeng: '唐山瑞丰钢铁（集团）有限公司',
+        anfeng: '河北安丰钢铁集团有限公司',
+        anfengZh: 'Hebei Anfeng Iron & Steel Group Co., Ltd.',
+        songting: '唐山松汀钢铁有限公司',
+        songtingZh: 'Tangshan Songting Iron & Steel Co., Ltd.'
       },
+      logisticsTitle: '优化物流，降低到岸成本',
+      logisticsLead: '由于我们的 GBFS 直接采购自合作工厂，能够消除不必要的中介环节，从而为客户提供更具成本效益的供应结构。此外，我们的合作工厂战略性地位于唐山地区主要港口附近，显著缩短了内陆运输距离和装卸成本。这种地理优势带来了更快的周转速度、优化的装载作业以及更低的整体物流费用，为客户提供有竞争力的价格和更高效的端到端交付解决方案。',
       k: {
         grade: '等级',
         sample: '样品',
@@ -404,6 +416,12 @@ function render() {
   const partnersSec = document.getElementById('factory-partners');
   if (partnersSec) {
     partnersSec.style.display = state.product === 'gbfs' ? '' : 'none';
+  }
+
+  // logistics partners section (GBFS only)
+  const logisticsSec = document.getElementById('logistics-partners');
+  if (logisticsSec) {
+    logisticsSec.style.display = state.product === 'gbfs' ? '' : 'none';
   }
 
   // 3D molecule (GGBFS only)
