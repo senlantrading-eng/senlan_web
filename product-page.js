@@ -185,7 +185,7 @@ const DATA = {
   },
 
   highcalcium: {
-    bg: 'img/highcalcium-hero-refresh-20260520.webp',
+    bg: 'img/highcalcium-product-nanobanana-2k_compressed.webp',
     headline: {
       en: 'High-calcium limestone for industrial applications.',
       zh: '高钙石/高钙石灰石，用于工业应用'
@@ -201,11 +201,11 @@ const DATA = {
     ],
     highlights: [],
     benefits: { en: [], zh: [] },
-    benefitImage: 'img/highcalcium-detail-singlegrade-nanobanana-2k_compressed.webp'
+    benefitImage: 'img/highcalcium-product-nanobanana-2k_compressed.webp'
   },
 
   clinker: {
-    bg: 'img/clinker-hero-nanobanana-2k_compressed.webp',
+    bg: 'img/clinker-product-nanobanana-2k_compressed.webp',
     headline: {
       en: 'Cement clinker for global supply.',
       zh: '水泥熟料 · 面向全球供应'

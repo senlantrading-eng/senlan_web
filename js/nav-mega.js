@@ -4,8 +4,8 @@
   const mega = document.querySelector('[data-products-mega]');
   if (!trigger || !mega) return;
 
-  // On pages using the compact topbar header, hover can flicker.
-  // Switch to click-to-toggle mode for stability.
+  // On pages using the compact topbar header, use click-to-toggle for stability.
+  // Pages without topbar (e.g. homepage hero) use hover.
   const clickOnly = !!document.querySelector('.topbar');
 
   const panel = mega.querySelector('.pMega__panel');
