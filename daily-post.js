@@ -297,6 +297,26 @@ function setLang(lang) {
 }
 
 applyI18n();
-renderPost();
-document.getElementById('year').textContent = new Date().getFullYear();
-document.querySelectorAll('.lang__btn').forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
+
+function init() {
+  renderPost();
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.querySelectorAll('.lang__btn').forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
+}
+
+if (window.DAILY_POSTS) {
+  init();
+} else {
+  // Wait for dynamically-injected daily-data.js to load
+  let attempts = 0;
+  const timer = setInterval(() => {
+    attempts++;
+    if (window.DAILY_POSTS) {
+      clearInterval(timer);
+      init();
+    } else if (attempts > 200) { // ~10s timeout
+      clearInterval(timer);
+      document.getElementById('post-root').innerHTML = '<p style="text-align:center;padding:40px;color:var(--muted)">Loading article data… Please refresh.</p>';
+    }
+  }, 50);
+}
