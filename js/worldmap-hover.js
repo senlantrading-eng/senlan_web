@@ -1,7 +1,7 @@
 // World map (countries) with hover highlight + optional points/arcs later
 // Data source: Natural Earth (admin_0 countries), converted to GeoJSON.
 
-const DATA_URL = './img/maps/world-countries-110m.geojson';
+const DATA_URL = './img/maps/world-countries-110m.geojson?v=2';
 
 // Export ports (China) + regional customers (center points)
 const PORTS = [
