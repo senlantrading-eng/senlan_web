@@ -6,7 +6,12 @@ const I18N = {
       tds: 'Technical Datasheet',
       benefitsTitle: 'Key Application Value',
       benefitsLead: 'Construction materials and diversified industrial applications:',
-      disclaimer: 'Datasheet values are for reference and may vary by batch and shipment conditions. Final acceptance is subject to contract.',
+      partnersTitle: 'Secured Factory-Direct GBFS Supply',
+      partnersLead: 'We maintain long-term contractual partnerships with multiple blast furnace slag producers in Tangshan, enabling us to source GBFS directly from the factory. This stable upstream integration ensures consistent product quality, reliable supply volumes, and full traceability from production to delivery. By working closely with our partner factories, we are able to respond efficiently to market demand while maintaining strict quality and logistics control for both domestic and international customers.',
+      partner: {
+        donghua: 'Tangshan Donghua Iron & Steel Enterprise Group Co., Ltd.',
+        ruifeng: 'Tangshan Ruifeng Iron & Steel (Group) Co., Ltd.'
+      },
       k: {
         grade: 'Grade',
         sample: 'Sample',
@@ -47,7 +52,12 @@ const I18N = {
       tds: '技术数据表',
       benefitsTitle: '关键应用价值',
       benefitsLead: '面向建筑材料与多元工业应用：',
-      disclaimer: '数据表信息仅供参考，数值可能因批次、生产与运输条件不同而变化，最终以合同约定为准。',
+      partnersTitle: '稳定的工厂直供 GBFS',
+      partnersLead: '我们与唐山多家高炉矿渣生产商保持长期合同合作关系，能够直接从工厂采购 GBFS。这种稳定的上游整合确保了产品质量的一致性、供应量的可靠性以及从生产到交付的全程可追溯性。通过与合作伙伴工厂的紧密协作，我们能够高效响应市场需求，同时为国内外客户严格把控质量与物流。',
+      partner: {
+        donghua: '唐山东华钢铁企业集团有限公司',
+        ruifeng: '唐山瑞丰钢铁（集团）有限公司'
+      },
       k: {
         grade: '等级',
         sample: '样品',
@@ -388,6 +398,12 @@ function render() {
     // hide section if empty
     const sec = document.getElementById('benefits');
     if (sec) sec.style.display = benefits.length ? '' : 'none';
+  }
+
+  // factory partners section (GBFS only)
+  const partnersSec = document.getElementById('factory-partners');
+  if (partnersSec) {
+    partnersSec.style.display = state.product === 'gbfs' ? '' : 'none';
   }
 
   // 3D molecule (GGBFS only)
