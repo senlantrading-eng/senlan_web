@@ -171,7 +171,7 @@ const DATA = {
         '多元工业应用：GBFS 可进一步加工为矿渣粉（高性能建筑外加材料）或用于生产矿棉保温材料；同时适用于道路基层填筑、制砖，以及作为玻璃陶瓷生产的补充原料等。'
       ]
     },
-    benefitImage: 'img/gbfs-in-use-2k_compressed.webp'
+    benefitImage: 'img/gbfs-closeup-realistic-2026-05-27_compressed.png'
   },
 
   highcalcium: {
