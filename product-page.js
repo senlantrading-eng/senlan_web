@@ -261,6 +261,35 @@ let state = { lang: 'en', product: 'ggbfs' };
 
 let cleanup3d = null;
 
+const STATIC_PRODUCTS = ['ggbfs', 'gbfs', 'highcalcium', 'clinker'];
+
+function getProductFromLocation() {
+  const sp = new URLSearchParams(location.search);
+  const queryProduct = (sp.get('p') || '').toLowerCase();
+  if (queryProduct && DATA[queryProduct]) return queryProduct;
+
+  const file = (location.pathname.split('/').pop() || '').toLowerCase();
+  const fileMap = {
+    'ggbfs.html': 'ggbfs',
+    'gbfs.html': 'gbfs',
+    'highcalcium.html': 'highcalcium',
+    'clinker.html': 'clinker'
+  };
+  return fileMap[file] || '';
+}
+
+function applyStaticProductContent() {
+  document.querySelectorAll('[data-static-product][data-static-lang]').forEach(el => {
+    const show = el.getAttribute('data-static-product') === state.product
+      && el.getAttribute('data-static-lang') === state.lang;
+    if (el.matches('#p-meta > div')) {
+      el.style.display = show ? 'contents' : 'none';
+    } else {
+      el.style.display = show ? '' : 'none';
+    }
+  });
+}
+
 function get(obj, path) {
   return path.split('.').reduce((o, k) => (o ? o[k] : undefined), obj);
 }
@@ -337,7 +366,7 @@ function render() {
     }
     ogd.setAttribute('content', s.desc);
 
-    const canonicalHref = `${SITE_URL}product.html?p=${encodeURIComponent(state.product)}`;
+    const canonicalHref = `${SITE_URL}${encodeURIComponent(state.product)}.html`;
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement('link');
@@ -414,35 +443,40 @@ function render() {
   // background
   document.getElementById('p-bg').style.backgroundImage = `url('${p.bg}')`;
 
-  // headline + lead
-  document.getElementById('p-headline').textContent = p.headline[state.lang];
-  const lead = [p.lead[state.lang], p.lead2?.[state.lang]].filter(Boolean).join('\n\n');
-  document.getElementById('p-lead').textContent = lead;
-
-  // highlights
+  // headline + lead + highlights
   const meta = document.getElementById('p-meta');
-  meta.innerHTML = '';
-  p.highlights.forEach(item => {
-    const div = document.createElement('div');
-    div.className = 'meta-item';
-    div.innerHTML = `<div class="meta-k">${t('p.k.' + item.k)}</div><div class="meta-v">${item.v}</div>`;
-    meta.appendChild(div);
-  });
-  meta.style.display = p.highlights.length ? '' : 'none';
+  if (STATIC_PRODUCTS.includes(state.product)) {
+    applyStaticProductContent();
+    meta.style.display = ['highcalcium', 'clinker'].includes(state.product) ? 'none' : '';
+  } else {
+    document.getElementById('p-headline').textContent = p.headline[state.lang];
+    const lead = [p.lead[state.lang], p.lead2?.[state.lang]].filter(Boolean).join('\n\n');
+    document.getElementById('p-lead').textContent = lead;
+
+    meta.innerHTML = '';
+    p.highlights.forEach(item => {
+      const div = document.createElement('div');
+      div.className = 'meta-item';
+      div.innerHTML = `<div class="meta-k">${t('p.k.' + item.k)}</div><div class="meta-v">${item.v}</div>`;
+      meta.appendChild(div);
+    });
+    meta.style.display = p.highlights.length ? '' : 'none';
+  }
 
   // benefits
   const list = document.getElementById('p-benefits');
   const benefits = (p.benefits?.[state.lang] || []).filter(Boolean);
   if (list) {
-    list.innerHTML = '';
-    benefits.forEach(text => {
-      const li = document.createElement('li');
-      li.textContent = text;
-      list.appendChild(li);
-    });
-    // hide section if empty, or explicitly disabled for this product
+    if (!['ggbfs', 'gbfs'].includes(state.product)) {
+      list.innerHTML = '';
+      benefits.forEach(text => {
+        const li = document.createElement('li');
+        li.textContent = text;
+        list.appendChild(li);
+      });
+    }
     const sec = document.getElementById('benefits');
-    if (sec) sec.style.display = benefits.length && state.product !== 'highcalcium' ? '' : 'none';
+    if (sec) sec.style.display = (['ggbfs', 'gbfs'].includes(state.product) || (benefits.length && state.product !== 'highcalcium')) ? '' : 'none';
   }
 
   // factory partners section (GBFS only)
@@ -493,17 +527,19 @@ function render() {
 
   // Render TDS as images to fully remove viewer toolbar
   const pdf = document.getElementById('p-pdf');
-  pdf.innerHTML = '';
-  (p.tdsPages || []).forEach((src, idx) => {
-    const wrap = document.createElement('div');
-    wrap.className = 'pdf-page';
-    const img = document.createElement('img');
-    img.src = src;
-    img.alt = `TDS page ${idx + 1}`;
-    img.loading = 'lazy';
-    wrap.appendChild(img);
-    pdf.appendChild(wrap);
-  });
+  if (!STATIC_PRODUCTS.includes(state.product)) {
+    pdf.innerHTML = '';
+    (p.tdsPages || []).forEach((src, idx) => {
+      const wrap = document.createElement('div');
+      wrap.className = 'pdf-page';
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = `TDS page ${idx + 1}`;
+      img.loading = 'lazy';
+      wrap.appendChild(img);
+      pdf.appendChild(wrap);
+    });
+  }
 
   applyI18n();
   applyLangBlocks();
@@ -516,11 +552,9 @@ function setLang(lang) {
 }
 
 function initFromQuery() {
-  const sp = new URLSearchParams(location.search);
-  const p = (sp.get('p') || '').toLowerCase();
+  const p = getProductFromLocation();
   if (p && DATA[p]) state.product = p;
-  // debug
-  console.log('[product] query p=', p, '→ using', state.product);
+  console.log('[product] location → using', state.product);
 }
 
 // init

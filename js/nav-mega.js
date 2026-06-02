@@ -12,6 +12,14 @@
   const backdrop = mega.querySelector('.pMega__backdrop');
   const items = Array.from(mega.querySelectorAll('[data-pm-item]'));
   const imgs = Array.from(mega.querySelectorAll('[data-pm-img]'));
+  const file = (window.location.pathname.split('/').pop() || '').toLowerCase();
+  const keyFromFile = {
+    'ggbfs.html': 'ggbfs',
+    'gbfs.html': 'gbfs',
+    'highcalcium.html': 'highcalcium',
+    'clinker.html': 'clinker',
+    'product.html': 'ggbfs'
+  }[file];
 
   let pinned = false;
   let hoverTimer = null;
@@ -24,6 +32,8 @@
     items.forEach((it) => it.classList.toggle('is-active', it.dataset.key === key));
     imgs.forEach((img) => img.classList.toggle('is-active', img.dataset.pmImg === key));
   }
+
+  if (keyFromFile) setActive(keyFromFile);
 
   function open() {
     if (closeTimer) {
