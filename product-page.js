@@ -199,20 +199,40 @@ const DATA = {
   highcalcium: {
     bg: 'img/highcalcium-product-nanobanana-2k_compressed.webp',
     headline: {
-      en: 'High-calcium limestone for industrial applications.',
-      zh: '高钙石/高钙石灰石，用于工业应用'
+      en: 'High-calcium limestone for cement, clinker, and industrial use.',
+      zh: '高钙石灰石，适用于水泥、熟料与多元工业用途'
     },
     lead: {
-      en: 'High-calcium limestone is widely used in cement and other industrial applications. Please refer to the technical datasheet for details.',
-      zh: '高钙石灰石广泛用于水泥及多种工业场景，具体指标请参考技术数据表。'
+      en: 'High-calcium limestone is an important industrial raw material used in cement, clinker, steelmaking, and other mineral-processing applications. The current sample datasheet shows a high-CaO profile suitable for customers who need stable calcium-bearing material for blending, fluxing, or raw mix adjustment.',
+      zh: '高钙石灰石是重要的工业原料，广泛用于水泥、熟料、炼钢及其他矿物加工场景。当前样品数据表显示其具备较高 CaO 特征，适合用于需要稳定含钙原料的配料、熔剂或生料校正应用。'
     },
-    lead2: { en: '', zh: '' },
+    lead2: {
+      en: 'Third-party lab data from the sample indicates 54.49% CaO, 0.18% SiO₂, and 1.72% MgO. Final supply specification, sizing, and commercial terms remain subject to contract and shipment requirements.',
+      zh: '样品第三方检测数据显示：CaO 54.49%、SiO₂ 0.18%、MgO 1.72%。最终供货指标、粒度与商务条款以合同及实际装运要求为准。'
+    },
     tdsPages: [
       'img/tds/highcalcium-tds-1_compressed.webp',
       'img/tds/highcalcium-tds-2_compressed.webp'
     ],
     highlights: [],
-    benefits: { en: [], zh: [] },
+    benefits: {
+      en: [
+        'Production of building materials: used in carpet, vinyl tile, mortars, plastics, and roofing shingles, where calcium limestone can improve strength, durability, and cost efficiency.',
+        'Agriculture and animal feed: a cost-effective calcium source for poultry, cattle, and pigs, supporting bone development, eggshell quality, and egg production.',
+        'Soil amendment: used to raise soil pH in acidic conditions, helping improve nutrient availability and crop performance.',
+        'Glass production: provides calcium input that supports hardness and durability in finished glass products.',
+        'Construction aggregates: used in road base, asphalt, and concrete applications where strength and durability are required.',
+        'Flue gas cleaning: used in industrial gas treatment systems where calcium reacts with sulfur dioxide to support pollutant removal.'
+      ],
+      zh: [
+        '建材生产：可用于地毯、乙烯基地砖、砂浆、塑料和屋面瓦等产品，帮助提升强度、耐久性，并优化材料成本。',
+        '农业与饲料：作为禽类、牛和猪等动物饲料中高性价比的钙源，有助于骨骼发育、蛋壳质量和产蛋表现。',
+        '土壤改良：可用于改善酸性土壤，通过提升土壤 pH 值来增强养分有效性并促进作物生长。',
+        '玻璃生产：为玻璃制造提供钙源，有助于成品玻璃的硬度与耐久性。',
+        '建筑骨料：可用于道路、沥青和混凝土相关场景，为最终产品提供强度与耐久支持。',
+        '烟气净化：可用于工业烟气处理系统，通过与二氧化硫反应，帮助实现污染物去除。'
+      ]
+    },
     benefitImage: 'img/highcalcium-product-nanobanana-2k_compressed.webp'
   },
 
@@ -255,6 +275,18 @@ function applyI18n() {
     const key = el.getAttribute('data-i18n');
     const val = get(I18N[state.lang], key);
     if (typeof val === 'string') el.textContent = val;
+  });
+}
+
+function applyLangBlocks() {
+  document.querySelectorAll('[data-lang-block]').forEach(el => {
+    el.style.display = el.getAttribute('data-lang-block') === state.lang ? '' : 'none';
+  });
+}
+
+function applyProductSections() {
+  document.querySelectorAll('[data-product-section]').forEach(el => {
+    el.style.display = el.getAttribute('data-product-section') === state.product ? '' : 'none';
   });
 }
 
@@ -396,6 +428,7 @@ function render() {
     div.innerHTML = `<div class="meta-k">${t('p.k.' + item.k)}</div><div class="meta-v">${item.v}</div>`;
     meta.appendChild(div);
   });
+  meta.style.display = p.highlights.length ? '' : 'none';
 
   // benefits
   const list = document.getElementById('p-benefits');
@@ -417,6 +450,8 @@ function render() {
   if (partnersSec) {
     partnersSec.style.display = state.product === 'gbfs' ? '' : 'none';
   }
+
+  applyProductSections();
 
   // logistics partners section (GBFS only)
   const logisticsSec = document.getElementById('logistics-partners');
@@ -471,6 +506,7 @@ function render() {
   });
 
   applyI18n();
+  applyLangBlocks();
 }
 
 function setLang(lang) {
