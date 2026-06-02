@@ -407,9 +407,9 @@ function render() {
       li.textContent = text;
       list.appendChild(li);
     });
-    // hide section if empty
+    // hide section if empty, or explicitly disabled for this product
     const sec = document.getElementById('benefits');
-    if (sec) sec.style.display = benefits.length ? '' : 'none';
+    if (sec) sec.style.display = benefits.length && state.product !== 'highcalcium' ? '' : 'none';
   }
 
   // factory partners section (GBFS only)
