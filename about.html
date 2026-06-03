@@ -23,7 +23,7 @@
 </head>
 <body>
 
-  <header class="topbar" data-topbar data-scrollhide>
+  <header class="topbar topbar--on-hero" data-topbar data-scrollhide>
     <div class="container topbar__inner">
       <a class="topbar__logo" href="index.html">SENLAN TRADING</a>
       <nav class="topbar__nav" aria-label="Primary">
@@ -77,15 +77,38 @@
   </div>
 
   <main>
-    <!-- Tesla-like fullscreen hero (image slideshow, video-style) -->
+    <!-- Tesla-like fullscreen hero (background video) -->
     <section class="aboutHero" aria-label="About hero">
       <div class="aboutHero__bg" aria-hidden="true">
-        <div class="aboutHero__frame is-active" data-about-frame style="background-image:url('img/about/about-hero-1_compressed.webp')"></div>
-        <div class="aboutHero__frame" data-about-frame style="background-image:url('img/about/about-hero-2_compressed.webp')"></div>
-        <div class="aboutHero__frame" data-about-frame style="background-image:url('img/about/about-hero-3_compressed.webp')"></div>
+        <video class="aboutHero__video" id="aboutHeroVideo" autoplay muted loop playsinline preload="metadata">
+          <source src="video/0a369605a094b5e88b061d28b29e4fbc.mp4" type="video/mp4">
+        </video>
       </div>
       <div class="aboutHero__veil" aria-hidden="true"></div>
       <div class="container aboutHero__content">
+        <div class="aboutHero__controls" aria-label="Video controls">
+          <button class="aboutHero__control" id="aboutHeroMute" type="button" aria-pressed="true" aria-label="Unmute video">
+            <svg class="aboutHero__icon aboutHero__icon--volume-on" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 9v6h4l5 4V5l-5 4H5Z" fill="currentColor"></path>
+              <path d="M18 9.5a4.5 4.5 0 0 1 0 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+              <path d="M19.8 7a7.5 7.5 0 0 1 0 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+            </svg>
+            <svg class="aboutHero__icon aboutHero__icon--volume-off" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 9v6h4l5 4V5l-5 4H5Z" fill="currentColor"></path>
+              <path d="M17 9l4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+              <path d="M21 9l-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+            </svg>
+          </button>
+          <button class="aboutHero__control" id="aboutHeroPause" type="button" aria-pressed="false" aria-label="Pause video">
+            <svg class="aboutHero__icon aboutHero__icon--pause" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="7" y="5" width="3.2" height="14" rx="1.2" fill="currentColor"></rect>
+              <rect x="13.8" y="5" width="3.2" height="14" rx="1.2" fill="currentColor"></rect>
+            </svg>
+            <svg class="aboutHero__icon aboutHero__icon--play" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 6.5v11l9-5.5-9-5.5Z" fill="currentColor"></path>
+            </svg>
+          </button>
+        </div>
         <a class="aboutHero__scroll" href="#about" aria-label="Scroll down">↓</a>
       </div>
     </section>
@@ -139,16 +162,43 @@
   <script src="app.js" type="module"></script>
   <script src="js/nav-mega.js" defer></script>
   <script>
-    // About fullscreen hero slideshow (video-style)
+    // About hero video controls
     (function(){
-      var frames = Array.prototype.slice.call(document.querySelectorAll('[data-about-frame]'));
-      if (!frames.length) return;
-      var i = 0;
-      setInterval(function(){
-        frames[i].classList.remove('is-active');
-        i = (i + 1) % frames.length;
-        frames[i].classList.add('is-active');
-      }, 9000);
+      var video = document.getElementById('aboutHeroVideo');
+      var muteButton = document.getElementById('aboutHeroMute');
+      var pauseButton = document.getElementById('aboutHeroPause');
+      if (!video || !muteButton || !pauseButton) return;
+
+      function syncMuteUi(){
+        var muted = !!video.muted;
+        muteButton.setAttribute('aria-pressed', String(muted));
+        muteButton.setAttribute('aria-label', muted ? 'Unmute video' : 'Mute video');
+        muteButton.classList.toggle('is-muted', muted);
+      }
+
+      function syncPlayUi(){
+        var paused = !!video.paused;
+        pauseButton.setAttribute('aria-pressed', String(paused));
+        pauseButton.setAttribute('aria-label', paused ? 'Play video' : 'Pause video');
+        pauseButton.classList.toggle('is-paused', paused);
+      }
+
+      muteButton.addEventListener('click', function(){
+        video.muted = !video.muted;
+        syncMuteUi();
+      });
+
+      pauseButton.addEventListener('click', function(){
+        if (video.paused) video.play();
+        else video.pause();
+        syncPlayUi();
+      });
+
+      video.addEventListener('play', syncPlayUi);
+      video.addEventListener('pause', syncPlayUi);
+
+      syncMuteUi();
+      syncPlayUi();
     })();
 
     // About topbar: hide on scroll down, show on scroll up

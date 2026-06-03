@@ -577,30 +577,81 @@ a{color:inherit}
 /* About: Tesla-like fullscreen hero (image slideshow, video-style) */
 .aboutHero{
   position: relative;
-  min-height: calc(100vh - 24px);
+  min-height: 100svh;
+  height: 100svh;
   display:flex;
   align-items:flex-end;
   overflow:hidden;
 }
-.aboutHero__bg{position:absolute;inset:0;}
-.aboutHero__frame{
-  position:absolute;inset:0;
-  background-size:cover;
-  background-position:center;
-  opacity:0;
-  transform: scale(1.04);
-  filter: saturate(1.02) contrast(1.02);
-  transition: opacity 1.2s ease, transform 10s linear;
+.aboutHero__bg{position:absolute;inset:0;overflow:hidden;}
+.aboutHero__video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  filter:saturate(1.02) contrast(1.02);
 }
-.aboutHero__frame.is-active{opacity:1; transform: scale(1.00);}
 .aboutHero__veil{
   position:absolute;inset:0;
   background:
     radial-gradient(900px 520px at 18% 58%, rgba(0,0,0,.36), rgba(0,0,0,0) 62%),
     linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.42) 88%);
 }
-.aboutHero__content{position:relative;z-index:1; padding: 0 16px 54px;}
-.topbar.topbar--on-hero + main .aboutHero__content{padding-top: 72px;}
+.aboutHero__content{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  padding:0;
+}
+.aboutHero__controls{
+  position:absolute;
+  right:20px;
+  bottom:20px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.aboutHero__control{
+  width:44px;
+  height:44px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,255,255,.24);
+  background:rgba(0,0,0,.18);
+  color:#fff;
+  cursor:pointer;
+  padding:0;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+.aboutHero__control:hover{
+  transform:translateY(-2px);
+  background:rgba(0,0,0,.26);
+  border-color:rgba(255,255,255,.34);
+}
+.aboutHero__icon{
+  width:18px;
+  height:18px;
+  display:block;
+}
+.aboutHero__icon--volume-off,
+.aboutHero__icon--play{
+  display:none;
+}
+.aboutHero__control.is-muted .aboutHero__icon--volume-on,
+.aboutHero__control.is-paused .aboutHero__icon--pause{
+  display:none;
+}
+.aboutHero__control.is-muted .aboutHero__icon--volume-off,
+.aboutHero__control.is-paused .aboutHero__icon--play{
+  display:block;
+}
+.topbar.topbar--on-hero + main .aboutHero__content{padding-top: 0;}
 .aboutHero__text{max-width: 920px;}
 .aboutHero__title{
   margin:0 0 12px;
@@ -684,14 +735,14 @@ a{color:inherit}
 
 /* Force topbar to sit on top of the hero without revealing page background */
 .topbar.topbar--on-hero{
-  position: relative !important;
-  left: auto;
-  right: auto;
-  top: auto;
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  top: 0;
   z-index: 120;
 }
 .topbar.topbar--on-hero .topbar__inner{margin-top: 0 !important;}
-.topbar.topbar--on-hero + main .aboutHero__content{padding-top: 72px;}
+.topbar.topbar--on-hero + main .aboutHero__content{padding-top: 0;}
 
 /* Footprint split: left text, right big image */
 .footprint-split{
