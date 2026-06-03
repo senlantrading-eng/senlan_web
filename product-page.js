@@ -259,6 +259,13 @@ const DATA = {
 
 let state = { lang: 'en', product: 'ggbfs' };
 
+const HIGHCALCIUM_SPEC_IMAGES = {
+  '10mm-26mm': 'img/highcalcium-10mm-26mm.jpg',
+  '20mm-40mm': 'img/highcalcium-20mm-40mm.jpg',
+  '30mm-50mm': 'img/highcalcium-30mm-50mm.jpg',
+  '40mm-80mm': 'img/highcalcium-40mm-80mm.png'
+};
+
 let cleanup3d = null;
 
 const STATIC_PRODUCTS = ['ggbfs', 'gbfs', 'highcalcium', 'clinker'];
@@ -543,6 +550,46 @@ function render() {
 
   applyI18n();
   applyLangBlocks();
+  initHighcalciumSpecsPreview();
+}
+
+function initHighcalciumSpecsPreview() {
+  const preview = document.getElementById('highcalcium-spec-preview');
+  const img = document.getElementById('highcalcium-spec-preview-img');
+  const empty = document.getElementById('highcalcium-spec-preview-empty');
+  if (!preview || !img || !empty) return;
+
+  const blocks = document.querySelectorAll('#highcalcium-specs .highcalcium-specs-list > [data-static-product="highcalcium"][data-static-lang]');
+  const activeBlock = Array.from(blocks).find((block) => block.dataset.staticLang === state.lang);
+  if (!activeBlock) return;
+
+  const options = activeBlock.querySelectorAll('.spec-option');
+  if (!options.length) return;
+
+  const updatePreview = (option) => {
+    const sizeKey = option.dataset.sizeKey;
+    const src = HIGHCALCIUM_SPEC_IMAGES[sizeKey];
+
+    options.forEach((node) => node.classList.toggle('is-active', node === option));
+
+    if (src) {
+      img.src = src;
+      img.alt = option.querySelector('.meta-v')?.textContent || 'High-calcium size preview';
+      img.hidden = false;
+      empty.hidden = true;
+    } else {
+      img.hidden = true;
+      empty.hidden = false;
+    }
+  };
+
+  options.forEach((option) => {
+    option.onmouseenter = () => updatePreview(option);
+    option.onfocus = () => updatePreview(option);
+  });
+
+  const active = activeBlock.querySelector('.spec-option.is-active') || options[0];
+  updatePreview(active);
 }
 
 function setLang(lang) {

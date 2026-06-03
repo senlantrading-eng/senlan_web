@@ -213,6 +213,120 @@
 .chips{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
 .chip{border:1px solid var(--line); border-radius:999px; padding:10px 14px; background:#fff}
 
+#highcalcium-specs{
+  background:#f9fbfd;
+}
+
+.highcalcium-specs-layout{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns:minmax(280px, 420px) minmax(320px, 1fr);
+  gap:20px;
+  align-items:stretch;
+}
+
+.highcalcium-specs-list{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.highcalcium-specs-list > div{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.spec-option{
+  cursor:pointer;
+  transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.spec-option:hover,
+.spec-option:focus-visible,
+.spec-option.is-active{
+  border-color:rgba(52,120,246,.35);
+  box-shadow:0 10px 30px rgba(17,24,39,.08);
+  transform:translateY(-1px);
+}
+
+.spec-preview{
+  min-height:418px;
+}
+
+.spec-preview__media{
+  position:relative;
+  width:678px;
+  height:418px;
+  max-width:100%;
+  min-height:418px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  background:linear-gradient(180deg, #fdfefe 0%, #f2f6fb 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px;
+}
+
+.spec-preview__media img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:contain;
+  padding:0;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(17,24,39,.10);
+}
+
+.spec-preview__empty{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  text-align:center;
+  color:var(--muted);
+  font-size:15px;
+  background:linear-gradient(180deg, rgba(255,255,255,.88) 0%, rgba(244,247,251,.96) 100%);
+}
+
+.spec-preview__empty[hidden],
+.spec-preview__media img[hidden]{
+  display:none !important;
+}
+
+.clinker-figure{
+  margin:18px 0 8px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  background:#fff;
+}
+
+.clinker-figure--float{
+  float:right;
+  width:320px;
+  max-width:42%;
+  margin:4px 0 16px 20px;
+}
+
+.clinker-figure img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.clinker-figure figcaption{
+  padding:12px 16px;
+  font-size:13px;
+  color:var(--muted);
+  border-top:1px solid var(--line);
+  background:#fbfcfe;
+}
+
 @media (max-width: 820px){
   .product-hero__grid{grid-template-columns:1fr; min-height: auto}
   .product-hero__media{min-height: 44vh; border-right:none; border-bottom:1px solid var(--line)}
@@ -224,4 +338,9 @@
 
   .benefits{grid-template-columns:1fr}
   .benefits__media{min-height: 320px}
+  .highcalcium-specs-layout{grid-template-columns:1fr}
+  .spec-preview{min-height:auto}
+  .spec-preview__media{width:100%; min-height:auto; height:auto; aspect-ratio:678 / 418; padding:8px}
+  .spec-preview__media img{width:100%; height:100%; max-width:none; max-height:none; padding:0}
+  .clinker-figure--float{float:none; width:100%; max-width:none; margin:16px 0}
 }
