@@ -263,7 +263,8 @@ const HIGHCALCIUM_SPEC_IMAGES = {
   '10mm-26mm': 'img/highcalcium-10mm-26mm.jpg',
   '20mm-40mm': 'img/highcalcium-20mm-40mm.jpg',
   '30mm-50mm': 'img/highcalcium-30mm-50mm.jpg',
-  '40mm-80mm': 'img/highcalcium-40mm-80mm.png'
+  '40mm-80mm': 'img/highcalcium-40mm-80mm.png',
+  '50mm-80mm': 'img/highcalcium-50mm-80mm.png'
 };
 
 let cleanup3d = null;
