@@ -70,6 +70,22 @@ const I18N = {
       body2: "Our scale is built on proven capability, disciplined logistics, and trust earned through repeat delivery.",
       mapTitle: "Our Global Footprint Across China and International Markets"
     },
+    about: {
+      title: "Leading GBFS & GGBFS Manufacturer and Export Partner in Northern China",
+      body1: "Senlan specializes in the manufacturing and export of GBFS and GGBFS for the cement and concrete industry. Since 2015, we have supported customers across the United States, Europe, and Australia with reliable, consistent supply for large-volume projects.",
+      body2: "Backed by large raw-material reserves, port-based stockyards, and integrated logistics and quality control, we deliver stable quality and efficient international shipments worldwide.",
+      cards: {
+        consistencyTitle: "Built for consistency.",
+        consistencyBody: "Stable specs. Clear documentation. Reliable timelines.",
+        logisticsTitle: "Logistics",
+        logisticsBody: "Port-based stockyards and efficient international shipment planning."
+      },
+      tags: {
+        since: "Since 2015",
+        products: "GBFS · GGBFS",
+        markets: "US · Europe · Australia"
+      }
+    },
     footer: { backTop: "Back to top" }
   },
   zh: {
@@ -142,6 +158,22 @@ const I18N = {
       body1: "过去一年，Senlan Trading 已向国内及国际市场供应 4,000,000 吨 GBFS 与 900,000 吨 GGBFS。支撑这一成绩的是我们一体化的交付链路——从长期合作工厂到港口装载与发运，确保产能稳定、质量一致、执行可靠。",
       body2: "我们的规模，建立在经验证的能力、严谨的物流执行，以及一次次复购中积累的信任之上。",
       mapTitle: "我们在中国与全球市场的业务足迹"
+    },
+    about: {
+      title: "中国北方领先的 GBFS 与 GGBFS 制造及出口合作伙伴",
+      body1: "Senlan 专注于服务水泥与混凝土行业的 GBFS 与 GGBFS 制造和出口。自 2015 年以来，我们持续为美国、欧洲和澳大利亚客户提供可靠、稳定的大宗项目供应。",
+      body2: "依托充足的原料储备、港口堆场，以及一体化物流与质量控制体系，我们能够向全球客户稳定交付并高效完成国际发运。",
+      cards: {
+        consistencyTitle: "稳定，是我们的底层能力。",
+        consistencyBody: "指标稳定，单证清晰，交期可靠。",
+        logisticsTitle: "物流执行",
+        logisticsBody: "依托港口堆场与高效的国际发运规划，提升交付效率。"
+      },
+      tags: {
+        since: "自 2015 年起",
+        products: "GBFS · GGBFS",
+        markets: "美国 · 欧洲 · 澳大利亚"
+      }
     },
     footer: { backTop: "返回顶部" }
   }
