@@ -8,11 +8,24 @@ const I18N = {
       changeImages: "Change Images"
     },
     cta: { getQuote: "Get Quote", learnMore: "Learn More" },
-    nav: { daily: "News" },
+    nav: { products: "Products", about: "About", daily: "News", contact: "Contact" },
     brand: {
       title: "Built for consistency.",
       keywords: "Quality · Delivery · Partnership",
       small: "Stable specs. Clear documentation. Reliable timelines."
+    },
+    capacity: {
+      title: "OUR CAPACITY AND LOADING SCENE",
+      sub: "Port, loading, packing, and production scenes.",
+      slides: {
+        caofeidian: "Caofeidian Port Loading GBFS",
+        portLoading: "Port Loading Scene",
+        portCapacity: "Port Capacity Overview",
+        jumboBags: "GGBFS in Jumbo Bags",
+        grindingSystem: "GGBFS Grinding System",
+        storageSilos: "GGBFS Storage Silos",
+        productionEquipment: "GGBFS Production Equipment"
+      }
     },
     products: {
       title: "Products",
@@ -20,7 +33,15 @@ const I18N = {
       granules: "Granules",
       ggbfs: "For cement and concrete blending applications.",
       gbfs: "For further processing and industrial use.",
-      viewSpecs: "View Specs"
+      viewSpecs: "View Specs",
+      sectionTitle: "Products",
+      sectionSub: "Hover a product to preview.",
+      cards: {
+        ggbfs: { name: "GGBFS Powder", meta: "Cement replacement · Durability · Low heat" },
+        gbfs: { name: "GBFS Granules", meta: "Bulk supply · Further processing" },
+        highcalcium: { name: "High-Calcium Stone", meta: "Stable CaO · Industrial-grade" },
+        clinker: { name: "Clinker", meta: "Cement raw material · Consistent supply" }
+      }
     },
     process: {
       title: "From inquiry to shipment.",
@@ -41,6 +62,14 @@ const I18N = {
       notes: "Specs / Notes (optional)",
       submit: "Submit"
     },
+    footprint: {
+      kickerTitle: "4,000,000 MT GBFS and 900,000 MT GGBFS shipped this year.",
+      kickerSub: "Executed with scale, discipline, and control.",
+      lead: "4,000,000 MT of GBFS. 900,000 MT of GGBFS. Here’s How We Delivered.",
+      body1: "Over the past year, Senlan Trading has supplied 4,000,000 MT of GBFS and 900,000 MT of GGBFS to both domestic and global markets. This performance is supported by our integrated delivery chain — from long-term partner factories to port handling and shipment — ensuring stable capacity, consistent quality, and reliable execution.",
+      body2: "Our scale is built on proven capability, disciplined logistics, and trust earned through repeat delivery.",
+      mapTitle: "Our Global Footprint Across China and International Markets"
+    },
     footer: { backTop: "Back to top" }
   },
   zh: {
@@ -52,11 +81,24 @@ const I18N = {
       changeImages: "更换图片"
     },
     cta: { getQuote: "获取报价", learnMore: "了解更多" },
-    nav: { daily: "每日热点" },
+    nav: { products: "产品", about: "关于我们", daily: "每日热点", contact: "联系" },
     brand: {
       title: "稳定，才是长期合作的基础。",
       keywords: "品质 · 交付 · 合作",
       small: "指标稳定 · 单证清晰 · 交期可靠"
+    },
+    capacity: {
+      title: "产能与装载场景",
+      sub: "港口、装船、包装与生产现场一览。",
+      slides: {
+        caofeidian: "曹妃甸港口装载 GBFS",
+        portLoading: "港口装载场景",
+        portCapacity: "港口能力概览",
+        jumboBags: "吨包袋装 GGBFS",
+        grindingSystem: "GGBFS 粉磨系统",
+        storageSilos: "GGBFS 储料筒仓",
+        productionEquipment: "GGBFS 生产设备"
+      }
     },
     products: {
       title: "产品",
@@ -64,7 +106,15 @@ const I18N = {
       granules: "颗粒",
       ggbfs: "用于水泥与混凝土体系的掺合应用。",
       gbfs: "适用于再加工及工业用途。",
-      viewSpecs: "查看参数"
+      viewSpecs: "查看参数",
+      sectionTitle: "产品",
+      sectionSub: "悬停查看产品预览。",
+      cards: {
+        ggbfs: { name: "GGBFS 矿渣粉", meta: "替代水泥 · 耐久提升 · 低水化热" },
+        gbfs: { name: "GBFS 粒化矿渣", meta: "散货供应 · 适合再加工" },
+        highcalcium: { name: "高钙石", meta: "CaO 稳定 · 工业级应用" },
+        clinker: { name: "熟料", meta: "水泥原料 · 供应稳定" }
+      }
     },
     process: {
       title: "从询盘到发运，一条线走完。",
@@ -84,6 +134,14 @@ const I18N = {
       port: "目的港",
       notes: "指标/备注（可选）",
       submit: "提交"
+    },
+    footprint: {
+      kickerTitle: "今年已发运 4,000,000 吨 GBFS 与 900,000 吨 GGBFS。",
+      kickerSub: "以规模、纪律与控制力完成交付。",
+      lead: "4,000,000 吨 GBFS，900,000 吨 GGBFS：我们如何完成交付。",
+      body1: "过去一年，Senlan Trading 已向国内及国际市场供应 4,000,000 吨 GBFS 与 900,000 吨 GGBFS。支撑这一成绩的是我们一体化的交付链路——从长期合作工厂到港口装载与发运，确保产能稳定、质量一致、执行可靠。",
+      body2: "我们的规模，建立在经验证的能力、严谨的物流执行，以及一次次复购中积累的信任之上。",
+      mapTitle: "我们在中国与全球市场的业务足迹"
     },
     footer: { backTop: "返回顶部" }
   }
@@ -173,13 +231,20 @@ function stopAutoplay(){
 
 function setLang(lang){
   state.lang = lang;
-  document.querySelectorAll('.lang__btn').forEach(b => b.classList.toggle('is-active', b.dataset.lang === lang));
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  document.querySelectorAll('.lang__btn').forEach(b => {
+    const active = b.dataset.lang === lang;
+    b.classList.toggle('is-active', active);
+    b.setAttribute('aria-pressed', active ? 'true' : 'false');
+  });
+  try { localStorage.setItem('senlan_lang', lang); } catch (_) {}
   // keep Learn More link correct
   const learn = document.querySelector('[data-learnmore]');
   if (learn) {
     if (state.slide === 2) learn.setAttribute('href', 'product.html?p=ggbfs');
     else if (state.slide === 3) learn.setAttribute('href', 'product.html?p=gbfs');
-    else learn.setAttribute('href', 'product.html?p=ggbfs');
+    else if (state.slide === 4) learn.setAttribute('href', 'product.html?p=clinker');
+    else learn.setAttribute('href', 'product.html?p=highcalcium');
   }
   applyI18n();
 }
@@ -206,7 +271,14 @@ if (heroEl) {
 }
 
 // Init
-applyI18n();
+const initialLang = (() => {
+  try {
+    const saved = localStorage.getItem('senlan_lang');
+    if (saved === 'zh' || saved === 'en') return saved;
+  } catch (_) {}
+  return document.documentElement.lang && document.documentElement.lang.toLowerCase().startsWith('zh') ? 'zh' : 'en';
+})();
+setLang(initialLang);
 setSlide(1);
 document.getElementById('year').textContent = new Date().getFullYear();
 startAutoplay();
