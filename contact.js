@@ -2,8 +2,8 @@ const I18N = {
   en: {
     nav: { products: 'Products', about: 'About', daily: 'News', contact: 'Contact', home: 'Home', details: 'Details' },
     contact: {
-      title: 'Get a Quote',
-      lead: "Interested in working together? Fill out some info and we will be in touch shortly. We can’t wait to hear from you!"
+      title: 'Request a quote for GGBFS, GBFS, limestone or clinker',
+      lead: 'Share your laycan, required quantity, target specification and preferred loading method. We will review the inquiry and come back with the next commercial step.'
     },
     form: {
       firstName: 'First Name',
@@ -12,7 +12,7 @@ const I18N = {
       phone: 'Phone',
       laycan: 'Laycan',
       loading: 'Loading method',
-      loading: { bulk: 'Bulk', jumbo: 'Jumbo Bags', other: 'Other' },
+      loading: { bulk: 'Dry Bulk', jumbo: 'Jumbo Bags', container: 'Container', other: 'Other' },
       qty: 'Quantity in MT',
       qtyPlaceholder: 'e.g., 500',
       checkbox: 'I agree to be contacted by SENLAN TRADING.',
@@ -31,10 +31,11 @@ const I18N = {
       brand: 'SENLAN TRADING',
       slogan: 'Quality First · Stable Supply · Integrity Always',
       company: 'Company',
-      companyValue: 'Tangshan Senlan Commerce and Trade Co., Ltd R®',
+      companyValue: 'TANGSHAN SENLAN TRADING CO., LTD.',
       location: 'Location',
       locationValue: 'Room 1710, Rongtong Building, No. 601 Chaoyang West Road, Lubei District, Tangshan City, Hebei Province, China',
       contact: 'Contact',
+      products: 'Products',
       emailLabel: 'Email',
       whatsappLabel: 'WhatsApp'
     },
@@ -43,8 +44,8 @@ const I18N = {
   zh: {
     nav: { products: '产品', about: '关于我们', daily: '每日热点', contact: '联系', home: '首页', details: '详情' },
     contact: {
-      title: '联系我们获取报价',
-      lead: '有合作意向？请填写相关信息，我们会尽快与您联系并提供报价。期待您的来信！'
+      title: '获取 GGBFS、GBFS、高钙石或熟料报价',
+      lead: '请提供 laycan、需求数量、目标规格与装载方式，我们会据此评估并尽快回复下一步商务信息。'
     },
     form: {
       firstName: '名',
@@ -53,7 +54,7 @@ const I18N = {
       phone: '电话',
       laycan: '装期（Laycan）',
       loading: '装载方式',
-      loading: { bulk: '散装', jumbo: '吨袋', other: '其他' },
+      loading: { bulk: '散货', jumbo: '吨袋', container: '集装箱', other: '其他' },
       qty: '数量（MT）',
       qtyPlaceholder: '例如：500',
       checkbox: '我同意森澜贸易通过以上信息与我联系。',
@@ -76,6 +77,7 @@ const I18N = {
       location: '地址',
       locationValue: '中国河北省唐山市路北区朝阳西道601号融通大厦1710室',
       contact: '联系方式',
+      products: '产品',
       emailLabel: '邮箱',
       whatsappLabel: 'WhatsApp'
     },

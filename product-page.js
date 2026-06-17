@@ -6,8 +6,8 @@ const I18N = {
       tds: 'Technical Datasheet',
       benefitsTitle: 'Key Application Value',
       benefitsLead: 'Construction materials and diversified industrial applications:',
-      partnersTitle: 'Secured Factory-Direct GBFS Supply',
-      partnersLead: 'We maintain long-term contractual partnerships with multiple blast furnace slag producers in Tangshan, enabling us to source GBFS directly from the factory. This stable upstream integration ensures consistent product quality, reliable supply volumes, and full traceability from production to delivery. By working closely with our partner factories, we are able to respond efficiently to market demand while maintaining strict quality and logistics control for both domestic and international customers.',
+      partnersTitle: 'Factory-direct sourcing and loading execution',
+      partnersLead: 'We work with long-term upstream partners in Tangshan and coordinate loading execution around the port network, helping customers secure more stable supply, clearer documentation, and more reliable shipment planning.',
       partner: {
         donghua: 'Tangshan Donghua Iron & Steel Enterprise Group Co., Ltd.',
         ruifeng: 'Tangshan Ruifeng Iron & Steel (Group) Co., Ltd.',
@@ -16,8 +16,14 @@ const I18N = {
         songting: 'Tangshan Songting Iron & Steel Co., Ltd.',
         songtingZh: '唐山松汀钢铁有限公司'
       },
-      logisticsTitle: 'Optimized Logistics, Lower Delivered Cost',
-      logisticsLead: 'Because our GBFS is sourced directly from partner factories, we are able to eliminate unnecessary intermediaries, resulting in a more cost-effective supply structure for our customers. In addition, our partner plants are strategically located near major ports in the Tangshan region, significantly reducing inland transportation distance and handling costs. This proximity allows for faster turnaround, optimized loading operations, and lower overall logistics expenses, providing customers with competitive pricing and a more efficient end-to-end delivery solution.',
+      logisticsTitle: 'Port-side logistics and delivered cost control',
+      logisticsLead: 'With sourcing, yard coordination, and shipment planning aligned around the Tangshan and Caofeidian loading system, we can help reduce unnecessary inland handling, improve turnaround efficiency, and support a more disciplined delivered-cost structure.',
+      quoteTitle: 'What to share before requesting a quote',
+      quoteLead: 'To prepare a clearer offer and loading plan, please send the basic shipment information below.',
+      quote1: 'Laycan or expected loading window',
+      quote2: 'Required quantity and target specification',
+      quote3: 'Preferred loading method: dry bulk, jumbo bag, or container',
+      quoteCta: 'Request a quote',
       k: {
         grade: 'Grade',
         sample: 'Sample',
@@ -58,8 +64,8 @@ const I18N = {
       tds: '技术数据表',
       benefitsTitle: '关键应用价值',
       benefitsLead: '面向建筑材料与多元工业应用：',
-      partnersTitle: '稳定的工厂直供 GBFS',
-      partnersLead: '我们与唐山多家高炉矿渣生产商保持长期合同合作关系，能够直接从工厂采购 GBFS。这种稳定的上游整合确保了产品质量的一致性、供应量的可靠性以及从生产到交付的全程可追溯性。通过与合作伙伴工厂的紧密协作，我们能够高效响应市场需求，同时为国内外客户严格把控质量与物流。',
+      partnersTitle: '稳定的上游协同与装载执行',
+      partnersLead: '我们与唐山长期合作的上游伙伴保持稳定协同，并围绕港口装载体系进行执行协调，帮助客户获得更稳定的供应、更清晰的单证和更可靠的发运安排。',
       partner: {
         donghua: '唐山东华钢铁企业集团有限公司',
         ruifeng: '唐山瑞丰钢铁（集团）有限公司',
@@ -68,8 +74,14 @@ const I18N = {
         songting: '唐山松汀钢铁有限公司',
         songtingZh: 'Tangshan Songting Iron & Steel Co., Ltd.'
       },
-      logisticsTitle: '优化物流，降低到岸成本',
-      logisticsLead: '由于我们的 GBFS 直接采购自合作工厂，能够消除不必要的中介环节，从而为客户提供更具成本效益的供应结构。此外，我们的合作工厂战略性地位于唐山地区主要港口附近，显著缩短了内陆运输距离和装卸成本。这种地理优势带来了更快的周转速度、优化的装载作业以及更低的整体物流费用，为客户提供有竞争力的价格和更高效的端到端交付解决方案。',
+      logisticsTitle: '围绕港口体系的物流与成本控制',
+      logisticsLead: '通过围绕唐山与曹妃甸装载体系来协调采购、堆场与发运计划，我们可以帮助减少不必要的内陆转运、提升周转效率，并支持更稳健的到岸成本结构。',
+      quoteTitle: '询价前建议提供的信息',
+      quoteLead: '为了更快准备报价和装载方案，建议先提供以下基础信息。',
+      quote1: 'Laycan 或预计装货时间窗口',
+      quote2: '需求数量与目标规格',
+      quote3: '希望的装载方式：散货、吨包或集装箱',
+      quoteCta: '获取报价',
       k: {
         grade: '等级',
         sample: '样品',
@@ -111,7 +123,7 @@ const DATA = {
   ggbfs: {
     bg: 'img/ggbfs-hero-nanobanana-2k_compressed.webp',
     headline: {
-      en: 'Built for durability and long-term performance.',
+      en: 'GGBFS supplier from China for cement and concrete applications.',
       zh: '专为耐用性和长期性能而设计'
     },
     lead: {
@@ -161,7 +173,7 @@ const DATA = {
   gbfs: {
     bg: 'img/gbfs-hero-nanobanana-1k-v2_compressed.webp',
     headline: {
-      en: 'More Than Just Slag — A Reliable Material for Modern Construction',
+      en: 'GBFS granules supplier from China for grinding and industrial use.',
       zh: '不止是矿渣——面向现代建设的可靠材料'
     },
     lead: {
@@ -199,7 +211,7 @@ const DATA = {
   highcalcium: {
     bg: 'img/highcalcium-product-nanobanana-2k_compressed.webp',
     headline: {
-      en: 'High-calcium limestone for cement, clinker, and industrial use.',
+      en: 'High-calcium limestone supplier for cement and industrial applications.',
       zh: '高钙石灰石，适用于水泥、熟料与多元工业用途'
     },
     lead: {
@@ -239,7 +251,7 @@ const DATA = {
   clinker: {
     bg: 'img/clinker-product-nanobanana-2k_compressed.webp',
     headline: {
-      en: 'Cement clinker for global supply.',
+      en: 'Cement clinker supplier from China for global trading.',
       zh: '水泥熟料 · 面向全球供应'
     },
     lead: {

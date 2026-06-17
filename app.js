@@ -1,6 +1,9 @@
 const I18N = {
   en: {
     hero: {
+      eyebrow: "SENLAN TRADING",
+      headline: "Consistent supply for cement and concrete markets.",
+      summary: "GGBFS, GBFS, high-calcium limestone, and clinker — delivered with discipline from China.",
       slide1: { title: "High-Calcium Stone" },
       slide2: { title: "GGBFS" },
       slide3: { title: "GBFS" },
@@ -71,25 +74,28 @@ const I18N = {
       mapTitle: "Our Global Footprint Across China and International Markets"
     },
     about: {
-      title: "Leading GBFS & GGBFS Manufacturer and Export Partner in Northern China",
-      body1: "Senlan specializes in the manufacturing and export of GBFS and GGBFS for the cement and concrete industry. Since 2015, we have supported customers across the United States, Europe, and Australia with reliable, consistent supply for large-volume projects.",
-      body2: "Backed by large raw-material reserves, port-based stockyards, and integrated logistics and quality control, we deliver stable quality and efficient international shipments worldwide.",
+      title: "China-based supplier of GGBFS, GBFS and cement materials",
+      body1: "SENLAN TRADING is a China-based supplier supporting cement and concrete customers with GGBFS, GBFS and related cement materials.",
+      body2: "Our supply coordination and loading execution are connected to Tangshan Caofeidian and Caofeidian Port, supporting bulk vessel, jumbo bag and container shipment planning.",
       cards: {
         consistencyTitle: "Built for consistency.",
         consistencyBody: "Stable specs. Clear documentation. Reliable timelines.",
-        logisticsTitle: "Logistics",
-        logisticsBody: "Port-based stockyards and efficient international shipment planning."
+        logisticsTitle: "Port execution",
+        logisticsBody: "Loading execution connected to Caofeidian Port for bulk vessel, jumbo bag and container planning."
       },
       tags: {
-        since: "Since 2015",
-        products: "GBFS · GGBFS",
-        markets: "US · Europe · Australia"
+        since: "Tangshan Caofeidian",
+        products: "GGBFS · GBFS · Clinker",
+        markets: "FOB · Bulk vessel · Jumbo bag · Container"
       }
     },
     footer: { backTop: "Back to top" }
   },
   zh: {
     hero: {
+      eyebrow: "SENLAN TRADING",
+      headline: "面向水泥与混凝土市场的稳定供应。",
+      summary: "GGBFS、GBFS、高钙石与熟料，从中国稳健交付。",
       slide1: { title: "高钙石" },
       slide2: { title: "GGBFS" },
       slide3: { title: "GBFS" },
@@ -160,19 +166,19 @@ const I18N = {
       mapTitle: "我们在中国与全球市场的业务足迹"
     },
     about: {
-      title: "中国北方领先的 GBFS 与 GGBFS 制造及出口合作伙伴",
-      body1: "Senlan 专注于服务水泥与混凝土行业的 GBFS 与 GGBFS 制造和出口。自 2015 年以来，我们持续为美国、欧洲和澳大利亚客户提供可靠、稳定的大宗项目供应。",
-      body2: "依托充足的原料储备、港口堆场，以及一体化物流与质量控制体系，我们能够向全球客户稳定交付并高效完成国际发运。",
+      title: "来自中国的 GGBFS、GBFS 与水泥相关材料供应商",
+      body1: "SENLAN TRADING 是一家服务于水泥与混凝土客户的中国供应商，聚焦 GGBFS、GBFS 及相关水泥材料。",
+      body2: "我们的供货协调与装载执行连接唐山曹妃甸及曹妃甸港，可支持散货船、吨包与集装箱的发运规划。",
       cards: {
         consistencyTitle: "稳定，是我们的底层能力。",
         consistencyBody: "指标稳定，单证清晰，交期可靠。",
-        logisticsTitle: "物流执行",
-        logisticsBody: "依托港口堆场与高效的国际发运规划，提升交付效率。"
+        logisticsTitle: "港口执行",
+        logisticsBody: "依托曹妃甸港的装载执行，支持散货船、吨包与集装箱发运规划。"
       },
       tags: {
-        since: "自 2015 年起",
-        products: "GBFS · GGBFS",
-        markets: "美国 · 欧洲 · 澳大利亚"
+        since: "唐山曹妃甸",
+        products: "GGBFS · GBFS · 熟料",
+        markets: "FOB · 散货船 · 吨包 · 集装箱"
       }
     },
     footer: { backTop: "返回顶部" }
@@ -216,7 +222,7 @@ function setSlide(n){
   if (hero) hero.classList.toggle('hero--tall', next === 3);
 
   // Only one big title in hero, swap per slide + animate
-  const titleEl = document.querySelector('[data-i18n^="hero.slide"][data-i18n$=".title"]');
+  const titleEl = document.querySelector('.hero__focus[data-i18n^="hero.slide"][data-i18n$=".title"]');
   if (titleEl) {
     titleEl.classList.remove('is-animating');
     // restart animation
@@ -231,11 +237,11 @@ function setSlide(n){
   // Learn More → product detail page (based on current slide)
   const learn = document.querySelector('[data-learnmore]');
   if (learn) {
-    if (next === 1) learn.setAttribute('href', 'product.html?p=highcalcium');
-    else if (next === 2) learn.setAttribute('href', 'product.html?p=ggbfs');
-    else if (next === 3) learn.setAttribute('href', 'product.html?p=gbfs');
-    else if (next === 4) learn.setAttribute('href', 'product.html?p=clinker');
-    else learn.setAttribute('href', 'product.html?p=highcalcium');
+    if (next === 1) learn.setAttribute('href', 'highcalcium.html');
+    else if (next === 2) learn.setAttribute('href', 'ggbfs.html');
+    else if (next === 3) learn.setAttribute('href', 'gbfs.html');
+    else if (next === 4) learn.setAttribute('href', 'clinker.html');
+    else learn.setAttribute('href', 'highcalcium.html');
   }
 }
 
@@ -273,10 +279,10 @@ function setLang(lang){
   // keep Learn More link correct
   const learn = document.querySelector('[data-learnmore]');
   if (learn) {
-    if (state.slide === 2) learn.setAttribute('href', 'product.html?p=ggbfs');
-    else if (state.slide === 3) learn.setAttribute('href', 'product.html?p=gbfs');
-    else if (state.slide === 4) learn.setAttribute('href', 'product.html?p=clinker');
-    else learn.setAttribute('href', 'product.html?p=highcalcium');
+    if (state.slide === 2) learn.setAttribute('href', 'ggbfs.html');
+    else if (state.slide === 3) learn.setAttribute('href', 'gbfs.html');
+    else if (state.slide === 4) learn.setAttribute('href', 'clinker.html');
+    else learn.setAttribute('href', 'highcalcium.html');
   }
   applyI18n();
 }
