@@ -1164,7 +1164,20 @@ a{color:inherit}
 .footer{border-top:1px solid var(--line); padding:26px 0}
 .footer__inner{display:flex; align-items:center; justify-content:space-between; color:var(--muted); font-size:13px}
 
+.social-nav{display:flex; align-items:center; gap:10px; margin-right:14px}
+.social-nav__link{display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:999px; border:1px solid rgba(15,23,42,.12); color:rgba(15,23,42,.86); background:rgba(255,255,255,.78); text-decoration:none; transition:transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease}
+.social-nav__link:hover{transform:translateY(-1px); background:rgba(255,255,255,.96); border-color:rgba(15,23,42,.22); color:#0f172a}
+.social-nav__link svg{width:16px; height:16px; display:block}
+.topbar__right .social-nav{margin-right:10px}
+.topbar.topbar--on-hero .social-nav__link{color:rgba(255,255,255,.9); border-color:rgba(255,255,255,.24); background:rgba(255,255,255,.10)}
+.topbar.topbar--on-hero .social-nav__link:hover{color:#fff; border-color:rgba(255,255,255,.38); background:rgba(255,255,255,.16)}
+.hero__header .social-nav{position:absolute; top:26px; right:92px; z-index:3; margin-right:0}
+.hero__header .social-nav__link{background:rgba(255,255,255,.74)}
+
 @media (max-width: 820px){
+  .social-nav{gap:8px; margin-right:8px}
+  .social-nav__link{width:32px; height:32px}
+  .hero__header .social-nav{top:18px; right:76px}
   .hero__content{padding-top: 15vh}
   .hero__cta{flex-direction:column; width:100%}
   .btn{width: min(420px, 92vw)}
