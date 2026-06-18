@@ -141,14 +141,13 @@
       </div>`;
   }
 
-  const right = document.querySelector('.topbar__right');
-  if (right && !right.querySelector('.social-nav')) {
-    right.insertAdjacentHTML('afterbegin', socialMarkup());
+  const topbarNav = document.querySelector('.topbar__nav');
+  if (topbarNav && !topbarNav.querySelector('.social-nav')) {
+    topbarNav.insertAdjacentHTML('beforeend', socialMarkup());
   }
 
-  const heroHeader = document.querySelector('.hero__header');
-  const heroLang = heroHeader ? heroHeader.querySelector('.lang') : null;
-  if (heroHeader && heroLang && !heroHeader.querySelector('.social-nav')) {
-    heroLang.insertAdjacentHTML('beforebegin', socialMarkup());
+  const heroNav = document.querySelector('.hero__nav');
+  if (heroNav && !heroNav.querySelector('.social-nav')) {
+    heroNav.insertAdjacentHTML('beforeend', socialMarkup());
   }
 })();
