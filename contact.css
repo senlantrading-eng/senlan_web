@@ -19,6 +19,9 @@
 
 .contact-grid{margin-top:28px;display:grid;grid-template-columns: 1.1fr .9fr;gap:22px;align-items:start}
 
+.contact-actions{margin:18px 0 0;display:flex;gap:12px;flex-wrap:wrap}
+.contact-note{margin:12px 0 0;color:var(--muted);line-height:1.6}
+
 .contact-form{
   border:1px solid var(--line);
   border-radius:18px;
