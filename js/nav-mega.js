@@ -127,7 +127,7 @@
 // Social links in nav: inject once across pages using shared navigation
 (() => {
   const LINKEDIN_URL = 'https://www.linkedin.com/company/tangshan-senlan-trading-co-ltd/';
-  const FACEBOOK_URL = 'https://www.facebook.com/people/Sen-Lan/61586972392027/';
+  const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61566060404096';
 
   function socialMarkup() {
     return `
