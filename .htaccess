@@ -9,3 +9,6 @@ RewriteRule ^product\.html$ /highcalcium.html [R=301,L,NE,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)p=ggbfs(&|$) [NC]
 RewriteRule ^product\.html$ /ggbfs.html [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)p=gbfs(&|$) [NC]
+RewriteRule ^product\.html$ /gbfs.html [R=301,L,NE,QSD]
