@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Redirect retired parameter-based product URLs to their canonical pages.
+RewriteCond %{QUERY_STRING} (^|&)p=clinker(&|$) [NC]
+RewriteRule ^product\.html$ /clinker.html [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)p=highcalcium(&|$) [NC]
+RewriteRule ^product\.html$ /highcalcium.html [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)p=ggbfs(&|$) [NC]
+RewriteRule ^product\.html$ /ggbfs.html [R=301,L,NE,QSD]
