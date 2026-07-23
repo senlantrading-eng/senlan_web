@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://senlantrading.org/sitemap.xml
+Sitemap: https://senlantrading.org/news-sitemap.xml
