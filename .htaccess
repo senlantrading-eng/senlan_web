@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Consolidate the legacy homepage URL into the canonical root URL.
+RewriteRule ^index\.html$ / [R=301,L,NE]
+
 # Redirect retired parameter-based product URLs to their canonical pages.
 RewriteCond %{QUERY_STRING} (^|&)p=clinker(&|$) [NC]
 RewriteRule ^product\.html$ /clinker.html [R=301,L,NE,QSD]
