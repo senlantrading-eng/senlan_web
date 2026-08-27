@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://senlantrading.org/news/articles/2026-08-28-plasma-heating-cement-clinker-scale.html</loc>
+    <news:news><news:publication><news:name>SENLAN TRADING</news:name><news:language>en</news:language></news:publication><news:publication_date>2026-08-28</news:publication_date><news:title>Plasma Heating for Cement Clinker Faces the Scale Test</news:title></news:news>
+  </url>
+  <url>
     <loc>https://senlantrading.org/news/articles/2026-08-27-scallop-shell-clinker-free-cement.html</loc>
     <news:news><news:publication><news:name>SENLAN TRADING</news:name><news:language>en</news:language></news:publication><news:publication_date>2026-08-27</news:publication_date><news:title>Scallop Shell Calcium Carbonate Enters Clinker-Free Cement</news:title></news:news>
   </url>

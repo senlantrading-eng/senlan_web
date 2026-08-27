@@ -72,7 +72,7 @@
   </url>
   <url>
     <loc>https://senlantrading.org/daily.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -418,6 +418,11 @@
   <url>
     <loc>https://senlantrading.org/news/articles/2026-08-27-scallop-shell-clinker-free-cement.html</loc>
     <lastmod>2026-08-27</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senlantrading.org/news/articles/2026-08-28-plasma-heating-cement-clinker-scale.html</loc>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
