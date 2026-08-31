@@ -72,7 +72,7 @@
   </url>
   <url>
     <loc>https://senlantrading.org/daily.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -428,6 +428,11 @@
   <url>
     <loc>https://senlantrading.org/news/articles/2026-08-29-hydrogen-cement-kiln-fuel-economics.html</loc>
     <lastmod>2026-08-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senlantrading.org/news/articles/2026-08-31-bulk-port-crane-cargo-execution.html</loc>
+    <lastmod>2026-08-31</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
