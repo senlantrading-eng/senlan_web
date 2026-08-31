@@ -72,7 +72,7 @@
   </url>
   <url>
     <loc>https://senlantrading.org/daily.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -438,6 +438,11 @@
   <url>
     <loc>https://senlantrading.org/news/articles/2026-08-30-east-africa-clinker-capacity-supply-planning.html</loc>
     <lastmod>2026-08-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senlantrading.org/news/articles/2026-09-01-cement-shipping-fleet-logistics-control.html</loc>
+    <lastmod>2026-09-01</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
