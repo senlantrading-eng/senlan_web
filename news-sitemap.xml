@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+  <url>
+    <loc>https://senlantrading.org/news/articles/2026-09-07-gearless-panamax-clinker-port-fit.html</loc>
+    <news:news><news:publication><news:name>SENLAN TRADING</news:name><news:language>en</news:language></news:publication><news:publication_date>2026-09-07</news:publication_date><news:title>Gearless Panamax Clinker Trade Raises Port-Fit Stakes</news:title></news:news>
+  </url>
     <loc>https://senlantrading.org/news/articles/2026-09-06-electric-trucks-clinker-logistics-decarbonization.html</loc>
     <news:news><news:publication><news:name>SENLAN TRADING</news:name><news:language>en</news:language></news:publication><news:publication_date>2026-09-06</news:publication_date><news:title>Electric Trucks Scale Clinker Logistics Decarbonization</news:title></news:news>
   </url>
