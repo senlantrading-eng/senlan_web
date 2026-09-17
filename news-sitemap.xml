@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://senlantrading.org/news/articles/2026-09-18-china-gulf-cement-feedstock-trade-shift.html</loc>
+    <news:news><news:publication><news:name>SENLAN TRADING</news:name><news:language>en</news:language></news:publication><news:publication_date>2026-09-18</news:publication_date><news:title>China-Gulf Cement Feedstock Shift Reshapes Dry Bulk Trade</news:title></news:news>
+  </url>
+  <url>
     <loc>https://senlantrading.org/news/articles/2026-09-17-fly-ash-binder-engineering-validation.html</loc>
     <news:news><news:publication><news:name>SENLAN TRADING</news:name><news:language>en</news:language></news:publication><news:publication_date>2026-09-17</news:publication_date><news:title>Fly Ash Binder Demonstration Enters Engineering Validation</news:title></news:news>
   </url>
