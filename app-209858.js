@@ -67,10 +67,10 @@ const I18N = {
       submit: "Submit"
     },
     footprint: {
-      kickerTitle: "4,000,000 MT GBFS and 900,000 MT GGBFS shipped this year.",
+      kickerTitle: "GGBFS and GBFS supply, supported by coordinated shipment planning.",
       kickerSub: "Executed with scale, discipline, and control.",
-      lead: "4,000,000 MT of GBFS. 900,000 MT of GGBFS. Here’s How We Delivered.",
-      body1: "Over the past year, Senlan Trading has supplied 4,000,000 MT of GBFS and 900,000 MT of GGBFS to both domestic and global markets. This performance is supported by our integrated delivery chain — from long-term partner factories to port handling and shipment — ensuring stable capacity, consistent quality, and reliable execution.",
+      lead: "From sourcing to loading: how we support your shipment.",
+      body1: "Senlan Trading coordinates GGBFS and GBFS supply from China, connecting sourcing, packing, port handling and shipment planning. Share your required specification, quantity, loading window and destination so we can prepare a suitable offer.",
       body2: "Our scale is built on proven capability, disciplined logistics, and trust earned through repeat delivery.",
       mapTitle: "Our Global Footprint Across China and International Markets"
     },
@@ -160,10 +160,10 @@ const I18N = {
       submit: "提交"
     },
     footprint: {
-      kickerTitle: "今年已发运 4,000,000 吨 GBFS 与 900,000 吨 GGBFS。",
+      kickerTitle: "GGBFS 与 GBFS 供应，配套装运协调服务。",
       kickerSub: "以规模、纪律与控制力完成交付。",
-      lead: "4,000,000 吨 GBFS，900,000 吨 GGBFS：我们如何完成交付。",
-      body1: "过去一年，Senlan Trading 已向国内及国际市场供应 4,000,000 吨 GBFS 与 900,000 吨 GGBFS。支撑这一成绩的是我们一体化的交付链路——从长期合作工厂到港口装载与发运，确保产能稳定、质量一致、执行可靠。",
+      lead: "从采购到装船：我们如何支持您的发运计划。",
+      body1: "森澜贸易协调中国 GGBFS 与 GBFS 供应，衔接采购、包装、港口装载及发运计划。请提供所需规格、数量、装货时间窗口及目的地，以便我们准备适合的报价方案。",
       body2: "我们的规模，建立在经验证的能力、严谨的物流执行，以及一次次复购中积累的信任之上。",
       mapTitle: "我们在中国与全球市场的业务足迹"
     },

@@ -24,6 +24,7 @@ const I18N = {
       quote2: 'Required quantity and target specification',
       quote3: 'Preferred loading method: dry bulk, jumbo bag, or container',
       quoteCta: 'Request a quote',
+      whatsappCta: 'WhatsApp us',
       k: {
         grade: 'Grade',
         sample: 'Sample',
@@ -82,6 +83,7 @@ const I18N = {
       quote2: '需求数量与目标规格',
       quote3: '希望的装载方式：散货、吨包或集装箱',
       quoteCta: '获取报价',
+      whatsappCta: 'WhatsApp 联系我们',
       k: {
         grade: '等级',
         sample: '样品',

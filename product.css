@@ -396,3 +396,9 @@
   .spec-preview__media img{width:100%; height:100%; max-width:none; max-height:none; padding:0}
   .clinker-figure--float{float:none; width:100%; max-width:none; margin:16px 0}
 }
+
+/* Clear, accessible quote actions on a white product hero. */
+.product-hero__actions{flex-wrap:wrap}
+.product-hero__actions .btn--primary{background:#172b45;color:#fff}
+.product-hero__actions .btn--primary:hover{background:#244565}
+.product-hero__actions a:focus-visible{outline:3px solid #2168d9;outline-offset:3px}

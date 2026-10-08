@@ -62,7 +62,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20260618-209858" />
-  <link rel="stylesheet" href="contact.css?v=20260618-209858" />
+  <link rel="stylesheet" href="contact.css?v=20261008" />
 </head>
 <body>
 
@@ -135,34 +135,50 @@
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_next" value="https://senlantrading.org/contact.html?submitted=1" />
             <div class="row2">
+              <label class="field"><span data-i18n="form.product">Product (required)</span>
+                <select name="product" required>
+                  <option value="" data-i18n="form.choose">Select a product</option>
+                  <option value="ggbfs">GGBFS</option><option value="gbfs">GBFS</option>
+                  <option value="highcalcium" data-i18n="form.limestone">High-Calcium Limestone</option>
+                  <option value="clinker" data-i18n="form.clinker">Clinker</option>
+                </select>
+              </label>
+              <label class="field"><span data-i18n="form.company">Company</span><input name="company" autocomplete="organization" maxlength="200" /></label>
+            </div>
+            <div class="row2">
+              <label class="field"><span data-i18n="form.country">Destination country / region</span><input name="destination_country" maxlength="100" /></label>
+              <label class="field"><span data-i18n="form.port">Destination port</span><input name="destination_port" maxlength="150" /></label>
+            </div>
+            <div class="row2">
               <label class="field">
                 <span data-i18n="form.firstName">First Name</span>
-                <input type="text" name="first_name" />
+                <input type="text" name="first_name" autocomplete="given-name" />
               </label>
               <label class="field">
                 <span data-i18n="form.lastName">Last Name</span>
-                <input type="text" name="last_name" />
+                <input type="text" name="last_name" autocomplete="family-name" />
               </label>
             </div>
 
             <label class="field">
               <span data-i18n="form.email">Email (required)</span>
-              <input type="email" name="email" required />
+              <input type="email" name="email" autocomplete="email" required />
             </label>
 
             <label class="field">
               <span data-i18n="form.phone">Phone</span>
-              <input type="text" name="phone" />
+              <input type="tel" name="phone" autocomplete="tel" />
             </label>
 
             <label class="field">
               <span data-i18n="form.laycan">Laycan</span>
-              <input type="date" name="laycan" />
+              <input type="text" name="laycan" placeholder="e.g., 1–15 November 2026" data-i18n-placeholder="form.laycanPlaceholder" maxlength="100" />
             </label>
 
             <label class="field">
-              <span data-i18n="form.loading">Loading method</span>
+              <span data-i18n="form.loadingLabel">Loading method</span>
               <select name="loading_method">
+                <option value="" data-i18n="form.loadingChoose">Select loading method</option>
                 <option value="bulk" data-i18n="form.loading.bulk">Dry Bulk</option>
                 <option value="jumbo" data-i18n="form.loading.jumbo">Jumbo Bags</option>
                 <option value="container" data-i18n="form.loading.container">Container</option>
@@ -172,19 +188,21 @@
 
             <label class="field">
               <span data-i18n="form.qty">Quantity in MT</span>
-              <input type="text" name="quantity_mt" placeholder="e.g., 500" data-i18n-placeholder="form.qtyPlaceholder" />
+              <input type="number" name="quantity_mt" min="0.01" step="any" placeholder="e.g., 500" data-i18n-placeholder="form.qtyPlaceholder" />
             </label>
 
             <label class="field checkbox">
-              <input type="checkbox" name="consent" value="yes" />
+              <input type="checkbox" name="consent" value="yes" required />
               <span data-i18n="form.checkbox">I agree to be contacted by SENLAN TRADING.</span>
             </label>
 
             <label class="field">
               <span data-i18n="form.details">Project Details (required)</span>
-              <textarea name="project_details" rows="6" required></textarea>
+              <textarea name="project_details" rows="5" required maxlength="8000" placeholder="Required grade, specification, application and shipment requirements" data-i18n-placeholder="form.detailsPlaceholder"></textarea>
             </label>
 
+            <p class="form-note" data-i18n="form.privacy">We use these details to respond to your inquiry. This form is processed by FormSubmit.</p>
+            <p id="inquiry-status" class="inquiry-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
             <button class="btn btn--primary" type="submit" data-i18n="form.submit">Submit</button>
           </form>
 
@@ -238,7 +256,7 @@
   </footer>
 
   <script src="js/nav-mega-841001.js"></script>
-  <script src="contact-552311.js" type="module"></script>
+  <script src="contact-552311.js?v=20261008" type="module"></script>
   <a class="floating-whatsapp" href="https://wa.me/8613733333067?text=Hello%2C%20I%20want%20to%20ask%20about%20GGBFS%20or%20clinker." target="_blank" rel="noopener" aria-label="WhatsApp live chat">
     <span class="floating-whatsapp__icon" aria-hidden="true">
       <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
@@ -248,5 +266,6 @@
     <span class="floating-whatsapp__text">Live Chat to Ask For Quote</span>
   </a>
 
+  <script src="js/inquiry.js?v=20261008" defer></script>
 </body>
 </html>
