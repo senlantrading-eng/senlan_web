@@ -238,6 +238,7 @@ news/articles/2026-11-05-san-antonio-ggbfs-scm-specification.html
 news/legacy/daily-post.html
 product-page.js
 product.css
+product.html
 scripts/check_seo.py
 scripts/generate_sitemaps.py
 scripts/organization.json

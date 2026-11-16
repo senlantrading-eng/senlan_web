@@ -1,6 +1,6 @@
 # SEO / GEO audit and repair register
 
-Audit: 2026-11-16 (Asia/Shanghai). Baseline: `cf4cae1f68e00c8af19cf3b39442d2417d8a63b6`. Source inventory: 232 HTML files; 106 articles under news/articles; 31 standalone root articles; 84 refresh pages (81 news wrappers, two legacy readers and product.html). No AGENTS.md present. Changes stay on a review branch.
+Audit: 2026-11-16 (Asia/Shanghai). Baseline: `cf4cae1f68e00c8af19cf3b39442d2417d8a63b6`. Source inventory: 232 HTML files; 106 articles under news/articles; 31 standalone root articles; 84 refresh pages (81 news wrappers, two legacy readers and product.html). No AGENTS.md present. Changes were prepared on a review branch; the user subsequently authorized submission to main.
 
 ## Findings before implementation
 
@@ -38,7 +38,7 @@ Audit: 2026-11-16 (Asia/Shanghai). Baseline: `cf4cae1f68e00c8af19cf3b39442d2417d
 
 ## Implementation and validation results
 
-- Primary identity uses the pre-existing homepage contact: `Senlantrading@outlook.com`, `+8619931552887`, the existing Tangshan address and LinkedIn/Facebook sameAs. No answer to the optional contact preference question was received before implementation. The contact page retains the existing alternative Outlook address and the FormSubmit recipient unchanged. `scripts/organization.json` is the reference record; static checks detect entity drift.
+- Primary identity uses the user-confirmed email and telephone: `Senlantrading@outlook.com`, `+8613733333067`, the existing Tangshan address and LinkedIn/Facebook sameAs. The user confirmed this email/telephone combination on 2026-11-16. The contact page retains the existing alternative Outlook address and the FormSubmit recipient unchanged. `scripts/organization.json` is the reference record; static checks detect entity drift.
 - Four products now ship their own English H1, description, highlights, technical images, static Product/BreadcrumbList and hero background. Other products' body blocks are removed, not merely hidden. No manufacturer/price/stock/rating is asserted. English technical reference/FAQ sections explicitly retain `lang=en` when Chinese UI is selected; no URL or hreflang migration.
 - GBFS chemistry describes oxides and the glass phase. Clinker mineral names remain only in the correct clinker context; unsupported generic percentage/strength guarantees were removed.
 - Existing product-page numbers are retained as references: GGBFS S95/S105/S115 and the displayed ranges; GBFS 98.1%, 9.40%, 99.86%, 0.34%; limestone CaO ≥53%, SiO₂ ≤1%, MgO ≤3% and existing sizes. Older shared JavaScript contained different values; it is aligned to the actual product HTML. No independent lab verification is claimed. Clinker numeric parameters remain in the linked PDF pending validated transcription.
@@ -53,7 +53,7 @@ Audit: 2026-11-16 (Asia/Shanghai). Baseline: `cf4cae1f68e00c8af19cf3b39442d2417d
 
 ## Deployment requirements and remaining verification
 
-1. Deploy the PR only after review. Ensure Apache/LiteSpeed honors `.htaccess`, `mod_rewrite`, `AllowOverride`, TLS and the canonical domain. The HTTPS condition assumes the origin exposes HTTPS correctly; if a reverse proxy terminates TLS, configure trusted scheme handling at the host before deployment. Do not trust arbitrary client Forwarded headers in application rewrite rules.
+1. Review the changes before production deployment. Ensure Apache/LiteSpeed honors `.htaccess`, `mod_rewrite`, `AllowOverride`, TLS and the canonical domain. The HTTPS condition assumes the origin exposes HTTPS correctly; if a reverse proxy terminates TLS, configure trusted scheme handling at the host before deployment. Do not trust arbitrary client Forwarded headers in application rewrite rules.
 2. Run `python3 scripts/generate_sitemaps.py` on publication and a host scheduler, preferably at least hourly, to age News entries out. Deploy both generated XML files atomically. This repository change does not install a production scheduler or deploy files. A static News sitemap can become stale between runs; use request-time generation if strict continuous 48h expiry is required.
 3. New news articles should have genuine timezone-aware `datePublished` (e.g. a real `+08:00` timestamp), matching visible publication time, an accurate headline and an indexable self canonical. Never rewrite old dates to make content appear fresh. Entries lacking a precise timezone-aware timestamp are conservatively omitted from News sitemap, not the ordinary sitemap.
 4. Search Console ownership, sitemap submission/processing, coverage, URL inspection, Google-selected canonicals, manual actions and crawl statistics require account access. The repository verification token is preserved, but a file alone does not prove ownership.
@@ -77,4 +77,4 @@ Read-only HTTP checks on 2026-11-16: HTTP non-www redirects to HTTPS non-www; HT
 
 ## Delivery status
 
-GitHub connector rejected both tree creation and branch creation with HTTP 403 `Resource not accessible by integration`. Local GitHub CLI has no authenticated host. Therefore the review branch/commit is saved locally and exported as a patch; no remote branch or PR has been created, merged or deployed. Restore repository Contents write access (and PR write access) or authenticate local Git before remote publication. The local commit uses the explicit agent identity `Codex <codex@localhost>`.
+GitHub connector rejected both tree creation and branch creation with HTTP 403 `Resource not accessible by integration`. Local GitHub CLI has no authenticated host. Therefore the review branch/commit is saved locally and exported as a patch; no remote branch or PR has been created, merged or deployed. The user subsequently requested no new branch and explicitly authorized submission to main. A repeat GitHub tree-creation attempt still returned the same 403, so remote publication remains blocked by repository write access, not by missing user authorization. The local commit uses the explicit agent identity `Codex <codex@localhost>`.
