@@ -13,6 +13,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - run: python scripts/test_news_images.py
+      - run: python scripts/validate_news.py
       - run: python scripts/test_sitemaps.py
       - run: python scripts/generate_sitemaps.py
       - run: python scripts/check_seo.py

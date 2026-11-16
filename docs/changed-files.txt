@@ -129,6 +129,7 @@ ggbfs.html
 highcalcium.html
 index.html
 news-sitemap.xml
+news/README.md
 news/articles/2026-05-18-market-brief.html
 news/articles/2026-05-19-low-carbon-cement-momentum.html
 news/articles/2026-05-20-cement-clinker-scm-price-signals.html
@@ -241,6 +242,10 @@ product.css
 product.html
 scripts/check_seo.py
 scripts/generate_sitemaps.py
+scripts/news_images.py
 scripts/organization.json
+scripts/publish_news.py
+scripts/test_news_images.py
 scripts/test_sitemaps.py
+scripts/validate_news.py
 sitemap.xml

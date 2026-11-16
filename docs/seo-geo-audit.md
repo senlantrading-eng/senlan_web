@@ -75,6 +75,15 @@ Audit: 2026-11-16 (Asia/Shanghai). Baseline: `cf4cae1f68e00c8af19cf3b39442d2417d
 
 Read-only HTTP checks on 2026-11-16: HTTP non-www redirects to HTTPS non-www; HTTP www redirects to HTTPS www; HTTPS www still returns 200 (duplicate origin). robots.txt and the existing verification file return 200. These observations are of the old live site, not this unmerged branch.
 
-## Delivery status
+## Delivery history
 
-GitHub connector rejected both tree creation and branch creation with HTTP 403 `Resource not accessible by integration`. Local GitHub CLI has no authenticated host. Therefore the review branch/commit is saved locally and exported as a patch; no remote branch or PR has been created, merged or deployed. The user subsequently requested no new branch and explicitly authorized submission to main. A repeat GitHub tree-creation attempt still returned the same 403, so remote publication remains blocked by repository write access, not by missing user authorization. The local commit uses the explicit agent identity `Codex <codex@localhost>`.
+The connected GitHub app rejected tree/branch writes with HTTP 403. The user then authorized direct main submission and provided the actual local checkout, whose existing SSH remote successfully authenticated and showed main at the original baseline. Changes are committed locally and delivered through that configured remote, with no forced push or new branch. The user-facing handoff records the final push result. Earlier local commits used `Codex <codex@localhost>`.
+
+## Actual checkout and image reuse follow-up (2026-11-16)
+
+- Applied the verified commits to `/Users/solomonzhang/.openclaw/workspace/senlan_web` main by fast-forward. Preserved all five pre-existing untracked image files.
+- Found 74 byte-identical tracked image aliases. Normalized references on 20 news pages; retained every original image file so old resource URLs do not break. This improves URL reuse/browser caching, not the on-disk size of the historical repository.
+- Added `scripts/news_images.py`: SHA-256 reuse regardless of filename, collision-safe import, dry-run/apply reference normalization. It does not guess whether visually similar crops/encodings are equivalent.
+- Added scoped `scripts/publish_news.py`: checks the canonical date's articles, only stages referenced new images and news outputs, rejects duplicate additions, modified existing image dependencies and pre-staged changes, regenerates sitemaps and runs static checks before commit/push.
+- Updated the separately installed local news publisher instructions and wrappers to call repository implementations. Its prior root-only validation and `git add *.html img/` are retired. These installed-wrapper edits are local files outside this repository; the core implementation is versioned here.
+- Five image/publishing regression tests pass, including renamed duplicates, same-name different-content imports, no-deletion URL normalization, exclusion of unrelated images and refusal of pre-staged unrelated changes. The external publisher's 2026-11-05 dry-run selects exactly the article, daily.html and two sitemaps, with no extra images.
