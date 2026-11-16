@@ -5,3 +5,7 @@
 # Natural Earth raw packages (do not commit)
 img/maps/ne/packages/
 *.tif
+
+# Python static-check cache
+__pycache__/
+*.pyc

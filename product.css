@@ -402,3 +402,10 @@
 .product-hero__actions .btn--primary{background:#172b45;color:#fff}
 .product-hero__actions .btn--primary:hover{background:#244565}
 .product-hero__actions a:focus-visible{outline:3px solid #2168d9;outline-offset:3px}
+
+/* Readable technical reference, including narrow screens. */
+.technical-table { width:100%; border-collapse:collapse; margin:24px 0; }
+.technical-table caption { text-align:left; margin-bottom:12px; }
+.technical-table th,.technical-table td { padding:12px; border-bottom:1px solid #d1d5db; text-align:left; overflow-wrap:anywhere; }
+#technical-summary details { margin:16px 0; }
+#technical-summary summary { cursor:pointer; font-weight:600; }

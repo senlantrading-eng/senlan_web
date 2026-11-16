@@ -34,3 +34,16 @@ Edit `styles.css` and replace the `.hero__slide[data-slide="X"]{background-image
 - UTM labels are carried between the updated homepage, product pages and contact page and included with the inquiry. They are length/character limited and not stored persistently. Use campaign labels only, never personal data. Other pages do not currently preserve campaign attribution on onward navigation.
 - Annual shipment figures were removed from homepage copy pending a confirmed reporting period. Existing WhatsApp page routing is retained pending confirmation.
 - Review tracking consent requirements for target markets when adding actual vendor tags. This change itself adds no analytics network calls.
+
+## SEO maintenance
+
+See [audit and deployment checklist](docs/seo-geo-audit.md). Run:
+
+```sh
+python3 scripts/test_sitemaps.py
+python3 scripts/generate_sitemaps.py
+python3 scripts/check_seo.py
+node --check product-page.js
+```
+
+Run sitemap generation when publishing and on the serving host scheduler to remove expired News entries. The script requires actual timezone-aware publication timestamps for News inclusion; date-only historical articles stay in the ordinary sitemap. No scheduler or production deployment is configured by this PR. Maintain static Organization nodes against `scripts/organization.json`; the checker rejects drift. Legacy news wrappers require the accompanying `.htaccess` rules for server-side 301s.

@@ -142,12 +142,10 @@ const DATA = {
       'img/tds/ggbfs-tds-2_compressed.webp'
     ],
     highlights: [
-      { k: 'grade', v: 'S95' },
-      { k: 'ssa', v: '427 m²/kg' },
-      { k: 'glass', v: '97%' },
-      { k: 'density', v: '2.9 g/cm³' },
-      { k: 'ai7', v: '85%' },
-      { k: 'ai28', v: '100%' }
+      { k: 'grade', v: 'S95 / S105 / S115' },
+      { k: 'ssa', v: '427–650 m²/kg' },
+      { k: 'ai7', v: '85–105%' },
+      { k: 'ai28', v: '100–128%' }
     ],
     benefits: {
       en: [
@@ -183,8 +181,8 @@ const DATA = {
       zh: '粒化高炉矿渣（GBFS）主要由活性硅酸盐化合物构成，广泛作为建筑材料原料与工业辅助材料使用。作为炼铁过程的副产物，GBFS 在实现资源高效循环利用的同时，在建筑与基础设施应用中提供稳定可靠的性能表现。'
     },
     lead2: {
-      en: 'Core Chemical Composition: The main constituents of GBFS are dicalcium silicate (C₂S) and tricalcium silicate (C₃S), supported by tricalcium aluminate (C₃A) and tetracalcium aluminoferrite (C₄AF). Secondary components include calcium oxide (CaO), silicon dioxide (SiO₂), aluminum oxide (Al₂O₃), and magnesium oxide (MgO). Exact proportions may vary depending on iron ore and fuel sources used during production.',
-      zh: '核心化学组成：GBFS 的主要成分包括硅酸二钙（C₂S）与硅酸三钙（C₃S），并含有三铝酸三钙（C₃A）与四铝铁酸四钙（C₄AF）等铝硅酸盐相关组分。次要成分包括氧化钙（CaO）、二氧化硅（SiO₂）、三氧化二铝（Al₂O₃）与氧化镁（MgO）等。具体比例会随矿石与燃料来源在一定范围内波动。'
+      en: 'Chemical composition is reported as CaO, SiO₂, Al₂O₃ and MgO. Rapid granulation produces a predominantly glassy phase; composition and reactivity vary with the source and processing. Refer to the sample datasheet for batch-specific assessment.',
+      zh: '化学组成以 CaO、SiO₂、Al₂O₃ 和 MgO 等氧化物表示。快速粒化形成以玻璃相为主的结构；组成与活性随来源和加工条件变化，请根据样品数据表评估具体批次。'
     },
     // pages generated from the latest PDF ("(1)" version)
     tdsPages: [
@@ -221,8 +219,8 @@ const DATA = {
       zh: '高钙石灰石是重要的工业原料，广泛用于水泥、熟料、炼钢及其他矿物加工场景。当前样品数据表显示其具备较高 CaO 特征，适合用于需要稳定含钙原料的配料、熔剂或生料校正应用。'
     },
     lead2: {
-      en: 'Third-party lab data from the sample indicates 54.49% CaO, 0.18% SiO₂, and 1.72% MgO. Final supply specification, sizing, and commercial terms remain subject to contract and shipment requirements.',
-      zh: '样品第三方检测数据显示：CaO 54.49%、SiO₂ 0.18%、MgO 1.72%。最终供货指标、粒度与商务条款以合同及实际装运要求为准。'
+      en: 'The existing product reference lists CaO ≥ 53%, SiO₂ ≤ 1%, and MgO ≤ 3%. Final supply specification, sizing, and commercial terms remain subject to contract and shipment requirements.',
+      zh: '现有产品参考指标为：CaO ≥ 53%、SiO₂ ≤ 1%、MgO ≤ 3%。最终供货指标、粒度与商务条款以合同及实际装运要求为准。'
     },
     tdsPages: [
       'img/tds/highcalcium-tds-1_compressed.webp',
@@ -288,7 +286,6 @@ const STATIC_PRODUCTS = ['ggbfs', 'gbfs', 'highcalcium', 'clinker'];
 function getProductFromLocation() {
   const sp = new URLSearchParams(location.search);
   const queryProduct = (sp.get('p') || '').toLowerCase();
-  if (queryProduct && DATA[queryProduct]) return queryProduct;
 
   const file = (location.pathname.split('/').pop() || '').toLowerCase();
   const fileMap = {
@@ -297,7 +294,7 @@ function getProductFromLocation() {
     'highcalcium.html': 'highcalcium',
     'clinker.html': 'clinker'
   };
-  return fileMap[file] || '';
+  return fileMap[file] || (file === 'product.html' && DATA[queryProduct] ? queryProduct : '');
 }
 
 function applyStaticProductContent() {
@@ -437,30 +434,7 @@ function render() {
     }
     twImage.setAttribute('content', new URL(p.bg, SITE_URL).href);
 
-    let schemaScript = document.getElementById('product-schema');
-    if (!schemaScript) {
-      schemaScript = document.createElement('script');
-      schemaScript.type = 'application/ld+json';
-      schemaScript.id = 'product-schema';
-      document.head.appendChild(schemaScript);
-    }
-    schemaScript.textContent = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Product',
-      name: s.title.replace(' | SENLAN TRADING', ''),
-      description: s.desc,
-      image: [new URL(p.bg, SITE_URL).href],
-      brand: {
-        '@type': 'Organization',
-        name: 'SENLAN TRADING'
-      },
-      manufacturer: {
-        '@type': 'Organization',
-        name: 'SENLAN TRADING'
-      },
-      url: canonicalHref,
-      category: 'Construction Materials'
-    });
+
   }
   // background
   document.getElementById('p-bg').style.backgroundImage = `url('${p.bg}')`;
@@ -526,18 +500,29 @@ function render() {
     mol.style.minHeight = '420px';
 
     if (state.product === 'ggbfs') {
-      // Lazy import to keep other pages light
-      import('./js/molecule-3d.js').then(mod => {
-        mol.setAttribute('data-3d', 'on');
-        cleanup3d = mod.initMolecule3D(mol);
-      }).catch((err) => {
-        mol.setAttribute('data-3d', 'on');
-        console.warn('[molecule3d] failed to load module', err);
-        // If module import fails, fall back to static image
-        mol.style.backgroundImage = `url('${p.benefitImage || p.bg}')`;
-        mol.style.backgroundSize = 'cover';
-        mol.style.backgroundPosition = 'center';
-      });
+      let cancelled = false;
+      let dispose = null;
+      let observer = null;
+      mol.style.backgroundImage = `url('${p.benefitImage || p.bg}')`;
+      mol.style.backgroundSize = 'cover';
+      const start = () => {
+        observer?.disconnect();
+        import('./js/molecule-3d.js').then(mod => {
+          if (cancelled) return;
+          dispose = mod.initMolecule3D(mol);
+          mol.setAttribute('data-3d', 'on');
+        }).catch(err => console.warn('[molecule3d] static fallback', err));
+      };
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        if ('IntersectionObserver' in window) {
+          observer = new IntersectionObserver(entries => {
+            if (entries.some(entry => entry.isIntersecting)) start();
+          }, { rootMargin: '100px' });
+          observer.observe(mol);
+        } else start();
+      }
+      cleanup3d = () => { cancelled = true; observer?.disconnect(); dispose?.(); };
+
     } else {
       mol.setAttribute('data-3d', 'n/a');
       // Non-GGBFS: static background
@@ -608,7 +593,8 @@ function initHighcalciumSpecsPreview() {
 }
 
 function setLang(lang) {
-  state.lang = lang;
+  state.lang = lang === 'zh' ? 'zh' : 'en';
+  document.documentElement.lang = state.lang === 'zh' ? 'zh-CN' : 'en';
   document.querySelectorAll('.lang__btn').forEach(b => b.classList.toggle('is-active', b.dataset.lang === lang));
   render();
 }
