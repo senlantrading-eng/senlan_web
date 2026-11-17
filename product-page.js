@@ -138,8 +138,8 @@ const DATA = {
     },
     // pages generated from the latest PDF ("(1)" version)
     tdsPages: [
-      'img/tds/ggbfs-tds-1_compressed.webp',
-      'img/tds/ggbfs-tds-2_compressed.webp'
+      'img/tds/ggbfs-tds-new-1.jpg?v=20261117',
+      'img/tds/ggbfs-tds-new-2.jpg?v=20261117'
     ],
     highlights: [
       { k: 'grade', v: 'S95 / S105 / S115' },
